@@ -1,0 +1,60 @@
+// start .sAbout
+.sAbout {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+		z-index: 2;
+		position: relative;
+		&::before{
+			content: '';
+			width: 100%;
+			height: calc(100% + 200px);
+			left: 0;
+			top: 0;
+			background-color: $light;
+			transform: skewX(20deg);
+			transform-origin: 0 0;
+			position: absolute;
+			z-index: -1;
+		}
+		p{
+			@include media-breakpoint-up(xl) {
+				max-width: rem(420);
+			}
+			font-size: rem(20);
+		}
+		&__video-wrap{
+			@include block(852, 485);
+			iframe{
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100% !important;
+				height: 100% !important;
+			}
+			
+					&::after {
+						content: '';
+						position: absolute;
+						pointer-events: none;
+						// right: rem(90);
+						left: 100%;
+						// top: -20px;
+						bottom: -10px;
+
+						width: rem(80);
+						background-color: $primary;
+						height: 80%;
+						transform: skewX(-27deg);
+					}
+
+		}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sAbout

@@ -1,0 +1,45 @@
+// start .sMost
+.sMost {
+		// --sPT: ;
+		--sPB: 27px;
+		// --sTPB: ;
+	&__slider{
+		overflow: visible;
+	}
+	&__slide{
+		max-width:	calc(100% / 3 - 20px  );
+		margin-right: rem(30);
+		height: auto;
+	}
+	&__item{
+		min-height: 100%;
+		background: #F0F0F0;
+		padding: rem(22) rem(30);
+		display: flex;
+		flex-direction: column;
+	}
+	&__title{
+		text-transform: uppercase;
+		font-size: 12px;
+		font-weight: bold;
+		color: $primary;
+		margin-bottom: 15px;
+	}
+	p{
+		font-weight: bold;
+		flex-grow: 1;
+	}
+
+	&__small{
+		color: #003E70;
+		font-size: 12px;
+		margin-bottom: 3px;
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sMost

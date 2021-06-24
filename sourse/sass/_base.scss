@@ -26,6 +26,7 @@ html{
 }
 
 body {
+	min-width: 570px;
 	&.fixed,
 	&.fancybox-active{
 		.header{ 
@@ -124,6 +125,10 @@ body {
 
 .section-title {
 	padding-bottom: var(--sTPB);
+	h2{
+		font-weight: bold;
+		color: $dark;
+	}
 }
 
 
@@ -486,4 +491,36 @@ iframe {
 
 ::-webkit-calendar-picker-indicator {
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='15' viewBox='0 0 24 24'><path fill='#{$primary}' d='M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z'/></svg>"); 
+}
+
+
+.btn{
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.tabs{
+	&__caption{
+		display: flex;
+
+	}
+	&__btn{
+		@extend .btn;
+		font-weight: bold;
+		// opacity: 0.5;
+		@extend .btn;
+		@extend .btn-primary;
+		color: rgba($color: $primary, $alpha: .5);
+		// color: #e3000f;
+		border-color: rgba($color: $primary, $alpha: 0);
+		background: rgba($color: $primary, $alpha: .1);
+		margin-right: 11px;
+		padding: rem(2) rem(9);
+		margin-bottom: 27px;
+		&.active{
+			opacity: 1;
+			background: #E3000F;
+			border-color: #E3000F;
+		}
+	}
 }

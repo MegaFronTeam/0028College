@@ -1,0 +1,14 @@
+mixin sSpecials(data)
+	// start sSpecials
+	+b.sSpecials.section#sSpecials&attributes(attributes)
+		.container
+			.row
+				mixin item(t, p, a="#")
+					+e.col.col-lg-6
+						+e.item
+							+e.title= t
+							p!= p
+							+e.btn(href= a) Узнать больше
+				+item(`Специальности после 9 класса`,`ЛУчший способ быстрее <br> обучиться и начать <br> зарабатывать раньше <br> сверстников!`,`#`)
+				+item(`Специальности после 11 классов`,`Теория совмещенная с практикой. Проходите стажировки в компаниях- партнерах  с последующим трудоустройством `,`#`)
+	// end sSpecials

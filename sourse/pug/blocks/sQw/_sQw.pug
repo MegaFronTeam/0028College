@@ -1,0 +1,18 @@
+mixin sQw(data)
+	// start sQw
+	+b.SECTION.sQw.section.bg-wrap#sQw&attributes(attributes)
+		+pic("form-bg.png",'bg',0).picture-bg
+		.container
+			//- +e.inners
+			.row
+				.col
+					+b.section-title
+						h2 Остались вопросы?
+						p Задай их нашим специалистам приемной комиссии и получи ответ на e-mail
+				.col-md-auto
+					+form-wrap  
+						+input("Ваше имя") 
+						+input("Номер телефона",'tel') 
+						+e.btn(type="submit") Отправить заявку
+						+policy
+	// end sQw

@@ -1,7 +1,59 @@
 .footer {
-		
+	padding-top: rem(90);
 	margin-top: auto;
+	position: relative;
+	z-index: 2;
+	@include media-breakpoint-up(md) {
 
+		&::after{
+			z-index: -1;
+			content: '';
+			position: absolute;
+			height: 150px;
+			width: 80px;
+			background-color: $dark;
+			bottom: 0;
+			left: -40px;
+			transform: skewX(28deg);
+		}
+	}
+	&__title{
+		margin-bottom: 2em;
+		font-weight: 600;
+		font-size: rem(24);
+	}
+	&__group-title{
+		font-weight: bold;
+		color: $primary;
+		margin-bottom: 1em;
+	}
+	&__group{
+		margin-bottom: 1em;
+	}
+	&__col{
+		margin-bottom: 40px;
+	}
+	&__bottom{
+		p{
+			font-size: 12px;
+			background-color: #fff;
+		}
+		a{
+			font-size: 14px;
+		}
+		margin-top: 30px;
+		padding-top: 40px;
+		border-top: 1px solid rgba($color: #B1B2B3, $alpha: .3);
+		.row{
+			align-items: center;
+			> * {
+				margin-bottom: 30px;
+			}
+		}
+		a{
+			@extend .text-dark;
+		}
+	}
 // 
 @include media-breakpoint-up(xl) {}
 

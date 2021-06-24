@@ -1,0 +1,14 @@
+mixin sAdvanteges(data)
+	// start sAdvanteges
+	+b.sAdvanteges.section#sAdvanteges&attributes(attributes)
+		.container
+			.row
+				mixin item(i,t)
+					+e.col.col-4
+						+e.item 
+							img(src=`img/svg/adv-icon-${i}.svg` loading="lazy", alt="")
+							p!= t
+				+item(`1`,`Отсрочка <br> от армии`)
+				+item(`2`,`Диплом государственного <br> образца`)
+				+item(`3`,`Поступление  <br> без экзаменов и ЕГЭ`)
+	// end sAdvanteges

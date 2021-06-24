@@ -1,0 +1,29 @@
+// start .sAdvanteges
+.sAdvanteges {
+		--sPT: 30px;
+		// --sPB: ;
+		// --sTPB: ;
+
+		&__item{
+			background: #F0F0F0;
+			text-align: center;
+			min-height: calc(100% - var(--bs-gutter-x));
+			@include media-breakpoint-up(lg) {
+				padding-top: rem(88);
+				min-height: rem(376);
+			}
+			padding-top: rem(38);
+			min-height: rem(276);
+			img{
+				margin-bottom: rem(45);
+			}
+		}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sAdvanteges

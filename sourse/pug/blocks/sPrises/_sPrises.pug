@@ -1,0 +1,55 @@
+mixin sPrises(data)
+	// start sPrises
+	+b.SECTION.sPrises.section#sPrises&attributes(attributes)
+		.container
+			+b.section-title
+				.row
+					.col
+						h2 Призовые места на&nbsp;открытых  чемпионатах профессионального  мастерства
+					.col-auto
+						+pic("logo.png",'',0)
+			.row
+				mixin item(p)
+					+e.col.col-lg-4.col-6
+						+e.title= p
+						block
+				+item('2018 — 2019')
+					+e.group
+						+e.img-wrap
+							+pic("group-1-1.png",'',0)
+						+e.text 2 золотых медали
+					+e.group
+						+e.img-wrap
+							+pic("group-1-2.png",'',0)
+						+e.text 2 серебрянных медали
+					+e.group
+						+e.img-wrap
+							+pic("group-1-3.png",'',0)
+						+e.text 1 бронзовая медаль
+				+item('2019 — 2020')
+					+e.group
+						+e.img-wrap
+							+pic("group-2-1.png",'',0)
+						+e.text
+					+e.group
+						+e.img-wrap
+							+pic("group-2-2.png",'',0)
+						+e.text 1 серебрянная медаль
+					+e.group
+						+e.img-wrap
+							+pic("group-2-3.png",'',0)
+						+e.text 3 бронзовых медали
+				+item('2020 — 2021')
+					+e.group
+						+e.img-wrap
+							+pic("group-3-1.png",'',0)
+						+e.text 2 золотых медали
+					+e.group
+						+e.img-wrap
+							+pic("group-3-2.png",'',0)
+						+e.text 6 серебрянных медалей
+					+e.group
+						+e.img-wrap
+							+pic("group-3-3.png",'',0)
+						+e.text 1 бронзовая медаль
+	// end sPrises

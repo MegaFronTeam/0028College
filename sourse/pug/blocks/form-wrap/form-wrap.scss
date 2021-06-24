@@ -1,7 +1,13 @@
 .form-wrap{
+	&__title{
+		color: $dark;
+		@extend .h3;
+		font-weight: bold;
+		margin-bottom: 1em;
+	}
  	&__input-wrap{
 			// @extend .form-group;
-			
+			margin-bottom: rem(20);
 		}
 		&__input{
 			// @extend .form-control;
@@ -10,11 +16,17 @@
  	}
  	&__btn{
  		cursor: pointer;
+		 @extend .btn;
+		 @extend .btn-primary;
  	}
  	label{
  		width: 100%;
  		display: block;
  	}
+	 &__policy{
+		 padding-top: rem(20);
+		 font-size: 12px;
+	 }
 }
 
 

@@ -1,9 +1,16 @@
-mixin sForm()
+mixin sForm(t='Узнай минимальный проходной балл в 2021 году')
 	// start sForm
-	+b.SECTION.sForm.section#sForm&attributes(attributes)
+	+b.SECTION.sForm.sectio
 		.container
-			+b.section-title.text-center
-				h2 sForm
-				
-			.row
+			+b.form-wrap&attributes(attributes)
+				form
+					+e.title= t
+					.row
+						.col-lg
+							+input("Ваше имя")
+						.col-lg
+							+input("Номер телефона",'tel')
+						.col-auto
+							+e.btn(type="submit") Отправить заявку
+					+policy
 	// end sForm

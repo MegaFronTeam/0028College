@@ -9,7 +9,7 @@ mixin mob-mnu()
 		//- let dataJson = JSON.parse(json);
 	//- h1= dataJson['lala'] 
 	+b.menu-mobile--js.d-lg-none
-		+b.toggle-menu-mobile--js.on
+		+b.toggle-menu-mobile--js
 			span
 		+e.inner
 		
@@ -18,13 +18,28 @@ mixin mob-mnu()
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
-	+b.top-nav.block-with-lazy
+	+b.top-nav
 		.container
 			.row
+				+e.logo.col-auto
+					a(href="/")
+						img(src="img/svg/logo.svg", alt="")
+				.col-12.d-none.d-lg-block
+					+mnu()
+				.col-md
+					.row
+						.col-xl
+							+e.title Центральная приемная комиссия
+						.col-auto
+							+e.tel(href="tel:88006559988")
+								+icon('tel')
+								| 8 800 655 99 88
+						.col-auto
+							+e.text Многоканальный c 9:00 до 19:00
+				.col-md-auto.col
+					+e.btn(href="#showquiz") Подобрать программу
 				.col-auto.d-lg-none
 					+b.toggle-menu-mobile--js
 						span
-				.col.d-none.d-lg-block
-					+mnu()
 					
 	// end top-nav

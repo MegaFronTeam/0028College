@@ -1,0 +1,14 @@
+mixin sBanner(data)
+	// start sBanner
+	+b.SECTION.sBanner.section#sBanner&attributes(attributes)
+		.container
+			+e.inner
+				+e.text
+					.row
+						.col
+							h2 Собственная <br> автошкола
+							p #[strong Скидки] для студентов <br> Обучение на категории #[strong B и C]
+						.col-xl-auto.align-self-end
+							p.small Обучение проводится профессионалами прошедшими аттестацию в МРЕО г. Москвы
+				+pic("banner.png",'',0)
+	// end sBanner

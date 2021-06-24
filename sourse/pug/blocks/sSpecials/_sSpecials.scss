@@ -1,0 +1,40 @@
+// start .sSpecials
+.sSpecials {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+	&__item{
+		min-height: calc(100% - 30px);
+		margin-bottom: 30px;
+		background: #F0F0F0;
+		padding: rem(55) rem(45); 
+		display: flex;
+		flex-direction: column;
+	}
+	&__title{
+		// @include rfs(30p)
+		@extend .h3;
+		font-weight: bold;
+		margin-bottom: 1em;
+	}
+	p{
+		max-width: rem(380);
+		// margin-bottom: 1em;
+		margin-bottom: rem(38);
+		// padding-bottom: 1em;
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-sm;
+		@extend .btn-primary;
+		width: rem(180);
+		margin-top: auto;
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sSpecials

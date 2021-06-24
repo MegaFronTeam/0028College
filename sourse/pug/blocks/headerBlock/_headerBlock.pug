@@ -2,9 +2,19 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
 			.row
+				.col-lg-7.col-8
+					+e.wrap
+						+e.wrap-bg
+						+e.labels
+							+e.label Кунцево
+							+e.label Очаково
+							+e.label Солнцево
+							+e.label Внуково
+						h1 учись в государственном колледже
+						p Московский Индустриальный Колледж
+				+e.col.col
+					+pic("head.png",'bg',0)
+
 						
 	// end headerBlock

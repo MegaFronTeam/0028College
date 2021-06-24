@@ -1,0 +1,40 @@
+// start .sPrises
+.sPrises {
+		--sPT: 0;
+		// --sPB: ;
+		// --sTPB: ;
+		position: relative;
+		z-index: 4;
+		&__col{
+			margin-bottom: 30px;
+		}
+		&__title{
+			display: inline-block;
+			font-size: rem(30);
+			font-weight: bold;
+			padding-bottom: 8px;
+			border-bottom: 1px solid;
+			color: $dark;
+			margin-bottom: 30px;
+		}
+		&__group{
+			display: flex;
+			align-items: center;
+			margin-bottom: 20px;
+		}
+		&__img-wrap{
+			margin-right: rem(30);
+			flex:  0 0 auto;
+		}
+		&__text{
+			max-width: rem(135);
+			font-weight: 500;
+		}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sPrises

@@ -1,0 +1,12 @@
+mixin sWorks(data)
+	// start sWorks
+	+b.SECTION.sWorks.section#sWorks&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Где работать после колледжа
+				
+			.row
+				- for (var x = 1; x < 17; x++)
+					.col-xl-3.col-md-4.col-6
+						+pic(`logo-${x}.png`,'',0)
+	// end sWorks
