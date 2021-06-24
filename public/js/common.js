@@ -106,7 +106,7 @@ const JSCCommon = {
 		document.addEventListener('mouseup', event => {
 			let container = event.target.closest(".menu-mobile--js.active"); // (1)
 
-			let link = event.target.closest(".menu as"); // (1)
+			let link = event.target.closest(".menu a"); // (1)
 
 			if (!container || link) this.closeMenu();
 		}, {
@@ -137,34 +137,17 @@ const JSCCommon = {
 
 	// /inputMask
 	sendForm() {
-		var gets = function () {
-			var a = window.location.search;
-			var b = new Object();
-			var c;
-			a = a.substring(1).split("&");
-
-			for (var i = 0; i < a.length; i++) {
-				c = a[i].split("=");
-				b[c[0]] = c[1];
-			}
-
-			return b;
-		}(); // form
-
-
+		// form
 		$(document).on('submit', "form", function (e) {
 			e.preventDefault();
 			const th = $(this);
 			var data = th.serialize();
-			th.find('.utm_source').val(decodeURIComponent(gets['utm_source'] || ''));
-			th.find('.utm_term').val(decodeURIComponent(gets['utm_term'] || ''));
-			th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium'] || ''));
-			th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign'] || ''));
 			$.ajax({
-				url: 'action.php',
+				url: 'rest.php',
 				type: 'POST',
 				data: data
 			}).done(function (data) {
+				console.log(data);
 				$.fancybox.close();
 				$.fancybox.open({
 					src: '#modal-thanks',
@@ -178,6 +161,7 @@ const JSCCommon = {
 					// yaCounter55828534.reachGoal('zakaz');
 				}, 4000);
 			}).fail(function () {});
+			console.log('fail');
 		});
 	},
 

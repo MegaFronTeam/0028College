@@ -36,12 +36,12 @@
 				</div>
 				<div class="menu-mobile__inner">
 					<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О нас</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Специальности</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О колледже</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Где работать</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Обратная связь</a></li>
+						<li class="menu-item" itemprop="item"><a href="/" itemprop="url">О нас</a></li>
+						<li class="menu-item" itemprop="item"><a href="#sMost" itemprop="url">Специальности</a></li>
+						<li class="menu-item" itemprop="item"><a href="#sAbout" itemprop="url">О колледже</a></li>
+						<li class="menu-item" itemprop="item"><a href="#sWorks" itemprop="url">Где работать</a></li>
+						<li class="menu-item" itemprop="item"><a href="#sContact" itemprop="url">Контакты</a></li>
+						<li class="menu-item" itemprop="item"><a href="#sQw" itemprop="url">Обратная связь</a></li>
 					</ul>
 					<div class="text-right"></div>
 				</div>
@@ -55,12 +55,12 @@
 						</div>
 						<div class="col-12 d-none d-lg-block">
 							<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О нас</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Специальности</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О колледже</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Где работать</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Обратная связь</a></li>
+								<li class="menu-item" itemprop="item"><a href="/" itemprop="url">О нас</a></li>
+								<li class="menu-item" itemprop="item"><a href="#sMost" itemprop="url">Специальности</a></li>
+								<li class="menu-item" itemprop="item"><a href="#sAbout" itemprop="url">О колледже</a></li>
+								<li class="menu-item" itemprop="item"><a href="#sWorks" itemprop="url">Где работать</a></li>
+								<li class="menu-item" itemprop="item"><a href="#sContact" itemprop="url">Контакты</a></li>
+								<li class="menu-item" itemprop="item"><a href="#sQw" itemprop="url">Обратная связь</a></li>
 							</ul>
 						</div>
 						<div class="col-md">
@@ -127,17 +127,18 @@
 			<section class="sForm sectio">
 				<div class="container">
 					<div class="form-wrap bg-light">
-						<form>
+						<form method="post">
 							<div class="form-wrap__title">Узнай минимальный проходной балл в 2021 году
 							</div>
+							<input type="hidden" name="DATA[TITLE]" value="Узнай минимальный проходной балл в 2021 году"/>
 							<div class="row">
 								<div class="col-lg">
-									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше имя"/>
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="DATA[NAME]" type="text" placeholder="Ваше имя"/>
 									</div>
 									<!-- +e.input-wrap-->
 								</div>
 								<div class="col-lg">
-									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Номер телефона"/>
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="DATA[PHONE_MOBILE]" type="tel" placeholder="Номер телефона"/>
 									</div>
 									<!-- +e.input-wrap-->
 								</div>
@@ -239,20 +240,20 @@
 										<div class="swiper-wrapper">
 													<div class="sMost__slide swiper-slide">
 														<div class="sMost__item">
-															<div class="sMost__title">ЦЕНТР ГРАДОСТРОИТЕЛЬНЫХ ТЕХНОЛОГИЙ
+															<div class="sMost__title">Центр промышленных технологий
 															</div>
-															<p>Информационные системы обеспечения градостроительной деятельности</p>
+															<p>15.01.05 Сварщик (ручной и частично механизированной сварки (наплавки)</p>
 															<div class="sMost__foot">
 																<div class="row">
 																	<div class="col-auto">
 																		<div class="sMost__small">Сроки обучения
 																		</div>
-																		<p>3 г. 10 мес.</p>
+																		<p>2 г.10 м.</p>
 																	</div>
 																	<div class="col-auto">
 																		<div class="sMost__small">Бюджетных мест
 																		</div>
-																		<p>10</p>
+																		<p>75</p>
 																	</div>
 																</div>
 															</div>
@@ -260,7 +261,7 @@
 													</div>
 													<div class="sMost__slide swiper-slide">
 														<div class="sMost__item">
-															<div class="sMost__title">ЦЕНТР ПРОМЫШЛЕННЫХ ТЕХНОЛОГИЙ
+															<div class="sMost__title">Центр промышленных технологий
 															</div>
 															<p>Организация и технология защиты информации</p>
 															<div class="sMost__foot">
@@ -283,7 +284,49 @@
 														<div class="sMost__item">
 															<div class="sMost__title">ЦЕНТР ТЕХНОЛОГИЙ ТРАНСПОРТА
 															</div>
-															<p>Информационные системы обеспечения градостроительной деятельности</p>
+															<p>15.02.14 Оснащение средствами автоматизации технологических процессов и производств (по отраслям)</p>
+															<div class="sMost__foot">
+																<div class="row">
+																	<div class="col-auto">
+																		<div class="sMost__small">Сроки обучения
+																		</div>
+																		<p>3 г. 10 м.</p>
+																	</div>
+																	<div class="col-auto">
+																		<div class="sMost__small">Бюджетных мест
+																		</div>
+																		<p>25</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="sMost__slide swiper-slide">
+														<div class="sMost__item">
+															<div class="sMost__title">ЦЕНТР ГРАДОСТРОИТЕЛЬНЫХ ТЕХНОЛОГИЙ
+															</div>
+															<p>21.02.06 Информационные системы обеспечения градостроительной деятельности</p>
+															<div class="sMost__foot">
+																<div class="row">
+																	<div class="col-auto">
+																		<div class="sMost__small">Сроки обучения
+																		</div>
+																		<p>3 г. 10 м.</p>
+																	</div>
+																	<div class="col-auto">
+																		<div class="sMost__small">Бюджетных мест
+																		</div>
+																		<p>50</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="sMost__slide swiper-slide">
+														<div class="sMost__item">
+															<div class="sMost__title">ЦЕНТР ГРАДОСТРОИТЕЛЬНЫХ ТЕХНОЛОГИЙ
+															</div>
+															<p>08.02.01 Строительство и эксплуатация зданий и сооружений</p>
 															<div class="sMost__foot">
 																<div class="row">
 																	<div class="col-auto">
@@ -310,12 +353,12 @@
 																	<div class="col-auto">
 																		<div class="sMost__small">Сроки обучения
 																		</div>
-																		<p>3 г. 10 мес.</p>
+																		<p>3 г. 10 м.</p>
 																	</div>
 																	<div class="col-auto">
 																		<div class="sMost__small">Бюджетных мест
 																		</div>
-																		<p>10</p>
+																		<p>50</p>
 																	</div>
 																</div>
 															</div>
@@ -325,18 +368,102 @@
 														<div class="sMost__item">
 															<div class="sMost__title">ЦЕНТР ГРАДОСТРОИТЕЛЬНЫХ ТЕХНОЛОГИЙ
 															</div>
-															<p>Информационные системы обеспечения градостроительной деятельности</p>
+															<p>35.02.03 Технология деревообработки</p>
 															<div class="sMost__foot">
 																<div class="row">
 																	<div class="col-auto">
 																		<div class="sMost__small">Сроки обучения
 																		</div>
-																		<p>3 г. 10 мес.</p>
+																		<p>3 г. 10 м.</p>
 																	</div>
 																	<div class="col-auto">
 																		<div class="sMost__small">Бюджетных мест
 																		</div>
-																		<p>10</p>
+																		<p>50</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="sMost__slide swiper-slide">
+														<div class="sMost__item">
+															<div class="sMost__title">Центр технологий транспорта
+															</div>
+															<p>23.01.17 Мастер по ремонту и обслуживанию автомобилей</p>
+															<div class="sMost__foot">
+																<div class="row">
+																	<div class="col-auto">
+																		<div class="sMost__small">Сроки обучения
+																		</div>
+																		<p>2 г. 10 м.</p>
+																	</div>
+																	<div class="col-auto">
+																		<div class="sMost__small">Бюджетных мест
+																		</div>
+																		<p>50</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="sMost__slide swiper-slide">
+														<div class="sMost__item">
+															<div class="sMost__title">Центр технологий транспорта
+															</div>
+															<p>43.02.06 Сервис на транспорте (по видам транспорта)</p>
+															<div class="sMost__foot">
+																<div class="row">
+																	<div class="col-auto">
+																		<div class="sMost__small">Сроки обучения
+																		</div>
+																		<p>2 г. 10 м.</p>
+																	</div>
+																	<div class="col-auto">
+																		<div class="sMost__small">Бюджетных мест
+																		</div>
+																		<p>25</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="sMost__slide swiper-slide">
+														<div class="sMost__item">
+															<div class="sMost__title">Центр технологий транспорта
+															</div>
+															<p>23.02.07 Техническое обслуживание и ремонт двигателей, систем и агрегатов автомобилей</p>
+															<div class="sMost__foot">
+																<div class="row">
+																	<div class="col-auto">
+																		<div class="sMost__small">Сроки обучения
+																		</div>
+																		<p>3 г. 10 м.</p>
+																	</div>
+																	<div class="col-auto">
+																		<div class="sMost__small">Бюджетных мест
+																		</div>
+																		<p>50</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="sMost__slide swiper-slide">
+														<div class="sMost__item">
+															<div class="sMost__title">Центр технологий транспорта
+															</div>
+															<p>10.02.01 Организация и технология защиты информации</p>
+															<div class="sMost__foot">
+																<div class="row">
+																	<div class="col-auto">
+																		<div class="sMost__small">Сроки обучения
+																		</div>
+																		<p>3 г. 10 м.</p>
+																	</div>
+																	<div class="col-auto">
+																		<div class="sMost__small">Бюджетных мест
+																		</div>
+																		<p>25</p>
 																	</div>
 																</div>
 															</div>
@@ -350,41 +477,20 @@
 										<div class="swiper-wrapper">
 													<div class="sMost__slide swiper-slide">
 														<div class="sMost__item">
-															<div class="sMost__title">ЦЕНТР ГРАДОСТРОИТЕЛЬНЫХ ТЕХНОЛОГИЙ
-															</div>
-															<p>Информационные системы обеспечения градостроительной деятельности</p>
-															<div class="sMost__foot">
-																<div class="row">
-																	<div class="col-auto">
-																		<div class="sMost__small">Сроки обучения
-																		</div>
-																		<p>3 г. 10 мес.</p>
-																	</div>
-																	<div class="col-auto">
-																		<div class="sMost__small">Бюджетных мест
-																		</div>
-																		<p>10</p>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="sMost__slide swiper-slide">
-														<div class="sMost__item">
 															<div class="sMost__title">ЦЕНТР ПРОМЫШЛЕННЫХ ТЕХНОЛОГИЙ
 															</div>
-															<p>Организация и технология защиты информации</p>
+															<p>22.02.06 Сварочное производство</p>
 															<div class="sMost__foot">
 																<div class="row">
 																	<div class="col-auto">
 																		<div class="sMost__small">Сроки обучения
 																		</div>
-																		<p>3 г. 10 мес.</p>
+																		<p>2 г. 10 мес.</p>
 																	</div>
 																	<div class="col-auto">
 																		<div class="sMost__small">Бюджетных мест
 																		</div>
-																		<p>10</p>
+																		<p>25</p>
 																	</div>
 																</div>
 															</div>
@@ -392,41 +498,20 @@
 													</div>
 													<div class="sMost__slide swiper-slide">
 														<div class="sMost__item">
-															<div class="sMost__title">ЦЕНТР ТЕХНОЛОГИЙ ТРАНСПОРТА
+															<div class="sMost__title">Центр градостроительных технологий
 															</div>
-															<p>Информационные системы обеспечения градостроительной деятельности</p>
+															<p>21.02.06 Информационные системы обеспечения градостроительной деятельности</p>
 															<div class="sMost__foot">
 																<div class="row">
 																	<div class="col-auto">
 																		<div class="sMost__small">Сроки обучения
 																		</div>
-																		<p>3 г. 10 мес.</p>
+																		<p>2 г. 10 мес.</p>
 																	</div>
 																	<div class="col-auto">
 																		<div class="sMost__small">Бюджетных мест
 																		</div>
-																		<p>10</p>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="sMost__slide swiper-slide">
-														<div class="sMost__item">
-															<div class="sMost__title">ЦЕНТР ГРАДОСТРОИТЕЛЬНЫХ ТЕХНОЛОГИЙ
-															</div>
-															<p>Информационные системы обеспечения градостроительной деятельности</p>
-															<div class="sMost__foot">
-																<div class="row">
-																	<div class="col-auto">
-																		<div class="sMost__small">Сроки обучения
-																		</div>
-																		<p>3 г. 10 мес.</p>
-																	</div>
-																	<div class="col-auto">
-																		<div class="sMost__small">Бюджетных мест
-																		</div>
-																		<p>10</p>
+																		<p>25</p>
 																	</div>
 																</div>
 															</div>
@@ -436,7 +521,7 @@
 														<div class="sMost__item">
 															<div class="sMost__title">ЦЕНТР ГРАДОСТРОИТЕЛЬНЫХ ТЕХНОЛОГИЙ
 															</div>
-															<p>Информационные системы обеспечения градостроительной деятельности</p>
+															<p>08.02.01 Строительство и эксплуатация зданий и сооружений</p>
 															<div class="sMost__foot">
 																<div class="row">
 																	<div class="col-auto">
@@ -447,7 +532,91 @@
 																	<div class="col-auto">
 																		<div class="sMost__small">Бюджетных мест
 																		</div>
-																		<p>10</p>
+																		<p>25</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="sMost__slide swiper-slide">
+														<div class="sMost__item">
+															<div class="sMost__title">Центр технологий транспорта
+															</div>
+															<p>43.02.06 Сервис на транспорте (по видам транспорта)</p>
+															<div class="sMost__foot">
+																<div class="row">
+																	<div class="col-auto">
+																		<div class="sMost__small">Сроки обучения
+																		</div>
+																		<p>2 г. 10 мес.</p>
+																	</div>
+																	<div class="col-auto">
+																		<div class="sMost__small">Бюджетных мест
+																		</div>
+																		<p>25</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="sMost__slide swiper-slide">
+														<div class="sMost__item">
+															<div class="sMost__title">Центр технологий транспорта
+															</div>
+															<p>23.02.07 Техническое обслуживание и ремонт двигателей, систем и агрегатов автомобилей</p>
+															<div class="sMost__foot">
+																<div class="row">
+																	<div class="col-auto">
+																		<div class="sMost__small">Сроки обучения
+																		</div>
+																		<p>2 г. 10 мес.</p>
+																	</div>
+																	<div class="col-auto">
+																		<div class="sMost__small">Бюджетных мест
+																		</div>
+																		<p>25</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="sMost__slide swiper-slide">
+														<div class="sMost__item">
+															<div class="sMost__title">Технопарк Внуково
+															</div>
+															<p>10.02.01 Организация и технология защиты информации</p>
+															<div class="sMost__foot">
+																<div class="row">
+																	<div class="col-auto">
+																		<div class="sMost__small">Сроки обучения
+																		</div>
+																		<p>2 г. 10 мес.</p>
+																	</div>
+																	<div class="col-auto">
+																		<div class="sMost__small">Бюджетных мест
+																		</div>
+																		<p>25</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="sMost__slide swiper-slide">
+														<div class="sMost__item">
+															<div class="sMost__title">Технопарк Внуково
+															</div>
+															<p>09.02.07 Информационные системы и программирование</p>
+															<div class="sMost__foot">
+																<div class="row">
+																	<div class="col-auto">
+																		<div class="sMost__small">Сроки обучения
+																		</div>
+																		<p>2 г. 10 мес.</p>
+																	</div>
+																	<div class="col-auto">
+																		<div class="sMost__small">Бюджетных мест
+																		</div>
+																		<p>25</p>
 																	</div>
 																</div>
 															</div>
@@ -464,17 +633,18 @@
 			<section class="sForm sectio">
 				<div class="container">
 					<div class="form-wrap bg-dark">
-						<form>
+						<form method="post">
 							<div class="form-wrap__title">Не определились со специальностью и хотите посоветоваться?
 							</div>
+							<input type="hidden" name="DATA[TITLE]" value="Не определились со специальностью и хотите посоветоваться?"/>
 							<div class="row">
 								<div class="col-lg">
-									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше имя"/>
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="DATA[NAME]" type="text" placeholder="Ваше имя"/>
 									</div>
 									<!-- +e.input-wrap-->
 								</div>
 								<div class="col-lg">
-									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Номер телефона"/>
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="DATA[PHONE_MOBILE]" type="tel" placeholder="Номер телефона"/>
 									</div>
 									<!-- +e.input-wrap-->
 								</div>
@@ -809,11 +979,12 @@
 						</div>
 						<div class="col-md-auto">
 							<div class="form-wrap">
-								<form> 
-									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше имя"/> 
+								<form method="post"> 
+									<input type="hidden" name="DATA[TITLE]" value="Остались вопросы?"/>
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="DATA[NAME]" type="text" placeholder="Ваше имя"/>
 									</div>
 									<!-- +e.input-wrap-->
-									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Номер телефона"/> 
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="DATA[PHONE_MOBILE]" type="tel" placeholder="Номер телефона"/>
 									</div>
 									<!-- +e.input-wrap-->
 									<button class="form-wrap__btn" type="submit">Отправить заявку
@@ -829,7 +1000,7 @@
 				</div>
 			</section>
 			<!-- end sQw-->
-			<footer class="footer">
+			<footer class="footer" id="sContact">
 				<div class="container">
 					<div class="row"> 
 						<div class="footer__col col-lg-4 col-6"> 
@@ -885,7 +1056,7 @@
 							<div class="col-auto"><a href="#"> Политика конфиденциальности</a></div>
 							<div class="col-auto"><a href="#">Пользовательское соглашение</a></div>
 							<div class="col-auto">
-								<div class="soc"><a class="soc__item" href="#" target="_blank">
+								<div class="soc"><a class="soc__item" href="https://vk.com/colledgemic" target="_blank">
 									<svg class="icon icon-vk ">
 										<use xlink:href="img/svg/sprite.svg#vk"></use>
 									</svg></a><a class="soc__item" href="#" target="_blank">
@@ -905,7 +1076,7 @@
 		<!--  start modals-->
 		<div class="modal-win" id="modal-call" style="display: none">
 			<div class="form-wrap">
-				<form>
+				<form method="post">
 					<div class="text-center">
 						<div class="form-wrap__title form-data h3 ttu">Обратный звонок
 						</div>

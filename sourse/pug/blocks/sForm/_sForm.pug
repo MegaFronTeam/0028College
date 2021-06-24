@@ -3,13 +3,15 @@ mixin sForm(t='Узнай минимальный проходной балл в 
 	+b.SECTION.sForm.sectio
 		.container
 			+b.form-wrap&attributes(attributes)
-				form
+				form(method="post")
 					+e.title= t
+					input(type="hidden" name="DATA[TITLE]" value= t)
 					.row
+
 						.col-lg
-							+input("Ваше имя")
+							+input("Ваше имя",'text','','DATA[NAME]')
 						.col-lg
-							+input("Номер телефона",'tel')
+							+input("Номер телефона",'tel','','DATA[PHONE_MOBILE]')
 						.col-auto
 							+e.btn(type="submit") Отправить заявку
 					+policy

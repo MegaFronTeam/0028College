@@ -2,12 +2,12 @@
 mixin mnu()
 	-
 		var nav= { 
-			"О нас":"#",
-			"Специальности":"#",
-			"О колледже":"#",
-			"Где работать":"#" ,
-			"Контакты":"#",
-			"Обратная связь":"#",
+			"О нас":"/",
+			"Специальности":"#sMost",
+			"О колледже":"#sAbout",
+			"Где работать":"#sWorks" ,
+			"Контакты":"#sContact",
+			"Обратная связь":"#sQw",
 			}
 	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
 		each linkPatch, linkName in nav

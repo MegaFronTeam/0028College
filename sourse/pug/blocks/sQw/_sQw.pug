@@ -11,8 +11,9 @@ mixin sQw(data)
 						p Задай их нашим специалистам приемной комиссии и получи ответ на e-mail
 				.col-md-auto
 					+form-wrap  
-						+input("Ваше имя") 
-						+input("Номер телефона",'tel') 
+						input(type="hidden" name="DATA[TITLE]" value= 'Остались вопросы?')
+						+input("Ваше имя",'text','','DATA[NAME]')
+						+input("Номер телефона",'tel','','DATA[PHONE_MOBILE]')
 						+e.btn(type="submit") Отправить заявку
 						+policy
 	// end sQw
