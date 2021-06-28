@@ -3,7 +3,7 @@ mixin sForm(t='Узнай минимальный проходной балл в 
 	+b.SECTION.sForm.sectio
 		.container
 			+b.form-wrap&attributes(attributes)
-				form(method="post")
+				form(action="rest.php" method='POST' )
 					+e.title= t
 					input(type="hidden" name="DATA[TITLE]" value= t)
 					.row
@@ -11,8 +11,8 @@ mixin sForm(t='Узнай минимальный проходной балл в 
 						.col-lg
 							+input("Ваше имя",'text','','DATA[NAME]')
 						.col-lg
-							+input("Номер телефона",'tel','','DATA[PHONE_MOBILE]')
+							+input("Номер телефона",'tel','','DATA[PHONE_MOBILE]')(required)
 						.col-auto
-							+e.btn(type="submit") Отправить заявку
+							+e.btn(type="submit" name="submit") Отправить заявку
 					+policy
 	// end sForm

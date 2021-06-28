@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>title</title>
+		<title>Государственное бюджетное профессиональное образовательное учреждение города Москвы &quot;Московский индустриальный колледж&quot;</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=570,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no">
@@ -127,7 +127,7 @@
 			<section class="sForm sectio">
 				<div class="container">
 					<div class="form-wrap bg-light">
-						<form method="post">
+						<form action="rest.php" method="POST">
 							<div class="form-wrap__title">Узнай минимальный проходной балл в 2021 году
 							</div>
 							<input type="hidden" name="DATA[TITLE]" value="Узнай минимальный проходной балл в 2021 году"/>
@@ -138,12 +138,12 @@
 									<!-- +e.input-wrap-->
 								</div>
 								<div class="col-lg">
-									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="DATA[PHONE_MOBILE]" type="tel" placeholder="Номер телефона"/>
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="DATA[PHONE_MOBILE]" type="tel" placeholder="Номер телефона" required="required"/>
 									</div>
 									<!-- +e.input-wrap-->
 								</div>
 								<div class="col-auto">
-									<button class="form-wrap__btn" type="submit">Отправить заявку
+									<button class="form-wrap__btn" type="submit" name="submit">Отправить заявку
 									</button>
 								</div>
 							</div>
@@ -633,7 +633,7 @@
 			<section class="sForm sectio">
 				<div class="container">
 					<div class="form-wrap bg-dark">
-						<form method="post">
+						<form action="rest.php" method="POST">
 							<div class="form-wrap__title">Не определились со специальностью и хотите посоветоваться?
 							</div>
 							<input type="hidden" name="DATA[TITLE]" value="Не определились со специальностью и хотите посоветоваться?"/>
@@ -644,12 +644,12 @@
 									<!-- +e.input-wrap-->
 								</div>
 								<div class="col-lg">
-									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="DATA[PHONE_MOBILE]" type="tel" placeholder="Номер телефона"/>
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="DATA[PHONE_MOBILE]" type="tel" placeholder="Номер телефона" required="required"/>
 									</div>
 									<!-- +e.input-wrap-->
 								</div>
 								<div class="col-auto">
-									<button class="form-wrap__btn" type="submit">Отправить заявку
+									<button class="form-wrap__btn" type="submit" name="submit">Отправить заявку
 									</button>
 								</div>
 							</div>

@@ -136,33 +136,45 @@ const JSCCommon = {
 	},
 
 	// /inputMask
-	sendForm() {
+	sendForm() {// $('form').on('submit', function (el) {//event submit form
+		// 	el.preventDefault();//the default action of the event will not be triggered
+		// 	var formData = $(this).serialize();
+		// 	$.ajax({
+		// 		'method': 'POST',
+		// 		'dataType': 'json',
+		// 		'url': 'index1.php',
+		// 		'data': formData,
+		// 		success: function (data) {//success callback
+		// 			alert(data.message);
+		// 		}
+		// 	});
 		// form
-		$(document).on('submit', "form", function (e) {
-			e.preventDefault();
-			const th = $(this);
-			var data = th.serialize();
-			$.ajax({
-				url: 'rest.php',
-				type: 'POST',
-				data: data
-			}).done(function (data) {
-				console.log(data);
-				$.fancybox.close();
-				$.fancybox.open({
-					src: '#modal-thanks',
-					type: 'inline'
-				}); // window.location.replace("/thanks.html");
-
-				setTimeout(function () {
-					// Done Functions
-					th.trigger("reset"); // $.magnificPopup.close();
-					// ym(53383120, 'reachGoal', 'zakaz');
-					// yaCounter55828534.reachGoal('zakaz');
-				}, 4000);
-			}).fail(function () {});
-			console.log('fail');
-		});
+		// $(document).on('submit', "form", function (e) {
+		// 	e.preventDefault();
+		// 	const th = $(this);
+		// 	var data = th.serialize(); 
+		// 	$.ajax({
+		// 		url: 'action1.php',
+		// 		type: 'GET',
+		// 		data: data,
+		// 	}).done(function (data) {
+		// 		console.log(data);
+		// 		$.fancybox.close();
+		// 		$.fancybox.open({
+		// 			src: '#modal-thanks',
+		// 			type: 'inline'
+		// 		});
+		// 		// window.location.replace("/thanks.html");
+		// 		setTimeout(function () {
+		// 			// Done Functions
+		// 			th.trigger("reset");
+		// 			// $.magnificPopup.close();
+		// 			// ym(53383120, 'reachGoal', 'zakaz');
+		// 			// yaCounter55828534.reachGoal('zakaz');
+		// 		}, 4000);
+		// 	}).fail(function () { });
+		// 		console.log('fail');
+		// });
 	},
 
 	heightwindow() {

@@ -1,6 +1,6 @@
 <?php
 
-include $_SERVER['DOCUMENT_ROOT'].'/bitrix24.php';
+require_once (__DIR__.'/bitrix24.php');
 
 // POST processing
 if ($_SERVER['REQUEST_METHOD'] == 'POST')

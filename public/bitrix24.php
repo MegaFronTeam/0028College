@@ -8,7 +8,7 @@ class Bitrix24
 	const CRM_PORT = 443;
 
 	const CRM_LOGIN = 'sadavan@yandex.ru';
-	const CRM_PASSWORD = 'ralmonyoksokkwrp';
+	const CRM_PASSWORD = 'hs7nawue1';
 
 
 	public static function sendQuery($postUrl, $arPost = array())
@@ -19,13 +19,13 @@ class Bitrix24
 
 
 		$strPost = http_build_query($arPost);
-		$postUrl = 'https://'.self::CRM_HOST.$postUrl;
+		$postUrl = 'https://'.self::CRM_HOST.$postUrl."?".$strPost;
 
 		$curl = curl_init();
 		curl_setopt($curl, CURLOPT_URL, $postUrl);
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER,true);
-		curl_setopt($curl, CURLOPT_POST, true);
-		curl_setopt($curl, CURLOPT_POSTFIELDS, $strPost);
+		// curl_setopt($curl, CURLOPT_POST, true);
+		// curl_setopt($curl, CURLOPT_POSTFIELDS, $strPost);
 		$out = curl_exec($curl);
 		curl_close($curl);
 
