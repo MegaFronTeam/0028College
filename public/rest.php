@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
 	// get lead data from the form
 	$postData = array(
-		'TITLE' => $leadData['TITLE'],
+		'TITLE' => $leadData['TITLE'] .',  Имя:'.  $leadData['NAME'] .', Телефон:'.  $leadData['PHONE_MOBILE'],
 		'NAME' => $leadData['NAME'],
 		'PHONE_MOBILE' => $leadData['PHONE_MOBILE']
 	);

@@ -4,7 +4,7 @@
 class Bitrix24
 {
 
-	const CRM_HOST = 'mic.bitrix24.com';
+	const CRM_HOST = 'mic.bitrix24.ru';
 	const CRM_PORT = 443;
 
 	const CRM_LOGIN = 'sadavan@yandex.ru';
@@ -19,13 +19,13 @@ class Bitrix24
 
 
 		$strPost = http_build_query($arPost);
-		$postUrl = 'https://'.self::CRM_HOST.$postUrl."?".$strPost;
+		$postUrl = 'https://'.self::CRM_HOST.$postUrl;
 
 		$curl = curl_init();
 		curl_setopt($curl, CURLOPT_URL, $postUrl);
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER,true);
-		// curl_setopt($curl, CURLOPT_POST, true);
-		// curl_setopt($curl, CURLOPT_POSTFIELDS, $strPost);
+		curl_setopt($curl, CURLOPT_POST, true);
+		curl_setopt($curl, CURLOPT_POSTFIELDS, $strPost);
 		$out = curl_exec($curl);
 		curl_close($curl);
 
