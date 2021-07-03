@@ -1,0 +1,43 @@
+mixin sNewsAlt(data)
+	// start sNewsAlt
+	+b.SECTION.sNewsAlt.section#sNewsAlt&attributes(attributes)
+		.container
+			+b.title-row.row
+				.col-auto
+					h2 Новости и события
+				.col-auto
+					+e.all(href='#') все
+			+e.row.row
+				+sNewsAltItem({
+					addClasses: 'white-item',
+					title: 'Автошкола',
+					imgNum: 1,
+					descr: `Мы работаем с вами до получения прав. Первое место среди автошкол западного округа Москвы`,
+					footerItems: [
+						'Категории: B, C',
+					],
+				})
+				+sNewsAltItem({
+					addClasses: 'black-item',
+					title: 'Уроки технологии',
+					imgNum: 2,
+					descr: `Уроки технологии в рамках <br> проекта «Уроки технологии <br> на базе колледжей»`,
+					footerItems: [
+						'Робототехника',
+						'AR\\VR',
+						'3D моделирование',
+					],
+				})
+	// end sNewsAlt
+
+mixin sNewsAltItem(data)
+	.col-lg-6
+		+e.item(class=`${data.addClasses || ''}`)
+			+e.img
+				img(loading="lazy" src=`img/@2x/sNewsAlt-${data.imgNum}.png` alt="")
+			+e.title(href="#")=data.title
+			+e.descr!=data.descr
+			+e.footer-row.row
+				-for(let item of data.footerItems)
+					.col-auto
+						+e.tag=item

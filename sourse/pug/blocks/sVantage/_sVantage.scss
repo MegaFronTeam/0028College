@@ -1,0 +1,90 @@
+// start .sVantage
+.sVantage {
+	--sPT: #{rem(16)};
+	--sPB: #{rem(25)};
+
+	&__row{
+		--bs-gutter-y: #{rem(20)};
+		--bs-gutter-x: #{rem(20)};
+		@include media-breakpoint-up(xl){
+			--bs-gutter-y: #{rem(32)};
+			--bs-gutter-x: #{rem(29)};
+		}
+	}
+	&__item{
+		@include media-breakpoint-up(md){
+			min-height: rem(144);
+		}
+		width: 100%;
+
+		display: flex;
+		align-items: center;
+		background: $gray-110;
+		border-radius: rem(10);
+
+		padding: rem(20) rem(30);
+		@include media-breakpoint-up(md){
+			padding: rem(20) rem(20);
+		}
+		@include media-breakpoint-up(xxl){
+			padding: rem(20) rem(40);
+		}
+
+		position: relative;
+		z-index: 1;
+		&:after{
+			content: '';
+			position: absolute;
+			background-color: $primary;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+			width: 3px;
+			height: rem(81);
+			border-radius: rem(10);
+		}
+	}
+	&__i-row{
+		flex-wrap: nowrap;
+
+		--bs-gutter-x: #{rem(24)};
+		@include media-breakpoint-up(md){
+			--bs-gutter-x: #{rem(16)};
+		}
+		@include media-breakpoint-up(xl){
+			--bs-gutter-x: #{rem(24)};
+		}
+		@include media-breakpoint-up(xxl){
+			--bs-gutter-x: #{rem(37)};
+		}
+	}
+	&__img{
+		width: rem(64);
+		height: rem(64);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&__i-txt{
+		font-weight: 600;
+
+		font-size: rem(16);
+		@include media-breakpoint-up(xl){
+			font-size: rem(20);
+		}
+		line-height: 1.5;
+		text-transform: uppercase;
+	}
+
+	//
+	&__{}
+	&__{}
+} // end.sVantage

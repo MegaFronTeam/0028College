@@ -1,0 +1,43 @@
+mixin sVantage(data)
+	// start sVantage
+	+b.sVantage.section#sVantage&attributes(attributes)
+		.container
+			+e.row.row
+				+sVantageItem(1)
+					| Приемная
+					br
+					| комиссия
+				+sVantageItem(2)
+					| Расписание
+					br
+					| занятий
+				+sVantageItem(3)
+					| Наши
+					br
+					| Преподаватели
+				+sVantageItem(4)
+					| Центр
+					br
+					| трудоустройства
+					br
+					| студентов
+				+sVantageItem(5)
+					| дополнительное
+					br
+					| образование
+				+sVantageItem(6)
+					| Питание
+					br
+					| на территории
+	// end sVantage
+
+mixin sVantageItem(imgNum)
+	.col-md-6.col-lg-4
+		+e.item
+			+e.i-row.row.align-items-center
+				.col-auto
+					+e.img
+						img(loading="lazy" src=`img/svg/sVantage-${imgNum}.svg` alt="")
+				.col
+					+e.i-txt
+						block

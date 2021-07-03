@@ -1,0 +1,51 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAdvanteges/_sAdvanteges.pug
+include ../blocks/sPlaces/_sPlaces.pug
+include ../blocks/sSpecials/_sSpecials.pug
+include ../blocks/sMost/_sMost.pug
+include ../blocks/sBanner/_sBanner.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sPrises/_sPrises.pug
+include ../blocks/sWorks/_sWorks.pug
+include ../blocks/sQw/_sQw.pug
+include ../blocks/sBaner/_sBaner.pug
+include ../blocks/sVantage/_sVantage.pug
+include ../blocks/sClosest/_sClosest.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sNewsAlt/_sNewsAlt.pug
+
+block variables
+	- let  mainPage='container-bigger color-coal'
+	- let  bg='026.png'
+
+block title
+	- let  title= '026'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+top-nav()
+	.page-head
+		.container
+			+breadcrumb('МИК', 'Центр промышленных технологий')
+	+sBaner()
+	+sVantage()
+	+sClosest()
+	+sNews()
+	+sNewsAlt()
+	//+headerBlock()
+	//+sForm.bg-light
+	//+sAdvanteges
+	//+sPlaces
+	//+sSpecials
+	//+sMost
+	//+sForm('Не определились со специальностью и хотите посоветоваться?').bg-dark
+	//+sBanner
+	//+sAbout
+	//+sPrises
+	//+sWorks
+	//+sQw
+	+footer()

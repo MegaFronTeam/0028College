@@ -227,6 +227,40 @@ function eventHandler() {
 		// slideToClickedSlide: true, 
 		observer: true
 	}); // modal window
+
+	let defaultSl = {
+		spaceBetween: 0,
+		lazy: {
+			loadPrevNext: true
+		},
+		watchOverflow: true,
+		spaceBetween: 0,
+		loop: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev'
+		},
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true // renderBullet: function (index, className) {
+			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+			// }
+
+		}
+	}; //luckyoneJs
+
+	let sClosestPrev = document.querySelector('.sClosest--js .swiper-prev');
+	let sClosestNext = document.querySelector('.sClosest--js .swiper-next');
+	let sClosestSlider = new Swiper('.sClosest-slider-js', {
+		slidesPerView: 'auto',
+		loop: true,
+		spaceBetween: 35,
+		navigation: {
+			nextEl: sClosestNext,
+			prevEl: sClosestPrev
+		}
+	}); //endluckyoneJs
 }
 
 ;
