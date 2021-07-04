@@ -19,6 +19,9 @@ include ../blocks/sNews/_sNews.pug
 include ../blocks/sNewsAlt/_sNewsAlt.pug
 include ../blocks/sProfs/_sProfs.pug
 include ../blocks/sGalery/_sGalery.pug
+include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sUnivers/_sUnivers.pug
+include ../blocks/sFaq/_sFaq.pug
 
 block variables
 	- let  mainPage='container-bigger color-coal'
@@ -40,6 +43,9 @@ block pagecontent
 	+sNewsAlt()
 	+sProfs()
 	+sGalery()
+	+sPartners()
+	+sUnivers()
+	+sFaq()
 	//+headerBlock()
 	//+sForm.bg-light
 	//+sAdvanteges

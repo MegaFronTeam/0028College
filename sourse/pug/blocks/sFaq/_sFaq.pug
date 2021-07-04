@@ -1,0 +1,19 @@
+mixin sFaq(data)
+	// start sFaq
+	+b.SECTION.sFaq.section#sFaq&attributes(attributes)
+		.container
+			+b.title-row.row
+				.col-auto
+					h2 Ответы на самые частые вопросы
+			+e.items.sFaq-dd-group-js
+
+	// end sFaq
+
+mixin sFaqItem(headTxt)
+	+e.item
+		+e.head.dd-head-js
+			+e.h-txt=headTxt
+			+e.h-plus
+		+e.content.dd-content-js
+			p Теория совмещена с практикой. Проходите стажировки в компаниях-партнерах с последующим трудоустройством!Теория совмещена с практикой. Проходите стажировки в компаниях-партнерах с последующим трудоустройством!Теория совмещена с практикой. Проходите стажировки в компаниях-партнерах с последующим трудоустройством!
+

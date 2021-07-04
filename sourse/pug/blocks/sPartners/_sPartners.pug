@@ -1,0 +1,27 @@
+mixin sPartners(data)
+	// start sPartners
+	+b.SECTION.sPartners.section#sPartners&attributes(attributes)
+		.container
+			+b.title-row.row
+				.col-auto
+					h2 Партнеры
+			+e.row.row
+				+sPartnersItem(1,'KEMPPI')
+				+sPartnersItem(2,'ГБУ Автомобильные дороги')
+				+sPartnersItem(3,'ГБУ «Моя карьера»')
+				+sPartnersItem(4,'Почта России')
+				+sPartnersItem(5,'UTG Aviation Services')
+				+sPartnersItem(6,'ФССП России')
+				+sPartnersItem(7,'ГК «ПИК»')
+				+sPartnersItem(8,'МЧС России')
+				+sPartnersItem(9,'Сбербанк России')
+				+sPartnersItem(10,'Федеральная налоговая служба')
+				+sPartnersItem(11,'Первый автокомбинат')
+	// end sPartners
+
+mixin sPartnersItem(imgNum, txt)
+	.col-6.col-md-4.col-lg-3
+		+e.img
+			img(loading="lazy" src=`img/@2x/sPartners-${imgNum}.png` alt="")
+		+e.txt=txt
+

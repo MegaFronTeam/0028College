@@ -284,7 +284,53 @@ function eventHandler() {
 			nextEl: sGaleryNext,
 			prevEl: sGaleryPrev
 		}
-	}); //endluckyoneJs
+	}); //.sUnivers-slider-js
+
+	let sUniversSlider = new Swiper('.sUnivers-slider-js', {
+		slidesPerView: 'auto',
+		loop: true,
+		breakpoints: {
+			0: {
+				spaceBetween: 40
+			},
+			768: {
+				spaceBetween: 70
+			},
+			1200: {
+				spaceBetween: 114
+			}
+		}
+	}); //
+
+	function makeDDGroup(ArrSelectors) {
+		for (let parentSelect of ArrSelectors) {
+			let parent = document.querySelector(parentSelect);
+
+			if (parent) {
+				// childHeads, kind of funny))
+				let ChildHeads = parent.querySelectorAll('.dd-head-js');
+				$(ChildHeads).click(function () {
+					let clickedHead = this;
+					$(ChildHeads).each(function () {
+						if (this === clickedHead) {
+							//parent element gain toggle class, style head change via parent
+							$(this.parentElement).toggleClass('active');
+							$(this.parentElement).find('.dd-content-js').slideToggle(function () {
+								$(this).toggleClass('active');
+							});
+						} else {
+							$(this.parentElement).removeClass('active');
+							$(this.parentElement).find('.dd-content-js').slideUp(function () {
+								$(this).removeClass('active');
+							});
+						}
+					});
+				});
+			}
+		}
+	}
+
+	makeDDGroup(['.sFaq-dd-group-js']); //endluckyoneJs
 }
 
 ;
