@@ -257,6 +257,34 @@ function eventHandler() {
 			prevEl: sClosestPrev,
 		},
 	});
+	//.sProfs-slider-js
+	let sProfsPrev = document.querySelector('.sProfs--js .swiper-prev');
+	let sProfsNext = document.querySelector('.sProfs--js .swiper-next');
+	let sProfsSlider = new Swiper('.sProfs-slider-js', {
+		slidesPerView: 'auto',
+		loop: true,
+		spaceBetween: 35,
+
+		navigation: {
+			nextEl: sProfsNext,
+			prevEl: sProfsPrev,
+		},
+	});
+	//.sGalery-slider-js
+	let sGaleryPrev = document.querySelector('.sGalery--js .swiper-prev');
+	let sGaleryNext = document.querySelector('.sGalery--js .swiper-next');
+	let sGalerySlider = new Swiper('.sGalery-slider-js', {
+		slidesPerView: 'auto',
+		loop: true,
+		spaceBetween: 35,
+
+		navigation: {
+			nextEl: sGaleryNext,
+			prevEl: sGaleryPrev,
+		},
+	});
+
+
 	//endluckyoneJs
 
 };

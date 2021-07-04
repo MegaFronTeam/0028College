@@ -9,21 +9,6 @@
 
 		padding-bottom: rem(40);
 	}
-	&__arrow-cont{
-		display: flex;
-		align-items: center;
-		& > *{
-			margin-right: rem(50);
-			&:last-child{
-				margin-right: 0;
-			}
-		}
-
-		@include media-breakpoint-up(xxl){
-			position: relative;
-			top: 4px;
-		}
-	}
 
 	//
 	&__slider-wrap{
@@ -168,6 +153,22 @@
 		transform: scale(1.2);
 	}
 }
-
 .swiper-prev{}
 .swiper-next{}
+
+
+.arrow-cont{
+	display: flex;
+	align-items: center;
+	& > *{
+		margin-right: rem(50);
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+
+	@include media-breakpoint-up(xxl){
+		position: relative;
+		top: 4px;
+	}
+}
