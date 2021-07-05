@@ -139,21 +139,45 @@ $h: em(2);
 		}
 	}
 
-	ul {
-		position: relative;
-	}
+	//ul {
+	//	position: relative;
+	//}
+	//
+	//li {
+	//	display: block;
+	//	margin: 0;
+	//	border-top: 1px solid rgba(255, 255, 255, .13);
+	//
+	//	a {
+	//		// font-size: 16px;
+	//		padding: 10px;
+	//		display: block;
+	//	}
+	//}
 
-	li {
+	background-color: $white;
+	padding: rem(0) rem(10);
+	ul{
+		text-transform: uppercase;
+
 		display: block;
-		margin: 0;
-		border-top: 1px solid rgba(255, 255, 255, .13);
-
-		a {
-			// font-size: 16px;
-
-			padding: 10px;
+		& > li{
 			display: block;
+			cursor: pointer;
 
+			& > ul{
+				position: static;
+				display: block;
+				&.active{
+					display: block;
+				}
+
+				border: none;
+				padding: 0 0 0 rem(10);
+				margin: 0;
+				box-shadow: none;
+			}
 		}
 	}
+
 }

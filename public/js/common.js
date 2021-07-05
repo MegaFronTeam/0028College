@@ -330,7 +330,13 @@ function eventHandler() {
 		}
 	}
 
-	makeDDGroup(['.sFaq-dd-group-js']); //endluckyoneJs
+	makeDDGroup(['.sFaq-dd-group-js']); //
+
+	$('.menu-mobile--js .menu-item-has-children').click(function () {
+		$(this).find('ul').slideToggle(function () {
+			$(this).toggleClass('active');
+		});
+	}); //endluckyoneJs
 }
 
 ;

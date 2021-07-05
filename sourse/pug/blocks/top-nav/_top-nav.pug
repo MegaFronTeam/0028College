@@ -57,3 +57,11 @@ mixin top-nav2()
 				.col-auto.d-lg-none
 					+b.toggle-menu-mobile--js
 						span
+
+mixin mob-mnu2()
+	+b.menu-mobile--js.d-lg-none
+		+b.toggle-menu-mobile--js
+			span
+		+e.inner
+			+mnu2()
+			.text-right
