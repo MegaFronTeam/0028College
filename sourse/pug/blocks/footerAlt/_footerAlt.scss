@@ -1,0 +1,32 @@
+// start .footerAlt
+.footerAlt {
+	&__title{
+		font-weight: 600;
+		font-size: rem(24);
+		line-height: 1.5;
+		color: $black;
+		margin-bottom: rem(37);
+	}
+	&__key{
+		font-weight: bold;
+		font-size: rem(14);
+		line-height: 1.5;
+		color: $primary;
+		margin-bottom: 21px;
+	}
+	&__val{
+		line-height: 1.5;
+		margin-bottom: 20px;
+
+		a{
+			color: $body-color!important;
+		}
+	}
+	&__no-title-col{
+		@include media-breakpoint-up(lg){
+			padding-top: calc(#{rem(24*1.5 + 37)});
+		}
+	}
+	&__{}
+	&__{}
+} // end.footerAlt

@@ -1,0 +1,26 @@
+mixin sFormAlt(data)
+	// start sFormAlt
+	+b.SECTION.sFormAlt.section#sFormAlt&attributes(attributes)
+		.container
+			+e.box
+				+e.box-bg
+					img(loading="lazy" src="img/svg/sFormAlt-bg.svg" alt="")
+				+e.row.row.align-items-center.gy-4.gy-sm-5
+					.col-lg
+						+e.title.text-center.text-lg-start
+							h2 Остались вопросы?
+							p Задай их нашим специалистам приемной комиссии и получи ответ на e-mail
+					+e.inputs-col.col-lg-auto
+						+e.inputs
+							+input('Ваше имя', 'text')
+							+input('Номер телефона', 'tel')
+						+e.btn(type='submit') Отправить заявку
+						+e.policy.text-center.text-lg-start
+							| Отправляя форму я соглашаюсь с
+							|
+							a(href='#') политикой конфиденциальности
+							|
+							| и условиями
+							|
+							a(href='#') обработки персональных данных
+	// end sFormAlt

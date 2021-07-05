@@ -1,22 +1,13 @@
 mixin mob-mnu()
-	-
-		//- let path = require('path');
-		//- let fs = require('fs');
-		//- var requestURL = 'top-nav.json';
-		//- var request = new XMLHttpRequest();
-		//- request.open('GET', requestURL);
-		//- request.responseType = 'json';
-		//- let dataJson = JSON.parse(json);
-	//- h1= dataJson['lala'] 
 	+b.menu-mobile--js.d-lg-none
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
-		
 			+mnu()
 			.text-right
 	//  мобильное меню
-mixin top-nav() 
+
+mixin top-nav()
 	// start top-nav
 	+b.top-nav
 		.container
@@ -41,5 +32,28 @@ mixin top-nav()
 				.col-auto.d-lg-none
 					+b.toggle-menu-mobile--js
 						span
-					
 	// end top-nav
+
+mixin top-nav2()
+	// start top-nav
+	+b.top-nav--alt
+		.container
+			.row.gy-3.gy-lg-0
+				+e.logo.col-auto
+					a(href="/")
+						img(src="img/svg/logo.svg", alt="")
+				.col-12.d-none.d-lg-block
+					+mnu2()
+				.col-md
+					.row
+						.col-auto
+							+e.tel(href="tel:88006559988")
+								+icon('tel')
+								| 8 800 655 99 88
+						.col-auto
+							+e.text Многоканальный c 9:00 до 19:00
+				.col-md-auto.col
+					+e.btn(href="#showquiz") Подобрать программу
+				.col-auto.d-lg-none
+					+b.toggle-menu-mobile--js
+						span

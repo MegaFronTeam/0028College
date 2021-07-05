@@ -1,7 +1,128 @@
 // start .sFaq
 .sFaq {
-	&__{}
-	&__{}
+	background: $gray-120;
+
+	--sPT: #{rem(56px)};
+	--sTPB: #{rem(40)};
+	--sPB: #{rem(60)};
+	@include media-breakpoint-up(xl){
+		--sPB: #{rem(80)};
+	}
+
+
+	.title-row{
+		padding-bottom: rem(37);
+	}
+	&__items{
+
+	}
+	&__item{
+		@include mt();
+
+		margin-bottom: rem(24);
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		box-shadow: 0px rem(5) rem(20) 0 rgba(0, 0, 0, 0.13);
+		border-radius: rem(20);
+
+		--item-px: #{rem(16)};
+		--item-py: #{rem(25)};
+		@include media-breakpoint-up(sm){
+			--item-px: #{rem(30)};
+			--item-py: #{rem(30)};
+		}
+		@include media-breakpoint-up(xxl){
+			--item-px: #{rem(47)};
+			--item-py: #{rem(37)};
+		}
+
+
+		background: $white;
+		--head-fs: #{rem(20)};
+		border: 1px solid transparent;
+		&.active{
+			background: transparent;
+			position: relative;
+			z-index: 2;
+			border: 1px solid $gray-550;
+
+			@include media-breakpoint-up(xxl){
+				--item-py: #{rem(41)};
+				--head-fs: #{rem(24)};
+				--head-fw: 600;
+				--head-tf: uppercase;
+				--plus-bef-o: 0;
+			}
+		}
+
+		padding-bottom: var(--item-py);
+	}
+	&__head{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		cursor: pointer;
+
+		padding: var(--item-py) var(--item-px) 0 var(--item-px) ;
+	}
+	&__h-txt{
+		@include mt();
+		font-weight: var(--head-fw, 700);
+		font-size: var(--head-fs, #{rem(20)});
+		text-transform: var(--head-tf, none);
+		line-height: 150%;
+		color: $black;
+
+	}
+	&__h-plus{
+		margin-left: rem(20);
+		width: rem(36);
+		height: rem(36);
+
+		position: relative;
+		z-index: 1;
+
+		&:after,
+		&:before{
+			@include mt();
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			background-color: $primary;
+		}
+
+		&:before{
+			opacity: var(--plus-bef-o, 1);
+			width: 3px;
+			height: 100%;
+		}
+		&:after{
+			width: 100%;
+			height: 3px;
+		}
+	}
+	&__content{
+		padding: rem(23) var(--item-px) 0;
+
+		display: none;
+		&.active{
+			display: block;
+		}
+
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+
+		p{
+			line-height: 1.8;
+			color: $black;
+		}
+	}
 	&__{}
 	&__{}
 } // end.sFaq

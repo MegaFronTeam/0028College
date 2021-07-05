@@ -22,6 +22,8 @@ include ../blocks/sGalery/_sGalery.pug
 include ../blocks/sPartners/_sPartners.pug
 include ../blocks/sUnivers/_sUnivers.pug
 include ../blocks/sFaq/_sFaq.pug
+include ../blocks/sFormAlt/_sFormAlt.pug
+include ../blocks/footerAlt/_footerAlt.pug
 
 block variables
 	- let  mainPage='container-bigger color-coal'
@@ -32,7 +34,7 @@ block title
 	title= title
 block pagecontent
 	+mob-mnu()
-	+top-nav()
+	+top-nav2()
 	.page-head
 		.container
 			+breadcrumb('МИК', 'Центр промышленных технологий')
@@ -46,16 +48,6 @@ block pagecontent
 	+sPartners()
 	+sUnivers()
 	+sFaq()
-	//+headerBlock()
-	//+sForm.bg-light
-	//+sAdvanteges
-	//+sPlaces
-	//+sSpecials
-	//+sMost
-	//+sForm('Не определились со специальностью и хотите посоветоваться?').bg-dark
-	//+sBanner
-	//+sAbout
-	//+sPrises
-	//+sWorks
-	//+sQw
+	+sFormAlt()
+	//-+footerAlt()
 	+footer()

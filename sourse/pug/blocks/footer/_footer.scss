@@ -1,4 +1,8 @@
 .footer {
+	&.footerAlt{
+		padding-top: rem(50);
+	}
+
 	padding-top: rem(90);
 	margin-top: auto;
 	position: relative;
