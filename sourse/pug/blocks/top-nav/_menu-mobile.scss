@@ -166,10 +166,12 @@ $h: em(2);
 			cursor: pointer;
 
 			& > ul{
+				transition: all 0s ease-in-out;
 				position: static;
-				display: block;
+
+				display: none!important;
 				&.active{
-					display: block;
+					display: block!important;
 				}
 
 				border: none;

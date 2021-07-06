@@ -1,0 +1,28 @@
+mixin sContinue(data)
+	// start sContinue
+	+b.SECTION.sContinue.section#sContinue&attributes(attributes)
+		.container
+			+b.section-title--smaller
+				h2 Где можно продолжить обучение
+			+e.row.row.align-items-center.gy-5
+				+sContinueItem(1)
+				+sContinueItem(1)
+				+sContinueItem(3)
+			+e.bot-row.row.gy-4
+				.col-lg-6
+					+e.title Необходимые документы
+					+e.UL.dot-list
+						li оригинал или копию документов, удостоверяющих личность и гражданство поступающего;
+						li оригинал или копию документа об образовании;
+						li справка 086/у
+				.col-lg-6
+					+e.title Сроки подачи документов
+					+e.UL.dot-list
+						li Прием документов начинается 20 июня
+						li Прием завершается 15 августа
+	// end sContinue
+
+mixin sContinueItem(imgNum)
+	.col-6.col-md-4
+		+e.img
+			img(loading="lazy" src=`img/@2x/sContinue-${imgNum}.png` alt="")

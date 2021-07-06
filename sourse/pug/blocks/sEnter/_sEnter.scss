@@ -1,14 +1,78 @@
 // start .sEnter
 .sEnter {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
+	--sPT: #{rem(41)};
+	--sPB: #{rem(23)};
+	--sTPB: #{rem(34)};
 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+	.section-title{
+		h2{
+			font-weight: 500;
+			font-size: rem(34);
+			line-height: 1.5;
+			color: $black;
+		}
+	}
+	&__row{
+		--bs-gutter-x: #{rem(32)};
+		--bs-gutter-y: #{rem(32)};
+
+		padding-bottom: rem(40);
+	}
+	&__item{
+		background: $gray-110;
+		border-radius: rem(10);
+
+		display: flex;
+		align-items: center;
+		min-height: 96px;
+
+		padding: 18px 24px 14px 24px;
+	}
+	&__i-row{
+		width: calc(100% + #{rem(24)});
+		--bs-gutter-x: #{rem(24)};
+	}
+	&__title{
+		line-height: 1.4;
+		margin-bottom: rem(10);
+		@include media-breakpoint-up(xxl){
+			line-height: 1.8;
+			margin-bottom: rem(5);
+		}
+		color: $black;
+
+	}
+	&__txt{
+		color: $black;
+
+		line-height: 1.4;
+		@include media-breakpoint-up(xxl){
+			line-height: 1.8;
+		}
+	}
+	&__red{
+		padding: rem(8);
+		background: $primary;
+		border-radius: rem(4);
+
+		font-weight: bold;
+		font-size: rem(16);
+		line-height: 1.8;
+		color: $white;
+	}
+	//
+	&__descr{
+		font-size: rem(20);
+		line-height: 1.5;
+		color: $black;
+
+		p{
+			margin-bottom: rem(25);
+		}
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+	}
+	&__{}
+	&__{}
 } // end.sEnter

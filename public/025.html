@@ -25,13 +25,13 @@
 		</script>
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 		<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body class="container-bigger color-coal" data-bg="025.png">
 		<div class="main-wrapper">
-			<div class="menu-mobile menu-mobile--js d-lg-none">
+			<div class="menu-mobile menu-mobile--js d-xl-none">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 				</div>
 				<div class="menu-mobile__inner">
@@ -63,7 +63,13 @@
 						<li class="menu-item"><a href="#">ПРЕСС-СЛУЖБА</a></li>
 						<li class="menu-item"><a href="#">Контакты</a></li>
 					</ul>
-					<div class="text-right"></div>
+					<div class="search">
+						<div class="search__input-wrap form-group"><input class="search__input form-control" name="text" type="text" placeholder="Найти информацию"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<button class="search__search-btn" type="button"><img loading="lazy" src="img/svg/zoom.svg" alt=""/>
+						</button>
+					</div>
 				</div>
 			</div>
 			<!-- start top-nav-->
@@ -72,7 +78,7 @@
 					<div class="row gy-3 gy-lg-0">
 						<div class="top-nav__logo col-auto"><a href="/"><img src="img/svg/logo.svg" alt=""/></a>
 						</div>
-						<div class="col-12 d-none d-lg-block">
+						<div class="col-12 d-none d-xl-block">
 							<ul class="menu">
 								<li class="menu-item"><a href="#">О нас</a></li>
 								<li class="menu-item"><a href="#">Поступающим</a></li>
@@ -104,20 +110,27 @@
 						</div>
 						<div class="col-md">
 							<div class="row">
+								<div class="col-lg d-none d-lg-block">
+									<div class="search">
+										<div class="search__input-wrap form-group"><input class="search__input form-control" name="text" type="text" placeholder="Найти информацию"/>
+										</div>
+										<!-- +e.input-wrap-->
+										<button class="search__search-btn" type="button"><img loading="lazy" src="img/svg/zoom.svg" alt=""/>
+										</button>
+									</div>
+								</div>
 								<div class="col-auto"><a class="top-nav__tel" href="tel:88006559988">
 									<svg class="icon icon-tel ">
 										<use xlink:href="img/svg/sprite.svg#tel"></use>
 									</svg>8 800 655 99 88</a>
-								</div>
-								<div class="col-auto">
-									<div class="top-nav__text">Многоканальный c 9:00 до 19:00
+									<div class="top-nav__sm-txt">Многоканальный c 9:00 до 19:00
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-auto col"><a class="top-nav__btn" href="#showquiz">Подобрать программу</a>
 						</div>
-						<div class="col-auto d-lg-none">
+						<div class="col-auto d-xl-none">
 							<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 							</div>
 						</div>
@@ -162,23 +175,391 @@
 			<!-- start sEnter-->
 			<section class="sEnter section" id="sEnter">
 				<div class="container">
-					<div class="section-title text-center">
-						<h2>sEnter</h2>
+					<div class="section-title">
+						<h2>Информация о приеме</h2>
 					</div>
-					<div class="row"></div>
+					<div class="sEnter__row row">
+						<div class="col-lg-6">
+							<div class="sEnter__item">
+								<div class="sEnter__i-row row align-items-center gy-3">
+									<div class="col">
+										<div class="sEnter__title"><b>На базе основного общего образования</b>
+											(9 класс)
+										</div>
+										<div class="sEnter__txt">Продолжительность обучения:
+										</div>
+									</div>
+									<div class="col-auto">
+										<div class="sEnter__red">2 г. 10 меc.
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="sEnter__item">
+								<div class="sEnter__i-row row align-items-center gy-3">
+									<div class="col">
+										<div class="sEnter__title"><b>На базе основного общего образования</b>
+											(9 класс)
+										</div>
+										<div class="sEnter__txt">Продолжительность обучения:
+										</div>
+									</div>
+									<div class="col-auto">
+										<div class="sEnter__red">10 месяцев
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="sEnter__item">
+								<div class="sEnter__i-row row align-items-center gy-3">
+									<div class="col">
+										<div class="sEnter__title"><b>Форма обучения</b>
+										</div>
+									</div>
+									<div class="col-auto">
+										<div class="sEnter__red">Очная
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="sEnter__item">
+								<div class="sEnter__i-row row align-items-center gy-3">
+									<div class="col">
+										<div class="sEnter__title"><b>Вступительные испытания</b>
+										</div>
+									</div>
+									<div class="col-auto">
+										<div class="sEnter__red">Конкурс аттестатов
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sEnter__descr">
+						<p>
+							Мастер столярно-плотничных и паркетных работ – квалифицированный рабочий широкого профиля,
+							выполняющий столярные, плотничные, стекольные, паркетные работы, выполняет работы по ремонту
+							деревянных конструкций и деталей, производит различные деревянные изделия на
+							деревообрабатывающих станках. Наши мастера востребованы в строительных фирмах, строительно-
+							ремонтных цехах заводов, на деревообрабатывающих предприятиях, в организациях, управляющих
+							 жилищно-коммунальным хозяйством, в частных фирмах, занимающихся производством столярных
+							изделий, на мебельных фабриках
+						</p>
+					</div>
 				</div>
 			</section>
 			<!-- end sEnter-->
-			<!--+sBaner()-->
-			<!--+sVantage()-->
-			<!--+sClosest()-->
-			<!--+sNews()-->
-			<!--+sNewsAlt()-->
-			<!--+sProfs()-->
-			<!--+sGalery()-->
-			<!--+sPartners()-->
-			<!--+sUnivers()-->
-			<!--+sFaq()-->
+			<!-- start sWhat-->
+			<section class="sWhat section" id="sWhat">
+				<div class="container">
+					<div class="section-title section-title--smaller">
+						<h2>Чему Вас научат</h2>
+					</div>
+					<ul class="sWhat__list">
+						<li>Проводить отбор и сортировку пиломатериалов;</li>
+						<li>Осуществлять обработку древесины: тесание, строгание, разнонаправленное пиление,  просверливание, долбление и резку стамеской;</li>
+						<li>Заготовку размерных брусков ручным способом для дальнейшего их использования в столярном деле;</li>
+						<li>Изготавливать столярные изделия различной сложности из предусмотренного техническим заданием материала, в соответствии с установленной нормой расхода, чертежом и требованиями к качеству;</li>
+						<li>Выполнять рубку наружных стен из бревен и сборку домов из бревен, брусьев и щитов;</li>
+						<li>Делать пропитку деревянных конструкций и деталей антисептическими и огнезащитными составами;</li>
+						<li>Изготовлению и установку столярных изделий (рамных опор, сборку пролетных строений балочных мостов и других конструкций);</li>
+						<li>Изготовлению дверей, окон, арок, лестниц и других изделий из массива древесины с возможным применением фанерования, шпонирования, ламинирования и т.д.</li>
+						<li>Приготовлению рамных замазок;</li>
+						<li>Шлифовке, зашкуриванию и натирке паркета простой конфигурации;</li>
+						<li>Укладывать лаги и настилать полы из различных материалов, устанавливать плинтусы;</li>
+						<li>Свободно читать рабочие чертежи;</li>
+						<li>Производить стандартные плотничные соединений элементов;</li>
+						<li>Пользоваться электрифицированным инструментом;</li>
+						<li>Настилке паркета;</li>
+						<li>Остеклению.</li>
+					</ul>
+				</div>
+			</section>
+			<!-- end sWhat-->
+			<!-- start sStudy-->
+			<section class="sStudy section" id="sStudy">
+				<div class="container">
+					<div class="section-title section-title--smaller">
+						<h2>Что я буду изучать?</h2>
+					</div>
+					<div class="sStudy__row row">
+						<div class="col-lg-6">
+							<div class="sStudy__item">
+								<div class="sStudy__sm-gray">66781-УВ
+								</div><a class="sStudy__title" href="#">Технология изготовления столярных изделий и столярно- монтажных работ</a>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="sStudy__item">
+								<div class="sStudy__sm-gray">66781-УВ
+								</div><a class="sStudy__title" href="#">Технология устройства деревянных конструкций и сборки деревянных домов</a>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="sStudy__item">
+								<div class="sStudy__sm-gray">66781-УВ
+								</div><a class="sStudy__title" href="#">Деревообрабатывающие станки, ручной электрический инструмент</a>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="sStudy__item">
+								<div class="sStudy__sm-gray">66781-УВ
+								</div><a class="sStudy__title" href="#">Технология выполнения паркетных работ</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sStudy-->
+			<!-- start sPrice-->
+			<section class="sPrice section" id="sPrice">
+				<div class="container">
+					<div class="sPrice__box">
+						<div class="sPrice__bg"><img loading="lazy" src="img/@2x/sPrice-bg.jpg" alt=""/>
+						</div>
+						<div class="sPrice__content">
+							<h2>Стоимость обучения</h2>
+							<div class="sPrice__price-txt">Стоимость обучения составляет –
+							</div>
+							<div class="sPrice__price-val">115 000 Р
+							</div>
+							<div class="sPrice__descr">
+								Оплату можно производить частями один раз в месяц во время обучения. Из расчета 10 учебных месяцев
+								<br/>стоимость обучения составит 11500
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sPrice-->
+			<!-- start sPantProg-->
+			<section class="sPantProg section" id="sPantProg">
+				<div class="container">
+					<div class="section-title section-title--smaller">
+						<h2>Партнёры программы</h2>
+					</div>
+					<div class="sPantProg__items">
+						<div class="sPantProg__item row align-items-xxl-center">
+							<div class="col-lg-auto">
+								<div class="sPantProg__logo"><img loading="lazy" src="img/@2x/sPartProg-1.png" alt=""/>
+								</div>
+							</div>
+							<div class="col-lg">
+								<div class="sPantProg__title">Российский государственный аграрный университет - МСХА им. К.А. Тимирязева
+								</div>
+								<div class="sPantProg__descr">РГАУ-МСХА имени К.А. Тимирязева возглавляет учебно-методические объединения вузов Российской Федерации по агрономическому, агроинженерному образованию и образованию в области природообустройства и водопользования. Сегодня Российский государственный аграрный университет – МСХА имени К.А. Тимирязева является ведущим учебным, научным, методическим и консультационным центром системы аграрного образования России.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sPantProg-->
+			<!-- start sWork-->
+			<section class="sWork section" id="sWork">
+				<div class="container">
+					<div class="section-title section-title--smaller">
+						<h2>Кем я смогу работать?</h2>
+					</div>
+					<div class="sWork__row row">
+						<div class="col-md-6 col-xl-3">
+							<div class="sWork__item">
+								<div class="sWork__title">Плотник
+								</div>
+								<div class="sWork__salary">60000-90000 рублей
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-xl-3">
+							<div class="sWork__item">
+								<div class="sWork__title">Столяр - строитель
+								</div>
+								<div class="sWork__salary">60000-90000 рублей
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-xl-3">
+							<div class="sWork__item">
+								<div class="sWork__title">Столяр - краснодеревщик
+								</div>
+								<div class="sWork__salary">60000-90000 рублей
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-xl-3">
+							<div class="sWork__item">
+								<div class="sWork__title">Столяр по производству мебели
+								</div>
+								<div class="sWork__salary">60000-90000 рублей
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sWork-->
+			<!-- start sContinue-->
+			<section class="sContinue section" id="sContinue">
+				<div class="container">
+					<div class="section-title section-title--smaller">
+						<h2>Где можно продолжить обучение</h2>
+					</div>
+					<div class="sContinue__row row align-items-center gy-5">
+						<div class="col-6 col-md-4">
+							<div class="sContinue__img"><img loading="lazy" src="img/@2x/sContinue-1.png" alt=""/>
+							</div>
+						</div>
+						<div class="col-6 col-md-4">
+							<div class="sContinue__img"><img loading="lazy" src="img/@2x/sContinue-1.png" alt=""/>
+							</div>
+						</div>
+						<div class="col-6 col-md-4">
+							<div class="sContinue__img"><img loading="lazy" src="img/@2x/sContinue-3.png" alt=""/>
+							</div>
+						</div>
+					</div>
+					<div class="sContinue__bot-row row gy-4">
+						<div class="col-lg-6">
+							<div class="sContinue__title">Необходимые документы
+							</div>
+							<ul class="sContinue__dot-list">
+								<li>оригинал или копию документов, удостоверяющих личность и гражданство поступающего;</li>
+								<li>оригинал или копию документа об образовании;</li>
+								<li>справка 086/у</li>
+							</ul>
+						</div>
+						<div class="col-lg-6">
+							<div class="sContinue__title">Сроки подачи документов
+							</div>
+							<ul class="sContinue__dot-list">
+								<li>Прием документов начинается 20 июня</li>
+								<li>Прием завершается 15 августа</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sContinue-->
+			<!-- start sDocs-->
+			<section class="sDocs section" id="sDocs">
+				<div class="container">
+					<div class="section-title section-title--smaller">
+						<h2>Как подать документы</h2>
+					</div>
+					<div class="sDocs__sub-title">На бюджет
+					</div>
+					<div class="sDocs__descr">
+						Только через Портал государственных и муниципальных услуг
+						<a href="www.mos.ru" target="_blank">www.mos.ru</a>
+					</div>
+					<div class="sDocs__graphic">
+						<!--delete this-->
+						<div class="sDocs__stab">Графика
+						</div>
+					</div>
+					<div class="sDocs__sub-title">На платные места
+					</div>
+					<div class="sDocs__descr sDocs__descr--big">Подать документы лично в один из пунктов приема заявлений по адресу:
+					</div>
+					<div class="sDocs__plates-row sDocs__plates-row--top row">
+						<div class="col-lg-6">
+							<div class="sDocs__plate">
+								<div class="sDocs__p-title"><b>Центр промышленных технологий</b>
+								</div>
+								<div class="sDocs__p-val"><b>Адрес:</b>
+									г. Москва, ул. Бобруйская, д. 7
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="sDocs__plate">
+								<div class="sDocs__p-title"><b>Центр промышленных технологий</b>
+								</div>
+								<div class="sDocs__p-val"><b>Адрес:</b>
+									г. Москва, ул. Бобруйская, д. 7
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sDocs__p-descr">Либо направить заявление, а также необходимые документы через операторов почтовой связи общего пользования (почта) в один из пунктов приема заявлений по адресу:
+					</div>
+					<div class="sDocs__plates-row sDocs__plates-row--bot row">
+						<div class="col-lg-6">
+							<div class="sDocs__plate">
+								<div class="sDocs__p-title"><b>Центр промышленных технологий</b>
+								</div>
+								<div class="sDocs__p-val"><b>Адрес:</b>
+									г. Москва, ул. Бобруйская, д. 7
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="sDocs__plate">
+								<div class="sDocs__p-title"><b>Центр промышленных технологий</b>
+								</div>
+								<div class="sDocs__p-val"><b>Адрес:</b>
+									г. Москва, ул. Бобруйская, д. 7
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sDocs__graphic">
+						<!--delete this-->
+						<div class="sDocs__stab">Графика
+						</div>
+					</div>
+					<div class="sDocs__foot-row row">
+						<div class="col-auto"><a class="sDocs__btn sDocs__btn--outline" href="#">Записаться на день открытых дверей</a>
+						</div>
+						<div class="col-auto"><a class="sDocs__btn sDocs__btn--red" href="#">Подать документы</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sDocs-->
+			<!-- start sFormAlt-->
+			<section class="sFormAlt section pt-4 pb-0" id="sFormAlt">
+				<div class="container">
+					<div class="sFormAlt__box">
+						<div class="sFormAlt__box-bg"><img loading="lazy" src="img/svg/sFormAlt-bg.svg" alt=""/>
+						</div>
+						<div class="sFormAlt__row row align-items-center gy-4 gy-sm-5">
+							<div class="col-lg">
+								<div class="sFormAlt__title text-center text-lg-start">
+									<h2>Остались вопросы?</h2>
+									<p>Задай их нашим специалистам приемной комиссии и получи ответ на e-mail</p>
+								</div>
+							</div>
+							<div class="sFormAlt__inputs-col col-lg-auto">
+								<div class="sFormAlt__inputs">
+									<div class="sFormAlt__input-wrap form-group"><input class="sFormAlt__input form-control" name="text" type="text" placeholder="Ваше имя"/>
+									</div>
+									<!-- +e.input-wrap-->
+									<div class="sFormAlt__input-wrap form-group"><input class="sFormAlt__input form-control" name="tel" type="tel" placeholder="Номер телефона"/>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<button class="sFormAlt__btn" type="submit">Отправить заявку
+								</button>
+								<div class="sFormAlt__policy text-center text-lg-start">
+									Отправляя форму я соглашаюсь с
+									<a href="#">политикой конфиденциальности</a>
+									и условиями
+									<a href="#">обработки персональных данных</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sFormAlt-->
 			<footer class="footer" id="sContact">
 				<div class="container">
 					<div class="row"> 

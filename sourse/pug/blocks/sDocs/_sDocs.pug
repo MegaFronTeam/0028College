@@ -1,0 +1,42 @@
+mixin sDocs(data)
+	// start sDocs
+	+b.SECTION.sDocs.section#sDocs&attributes(attributes)
+		.container
+			+b.section-title--smaller
+				h2 Как подать документы
+			+e.sub-title На бюджет
+			+e.descr
+				| Только через Портал государственных и муниципальных услуг
+				|
+				a(href='www.mos.ru' target="_blank") www.mos.ru
+			+e.graphic
+				//delete this
+				+e.stab Графика
+			+e.sub-title На платные места
+			+e.descr--big Подать документы лично в один из пунктов приема заявлений по адресу:
+			+e.plates-row--top.row
+				+sDocsPlates()
+				+sDocsPlates()
+			+e.p-descr Либо направить заявление, а также необходимые документы через операторов почтовой связи общего пользования (почта) в один из пунктов приема заявлений по адресу:
+			+e.plates-row--bot.row
+				+sDocsPlates()
+				+sDocsPlates()
+			+e.graphic
+				//delete this
+				+e.stab Графика
+			+e.foot-row.row
+				.col-auto
+					+e.btn--outline(href="#") Записаться на день открытых дверей
+				.col-auto
+					+e.btn--red(href="#") Подать документы
+	// end sDocs
+
+mixin sDocsPlates()
+	.col-lg-6
+		+e.plate
+			+e.p-title
+				b Центр промышленных технологий
+			+e.p-val
+				b Адрес:
+				|
+				| г. Москва, ул. Бобруйская, д. 7

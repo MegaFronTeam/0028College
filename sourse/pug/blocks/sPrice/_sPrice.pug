@@ -1,0 +1,17 @@
+mixin sPrice(data)
+	// start sPrice
+	+b.SECTION.sPrice.section#sPrice&attributes(attributes)
+		.container
+			+e.box
+				+e.bg
+					img(loading="lazy" src="img/@2x/sPrice-bg.jpg" alt="")
+				+e.content
+					h2 Стоимость обучения
+					+e.price-txt Стоимость обучения составляет –
+					+e.price-val 115 000 Р
+					+e.descr
+						| Оплату можно производить частями один раз в месяц во время обучения. Из расчета 10 учебных месяцев
+						|
+						br
+						| стоимость обучения составит 11500
+	// end sPrice

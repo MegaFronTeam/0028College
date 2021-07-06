@@ -26,6 +26,14 @@ include ../blocks/sFormAlt/_sFormAlt.pug
 include ../blocks/footerAlt/_footerAlt.pug
 include ../blocks/sBanerAlt/_sBanerAlt.pug
 include ../blocks/sEnter/_sEnter.pug
+include ../blocks/sWhat/_sWhat.pug
+include ../blocks/sStudy/_sStudy.pug
+include ../blocks/sPrice/_sPrice.pug
+include ../blocks/sPrice/_sPrice.pug
+include ../blocks/sPantProg/_sPantProg.pug
+include ../blocks/sWork/_sWork.pug
+include ../blocks/sContinue/_sContinue.pug
+include ../blocks/sDocs/_sDocs.pug
 
 block variables
 	- let  mainPage='container-bigger color-coal'
@@ -35,21 +43,19 @@ block title
 	- let  title= '025'
 	title= title
 block pagecontent
-	+mob-mnu2()
-	+top-nav2()
+	+mob-mnu3()
+	+top-nav3()
 	.page-head
 		.container
 			+breadcrumb('Главная', 'специальности')
 	+sBanerAlt()
 	+sEnter()
-	//+sBaner()
-	//+sVantage()
-	//+sClosest()
-	//+sNews()
-	//+sNewsAlt()
-	//+sProfs()
-	//+sGalery()
-	//+sPartners()
-	//+sUnivers()
-	//+sFaq()
+	+sWhat()
+	+sStudy()
+	+sPrice()
+	+sPantProg()
+	+sWork()
+	+sContinue()
+	+sDocs()
+	+sFormAlt()(class="pt-4 pb-0")
 	+footer()

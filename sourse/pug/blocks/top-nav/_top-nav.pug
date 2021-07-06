@@ -1,5 +1,5 @@
 mixin mob-mnu()
-	+b.menu-mobile--js.d-lg-none
+	+b.menu-mobile--js.d-xl-none
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
@@ -15,7 +15,7 @@ mixin top-nav()
 				+e.logo.col-auto
 					a(href="/")
 						img(src="img/svg/logo.svg", alt="")
-				.col-12.d-none.d-lg-block
+				.col-12.d-none.d-xl-block
 					+mnu()
 				.col-md
 					.row
@@ -29,7 +29,7 @@ mixin top-nav()
 							+e.text Многоканальный c 9:00 до 19:00
 				.col-md-auto.col
 					+e.btn(href="#showquiz") Подобрать программу
-				.col-auto.d-lg-none
+				.col-auto.d-xl-none
 					+b.toggle-menu-mobile--js
 						span
 	// end top-nav
@@ -38,11 +38,11 @@ mixin top-nav2()
 	// start top-nav
 	+b.top-nav--alt
 		.container
-			.row.gy-3.gy-lg-0
+			.row.gy-3.gy-xl-0
 				+e.logo.col-auto
 					a(href="/")
 						img(src="img/svg/logo.svg", alt="")
-				.col-12.d-none.d-lg-block
+				.col-12.d-none.d-xl-block
 					+mnu2()
 				.col-md
 					.row
@@ -54,14 +54,53 @@ mixin top-nav2()
 							+e.text Многоканальный c 9:00 до 19:00
 				.col-md-auto.col
 					+e.btn(href="#showquiz") Подобрать программу
-				.col-auto.d-lg-none
+				.col-auto.d-xl-none
 					+b.toggle-menu-mobile--js
 						span
 
 mixin mob-mnu2()
-	+b.menu-mobile--js.d-lg-none
+	+b.menu-mobile--js.d-xl-none
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
 			+mnu2()
 			.text-right
+
+mixin top-nav3()
+	// start top-nav
+	+b.top-nav--alt
+		.container
+			.row.gy-3.gy-lg-0
+				+e.logo.col-auto
+					a(href="/")
+						img(src="img/svg/logo.svg", alt="")
+				.col-12.d-none.d-xl-block
+					+mnu2()
+				.col-md
+					.row
+						.col-lg.d-none.d-lg-block
+							+topNavSearch()
+						.col-auto
+							+e.tel(href="tel:88006559988")
+								+icon('tel')
+								| 8 800 655 99 88
+							+e.sm-txt Многоканальный c 9:00 до 19:00
+				.col-md-auto.col
+					+e.btn(href="#showquiz") Подобрать программу
+				.col-auto.d-xl-none
+					+b.toggle-menu-mobile--js
+						span
+
+mixin mob-mnu3()
+	+b.menu-mobile--js.d-xl-none
+		+b.toggle-menu-mobile--js
+			span
+		+e.inner
+			+mnu2()
+			+topNavSearch()
+
+mixin topNavSearch()
+	+b.search
+		+input('Найти информацию', 'text')
+		+e.search-btn(type="button")
+			img(loading="lazy" src="img/svg/zoom.svg" alt="")

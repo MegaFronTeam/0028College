@@ -1,0 +1,103 @@
+// start .sDocs
+.sDocs {
+	--sPT: #{rem(31)};
+	--sPB: #{rem(30)};
+	--sTPB: #{rem(42)};
+
+	&__sub-title{
+		font-weight: 600;
+		font-size: rem(20);
+		text-transform: uppercase;
+
+		margin-bottom: rem(18);
+	}
+	&__descr{
+		margin-bottom: rem(35);
+		line-height: 1.8;
+		color: $black;
+
+		&--big{
+			font-size: rem(20);
+			margin-bottom: rem(20);
+		}
+	}
+	&__graphic{
+		width: 100%;
+		min-height: rem(480);
+		background: $gray-510;
+		margin-bottom: rem(45);
+		position: relative;
+		z-index: 1;
+	}
+	&__stab{
+		position: absolute;
+		z-index: 1;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+
+		font-weight: 500;
+		font-size: rem(34);
+		line-height: 1.5;
+		text-align: center;
+
+		color: $black;
+	}
+	&__plates-row{
+		--bs-gutter-x: #{rem(32)};
+		--bs-gutter-y: #{rem(32)};
+
+		margin-bottom: rem(40);
+
+		&--top{
+			@include media-breakpoint-up(xxl){
+				margin-bottom: rem(45px);
+			}
+		}
+		&--bot{
+			@include media-breakpoint-up(xxl){
+				margin-bottom: rem(64);
+			}
+		}
+	}
+	&__plate{
+		background: $light;
+		border-radius: rem(10);
+
+		padding: 16.5px 24px;
+	}
+	&__p-title{
+		line-height: 1.8;
+		color: $black;
+		margin-bottom: rem(5);
+	}
+	&__p-descr{
+		font-size: rem(20);
+		line-height: 1.5;
+
+		color: $black;
+		margin-bottom: rem(24);
+	}
+	&__foot-row{
+		--bs-gutter-x: #{rem(38)};
+		--bs-gutter-y: #{rem(20)};
+	}
+	&__btn{
+		@extend .btn;
+		&--outline{
+			@extend .btn-outline-primary;
+		}
+		&--red{
+			@extend .btn-primary;
+		}
+
+		font-weight: bold;
+		text-transform: uppercase;
+
+		font-size: rem(16);
+		padding: 15px 38px;
+		border-radius: rem(10);
+	}
+	&__{}
+	&__{}
+} // end.sDocs
