@@ -13,7 +13,7 @@ mixin sQw(data)
 					+form-wrap  
 						input(type="hidden" name="DATA[TITLE]" value= 'Остались вопросы?')
 						+input("Ваше имя",'text','','DATA[NAME]')
-						+input("Номер телефона",'tel','','DATA[PHONE_MOBILE]')
+						+input("Номер телефона",'tel','','DATA[PHONE_MOBILE]')(required)
 						+e.btn(type="submit") Отправить заявку
 						+policy
 	// end sQw

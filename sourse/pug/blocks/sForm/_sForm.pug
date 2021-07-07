@@ -1,11 +1,11 @@
-mixin sForm(t='Узнай минимальный проходной балл в 2021 году')
+mixin sForm(t='Узнай минимальный проходной балл в 2021 году', t2)
 	// start sForm
 	+b.SECTION.sForm.sectio
 		.container
 			+b.form-wrap&attributes(attributes)
 				form(action="rest.php" method='POST' )
 					+e.title= t
-					input(type="hidden" name="DATA[TITLE]" value= t)
+					input(type="hidden" name="DATA[TITLE]" value= t2)
 					.row
 
 						.col-lg
