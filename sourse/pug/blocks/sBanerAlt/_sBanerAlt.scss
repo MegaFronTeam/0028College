@@ -1,0 +1,110 @@
+// start .sBanerAlt
+.sBanerAlt {
+	position: relative;
+	z-index: 1;
+
+	--sPT: #{rem(50)};
+	--sPB: #{rem(50)};
+	@include media-breakpoint-up(lg){
+		--sPT: #{rem(76)};
+		--sPB: #{rem(84)};
+	}
+	--sTPB: #{rem(0)};
+
+	&__bg{
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		display: flex;
+		justify-content: flex-end;
+
+		background-color: $gray-110;
+	}
+	&__bg-img{
+		opacity: .7;
+		@include media-breakpoint-up(xl){
+			opacity: 1;
+		}
+		position: absolute;
+		z-index: 1;
+
+		width: (1120/1920) * 100%;
+		height: 100%;
+		&:after{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 100%;
+			width: rem(120);
+			background: linear-gradient(90deg, $gray-110 0, rgba($gray-110, 0) 100%)
+		}
+		img{
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+	&__back{
+		width: rem(16);
+		height: rem(16);
+		margin-bottom: rem(35);
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(50);
+		}
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	.section-title{
+		h1{
+			max-width: rem(700);
+			font-weight: bold;
+			font-size: rem(40);
+			line-height: 1.5;
+
+			margin-bottom: rem(35);
+			@include media-breakpoint-up(lg){
+				margin-bottom: rem(50);
+			}
+
+			text-transform: uppercase;
+			color: $coal;
+		}
+		&__row{
+			--bs-gutter-x: #{rem(38)};
+			--bs-gutter-y: #{rem(20)};
+		}
+		&__btn{
+			@extend .btn;
+			&--outline{
+				@extend .btn-outline-primary;
+			}
+			&--red{
+				@extend .btn-primary;
+			}
+
+			font-weight: bold;
+			text-transform: uppercase;
+
+			font-size: rem(16);
+			padding: 15px 38px;
+			border-radius: rem(10);
+		}
+	}
+	&__{}
+	&__{}
+	&__{}
+} // end.sBanerAlt

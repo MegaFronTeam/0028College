@@ -14,3 +14,59 @@ mixin mnu()
 			li.menu-item(itemprop="item" ): a(href= linkPatch itemprop="url")= linkName
 
 //- menu
+
+mixin mnu2()
+	ul.menu
+		li.menu-item
+			a(href="#") О нас
+		li.menu-item
+			a(href="#") Поступающим
+		li.menu-item.menu-item-has-children
+			span Образование
+			ul.sub-menu
+				li: a(href='#') Образование1
+				li: a(href='#') Образование2
+				li: a(href='#') Образование3
+		li.menu-item.menu-item-has-children
+			span Наши проекты
+			ul.sub-menu
+				li: a(href='#') Образование1
+				li: a(href='#') Образование2
+				li: a(href='#') Образование3
+		li.menu-item.menu-item-has-children
+			span возможности
+			ul.sub-menu
+				li: a(href='#') Образование1
+				li: a(href='#') Образование2
+				li: a(href='#') Образование3
+		li.menu-item
+			a(href="#") ПАРТНЁРЫ
+		li.menu-item
+			a(href="#") ПРЕСС-СЛУЖБА
+		li.menu-item
+			a(href="#") Контакты
+
+mixin mnu3()
+	+b.UL.menu
+		li.menu-item: a(href="#") О нас
+		li.menu-item: a(href="#") Поступающим
+		li.menu-item.menu-item-has-children
+			span Образование
+			ul
+				li: a(href="#") Детский сад
+				li: a(href="#") Школа
+				li: a(href="#") Колледж
+				li: a(href="#") Профподготовка
+				li: a(href="#") Дополнительное
+		li.menu-item.menu-item-has-children
+			span Наши проекты
+			ul
+				li: a(href="#") Мебельная помощь
+				li: a(href="#") Неделя профессий
+		li.menu-item: a(href="#") АВТОШКОЛА
+		li.menu-item: a(href="#") ФАБРИКА МЕБЕЛИ
+		li.menu-item: a(href="#") ПРОЕКТНОЕ БЮРО
+		li.menu-item: a(href="#") ЦЕНТР КАРЬЕРЫ
+		li.menu-item: a(href="#") ПАРТНЁРЫ
+		li.menu-item: a(href="#") ПРЕСС-СЛУЖБА
+		li.menu-item: a(href="#") Контакты

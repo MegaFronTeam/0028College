@@ -1,0 +1,115 @@
+// start .sNewsAlt
+.sNewsAlt {
+	background-color: $gray-810;
+	color: $white;
+	--sPT: #{rem(65)};
+	--sPB: #{rem(65)};
+	@include media-breakpoint-up(xl){
+		--sPB: #{rem(102)};
+	}
+
+	.title-row{
+		color: $white;
+		padding-bottom: rem(53);
+	}
+
+	&__row{
+		--bs-gutter-x: #{rem(20)};
+		--bs-gutter-y: #{rem(20)};
+		@include media-breakpoint-up(xl){
+			--bs-gutter-x: #{rem(32)};
+			--bs-gutter-y: #{rem(32)};
+		}
+	}
+	&__item{
+		min-height: 100%;
+		box-shadow: 0px 35px 60px rgba(0, 0, 0, 0.25);
+		border-radius: rem(20);
+		overflow: hidden;
+
+		padding: rem(30);
+		@include media-breakpoint-up(xxl){
+			padding: 30px rem(40) rem(35);
+		}
+
+		background-color: var(--bs-color);
+		&.white-item{
+			--bs-color: #{$white};
+			--opsite-color: #{$coal};
+			color: $coal;
+		}
+		&.black-item{
+			--bs-color: #{$coal};
+			--opsite-color: #{$white};
+			color: $white;
+		}
+
+		position: relative;
+		z-index: 1;
+	}
+	&__img{
+		position: absolute;
+		z-index: -1;
+
+		width: 60%;
+		height: 60%;
+		@include media-breakpoint-up(xl){
+			width: 100%;
+			height: 100%;
+		}
+
+		right: 0;
+		//top: 50%;
+		//transform: translateY(-50%);
+		top: 0;
+
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		img{
+			width: auto;
+			height: auto;
+			max-height: 100%;
+			max-width: 100%;
+		}
+	}
+	&__title{
+		display: inline-block;
+		line-height: 1.2;
+		margin-bottom: rem(24);
+
+		border-top: 1px solid transparent;
+		border-bottom: 1px solid transparent;
+		&:hover{
+			border-top: 1px solid transparent;
+			border-bottom: 1px solid var(--opsite-color, transparent);
+		}
+
+		font-weight: 500;
+		font-size: rem(34);
+		color: $primary;
+	}
+	&__descr{
+		//background-color: var(--bs-color);
+		max-width: rem(338);
+		line-height: 1.8;
+		margin-bottom: rem(56);
+		min-height: rem(87);
+	}
+	&__footer-row{
+		--bs-gutter-x: #{rem(20)};
+		--bs-gutter-y: #{rem(10)};
+
+		@include media-breakpoint-up(xxl){
+			--bs-gutter-x: #{rem(48)};
+		}
+	}
+	&__tag{
+		font-weight: bold;
+		font-size: rem(16);
+		line-height: 1.5;
+		color: $gray-550;
+	}
+	&__{}
+	&__{}
+} // end.sNewsAlt

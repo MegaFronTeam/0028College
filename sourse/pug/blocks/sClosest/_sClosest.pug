@@ -1,0 +1,48 @@
+mixin sClosest(data)
+	// start sClosest
+	+b.SECTION.sClosest--js.section#sClosest&attributes(attributes)
+		.container
+			+e.top-row.row
+				.col-lg
+					+b.title-row.row
+						.col-auto
+							h2 Ближайшие мероприятия Колледжа
+						.col-auto
+							+e.all(href='#') все
+				+b.arrow-cont.col-lg-auto
+					+arrow2()
+			+e.slider-wrap
+				.swiper-container.sClosest-slider-js
+					.swiper-wrapper
+						+sClosestSlide({
+							imgNum: 1,
+							title: `Техника безопасности <br> при работе со сварочными аппаратами`,
+							plateColor: '#B71E09',
+						})
+						+sClosestSlide({
+							imgNum: 2,
+							title: `Осенние веселые <br> старты для 8-10 классов`,
+							plateColor: '#9B51E0',
+							addClasses: 'gradient-black',
+						})
+						+sClosestSlide({
+							imgNum: 3,
+							title: `Мастер-класс по технологии деревообработки еще немного описания`,
+							plateColor: '#2D9CDB',
+						})
+	// end sClosest
+
+mixin sClosestSlide(data)
+	.swiper-slide
+		+e.item(class=`${data.addClasses || ''}`)
+			+e.img
+				img(loading="lazy" src=`img/@2x/sClosest-${data.imgNum}.jpg` alt="")
+			+e.plates-row.row.justify-content-end
+				.col-auto
+					+e.plate(style=`background-color: ${data.plateColor}`) Вебинары
+			+e.i-title!=data.title
+			+e.foot-row.row.align-items-center
+				.col
+					+e.date 16.05.2020
+				.col-auto
+					+e.more-btn(href='#') Подробнее

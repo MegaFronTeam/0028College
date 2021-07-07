@@ -1,0 +1,18 @@
+mixin sPantProg(data)
+	// start sPantProg
+	+b.SECTION.sPantProg.section#sPantProg&attributes(attributes)
+		.container
+			+b.section-title--smaller
+				h2 Партнёры программы
+			+e.items
+				+sPantProgItem()
+	// end sPantProg
+
+mixin sPantProgItem()
+	+e.item.row.align-items-xxl-center
+		.col-lg-auto
+			+e.logo
+				img(loading="lazy" src='img/@2x/sPartProg-1.png' alt="")
+		.col-lg
+			+e.title Российский государственный аграрный университет - МСХА им. К.А. Тимирязева
+			+e.descr РГАУ-МСХА имени К.А. Тимирязева возглавляет учебно-методические объединения вузов Российской Федерации по агрономическому, агроинженерному образованию и образованию в области природообустройства и водопользования. Сегодня Российский государственный аграрный университет – МСХА имени К.А. Тимирязева является ведущим учебным, научным, методическим и консультационным центром системы аграрного образования России.

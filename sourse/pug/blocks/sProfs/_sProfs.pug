@@ -1,0 +1,59 @@
+mixin sProfs(data)
+	// start sProfs
+	+b.SECTION.sProfs--js.section#sProfs&attributes(attributes)
+		.container
+			+e.top-row.row
+				.col
+					+b.title-row.row
+						.col-auto
+							h2 Специальности
+				+b.arrow-cont.col-auto
+					+arrow2()
+			+e.slider-wrap
+				.swiper-container.sProfs-slider-js
+					.swiper-wrapper
+						-for(let i = 0; i < 6; i++)
+							+sProfsSlide()
+	// end sProfs
+
+mixin sProfsSlide()
+	.swiper-slide
+		+e.item
+			+e.head
+				+e.date 10.02.01
+				+e.h-txt Организация и технология защиты информации
+			+e.content
+				+e.c-row.row
+					+sProfsClass({
+						classes: '9 классов',
+						time: '4 г. 10 мес.',
+						price: '200 000 Р',
+						free: '15',
+					})
+					+sProfsClass({
+						classes: '11 классов',
+						time: '3 г. 10 мес.',
+						price: '135 000 Р',
+						free: '10',
+					})
+			+e.foot
+				+e.f-row.row
+					.col-auto
+						+e.logo
+							img(loading="lazy" src='img/@2x/sProfs-1.png' alt="")
+					.col
+						+e.p-title Вуз партнер
+						+e.p-bold
+							| Российский государственный аграрный университет - МСХА
+							br
+							| им. К.А. Тимирязева
+
+mixin sProfsClass(data)
+	.col-6
+		+e.classes=data.classes
+		+e.title Сроки обучения
+		+e.time=data.time
+		+e.title Стоимость обучения
+		+e.price=data.price
+		+e.title Бюджетных мест
+		+e.free=data.free

@@ -113,7 +113,7 @@ const JSCCommon = {
 			passive: true
 		});
 		window.addEventListener('resize', () => {
-			if (window.matchMedia("(min-width: 992px)").matches) this.closeMenu();
+			if (window.matchMedia("(min-width: 1200px)").matches) this.closeMenu();
 		}, {
 			passive: true
 		});
@@ -132,7 +132,7 @@ const JSCCommon = {
 		// mask for input
 		let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
 		InputTel.forEach(element => element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"));
-		Inputmask("+7(999)999-99-99").mask(InputTel);
+		Inputmask("+9(999)999-99-99").mask(InputTel);
 	},
 
 	// /inputMask
@@ -225,14 +225,134 @@ function eventHandler() {
 	const swiper4 = new Swiper('.sMost__slider--js', {
 		slidesPerView: 'auto',
 		// slideToClickedSlide: true, 
-		loop: true,
-		observeParents: true,
-		observer: true,
-		speed: 1500,
-		autoplay: {
-			delay: 1000
-		}
+		observer: true
 	}); // modal window
+
+	let defaultSl = {
+		spaceBetween: 0,
+		lazy: {
+			loadPrevNext: true
+		},
+		watchOverflow: true,
+		spaceBetween: 0,
+		loop: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev'
+		},
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true // renderBullet: function (index, className) {
+			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+			// }
+
+		}
+	}; //luckyoneJs
+
+	let sClosestPrev = document.querySelector('.sClosest--js .swiper-prev');
+	let sClosestNext = document.querySelector('.sClosest--js .swiper-next');
+	let sClosestSlider = new Swiper('.sClosest-slider-js', {
+		slidesPerView: 'auto',
+		loop: true,
+		spaceBetween: 35,
+		navigation: {
+			nextEl: sClosestNext,
+			prevEl: sClosestPrev
+		}
+	}); //.sProfs-slider-js
+
+	let sProfsPrev = document.querySelector('.sProfs--js .swiper-prev');
+	let sProfsNext = document.querySelector('.sProfs--js .swiper-next');
+	let sProfsSlider = new Swiper('.sProfs-slider-js', {
+		slidesPerView: 'auto',
+		loop: true,
+		spaceBetween: 35,
+		navigation: {
+			nextEl: sProfsNext,
+			prevEl: sProfsPrev
+		}
+	}); //.sGalery-slider-js
+
+	let sGaleryPrev = document.querySelector('.sGalery--js .swiper-prev');
+	let sGaleryNext = document.querySelector('.sGalery--js .swiper-next');
+	let sGalerySlider = new Swiper('.sGalery-slider-js', {
+		slidesPerView: 'auto',
+		loop: true,
+		spaceBetween: 35,
+		navigation: {
+			nextEl: sGaleryNext,
+			prevEl: sGaleryPrev
+		}
+	}); //.sUnivers-slider-js
+
+	let sUniversSlider = new Swiper('.sUnivers-slider-js', {
+		slidesPerView: 'auto',
+		loop: true,
+		breakpoints: {
+			0: {
+				spaceBetween: 40
+			},
+			768: {
+				spaceBetween: 70
+			},
+			1200: {
+				spaceBetween: 114
+			}
+		}
+	}); //
+
+	function makeDDGroup(ArrSelectors) {
+		for (let parentSelect of ArrSelectors) {
+			let parent = document.querySelector(parentSelect);
+
+			if (parent) {
+				// childHeads, kind of funny))
+				let ChildHeads = parent.querySelectorAll('.dd-head-js');
+				$(ChildHeads).click(function () {
+					let clickedHead = this;
+					$(ChildHeads).each(function () {
+						if (this === clickedHead) {
+							//parent element gain toggle class, style head change via parent
+							$(this.parentElement).toggleClass('active');
+							$(this.parentElement).find('.dd-content-js').slideToggle(function () {
+								$(this).toggleClass('active');
+							});
+						} else {
+							$(this.parentElement).removeClass('active');
+							$(this.parentElement).find('.dd-content-js').slideUp(function () {
+								$(this).removeClass('active');
+							});
+						}
+					});
+				});
+			}
+		}
+	}
+
+	makeDDGroup(['.sFaq-dd-group-js']); //
+
+	$('.menu-mobile--js .menu-item-has-children').click(function () {
+		$(this).find('ul').slideToggle(function () {
+			$(this).toggleClass('active');
+		});
+	});
+	let sWeekSlider = new Swiper('.sWeek-slider-js', {
+		slidesPerView: 'auto',
+		loop: true,
+		spaceBetween: 40,
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true
+		}
+	}); //
+	//
+
+	$('.sBaner-menu-btn-js').click(function () {
+		$('.sBaner-menu-content-js li:hidden').slideDown();
+		$(this).fadeOut();
+	}); //endluckyoneJs
 }
 
 ;

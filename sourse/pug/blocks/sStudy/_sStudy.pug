@@ -1,0 +1,18 @@
+mixin sStudy(data)
+	// start sStudy
+	+b.SECTION.sStudy.section#sStudy&attributes(attributes)
+		.container
+			+b.section-title--smaller
+				h2 Что я буду изучать?
+			+e.row.row
+				+sStudyItem('Технология изготовления столярных изделий и столярно- монтажных работ')
+				+sStudyItem('Технология устройства деревянных конструкций и сборки деревянных домов')
+				+sStudyItem('Деревообрабатывающие станки, ручной электрический инструмент')
+				+sStudyItem('Технология выполнения паркетных работ')
+	// end sStudy
+
+mixin sStudyItem(title)
+	.col-lg-6
+		+e.item
+			+e.sm-gray 66781-УВ
+			+e.title(href="#")=title

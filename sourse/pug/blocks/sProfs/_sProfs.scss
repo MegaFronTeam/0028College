@@ -1,0 +1,122 @@
+// start .sProfs
+.sProfs {
+	--sPT: #{rem(80)};
+	--sPB: #{rem(55)};
+	--sTPB: #{rem(40)};
+
+	&__top-row{
+		--bs-gutter-x: #{rem(20)};
+		--bs-gutter-y: #{rem(20)};
+
+		padding-bottom: rem(52);
+	}
+	&__slider-wrap{
+		.swiper-container{
+			overflow: visible!important;
+		}
+		.swiper-wrapper{
+
+		}
+		.swiper-slide{
+			height: auto;
+			width: rem(416);
+		}
+	}
+	&__item{
+		background: $white;
+		border: 1px solid $gray-560;
+		border-radius: rem(20);
+
+		--item-px: #{rem(24)};
+	}
+	&__head{
+		padding: rem(20) var(--item-px) rem(24);
+		border-bottom: 1px solid $gray-560;
+	}
+	&__date{
+		font-weight: bold;
+		font-size: rem(16);
+		line-height: 1.8;
+		color: $coal;
+
+		margin-bottom: rem(7);
+	}
+	&__h-txt{
+		color: $black;
+	}
+	//
+	&__content{
+		border-bottom: 1px solid $gray-560;
+		padding: rem(24) var(--item-px) rem(24);
+	}
+	&__c-row{
+		@include media-breakpoint-up(xxl){
+			--bs-gutter-x: #{rem(36px)};
+		}
+		--bs-gutter-y: #{rem(24)};
+	}
+	&__classes{
+		display: inline-block;
+		padding: 0 rem(11);
+
+		background: rgba($primary, .1);
+		border-radius: rem(7.5);
+
+		font-weight: bold;
+		line-height: 2;
+		color: $primary;
+		margin-bottom: rem(11);
+	}
+	&__title{
+		font-size: rem(10);
+		line-height: 1.5;
+		color: $dark;
+		margin-bottom: 3px;
+	}
+	&__time{
+		font-weight: bold;
+		margin-bottom: 7px;
+	}
+	&__price{
+		font-weight: bold;
+		color: $primary;
+		margin-bottom: 8.5px;
+	}
+	&__free{
+		font-weight: bold;
+	}
+	//
+	&__foot{
+		padding: rem(10) var(--item-px);
+	}
+	&__f-row{
+		--bs-gutter-x: #{rem(22.5)};
+	}
+	&__logo{
+		width: rem(90);
+		height: rem(90);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&__p-title{
+		font-size: rem(12);
+		color: $black;
+		margin-bottom: rem(8);
+	}
+	&__p-bold{
+		font-weight: bold;
+		font-size: rem(12);
+		color: $black;
+	}
+	&__{}
+	&__{}
+} // end.sProfs

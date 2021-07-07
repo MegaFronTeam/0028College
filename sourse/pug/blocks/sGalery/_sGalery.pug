@@ -1,0 +1,29 @@
+mixin sGalery(data)
+	// start sGalery
+	+b.SECTION.sGalery--js.section#sGalery&attributes(attributes)
+		.container
+			+e.top-row.row
+				.col
+					+b.title-row.row
+						.col-auto
+							h2 Галерея
+						.col-auto
+							+e.all(href='#') все фотографии
+				+b.arrow-cont.col-auto
+					+arrow2()
+			+e.slider-cont
+				.swiper-container.sGalery-slider-js
+					.swiper-wrapper
+						+sGalerySlide(1)
+						+sGalerySlide(2)
+						+sGalerySlide(3)
+						+sGalerySlide(1)
+						+sGalerySlide(2)
+						+sGalerySlide(3)
+
+	// end sGalery
+
+mixin sGalerySlide(imgNum)
+	.swiper-slide
+		+e.img-link(href=`img/@2x/sGalery-${imgNum}.png` data-fancybox="sGalery")
+			img(loading="lazy" src=`img/@2x/sGalery-${imgNum}.png` alt="")

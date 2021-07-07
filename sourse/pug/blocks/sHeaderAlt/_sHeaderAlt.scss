@@ -1,0 +1,41 @@
+// start .sHeaderAlt
+.sHeaderAlt {
+	padding-top: 3px;
+	padding-bottom: 33px;
+
+	&__text {
+		font-size: 12px;
+		@include media-breakpoint-up(md){
+			font-size: $small;
+		}
+	}
+	&__tel {
+		font-weight: bold;
+		font-size: rem(20);
+		@extend .text-dark;
+
+		.icon {
+			font-size: 12px;
+			margin-right: 9px;
+		}
+	}
+
+	&__btn {
+		white-space: nowrap;
+
+		@extend .btn;
+		@extend .btn-sm;
+		@extend .btn-primary;
+		@include media-breakpoint-up(xxl) {
+			width: rem(248);
+		}
+		@include media-breakpoint-only(xs) {
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+	}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+} // end.sHeaderAlt

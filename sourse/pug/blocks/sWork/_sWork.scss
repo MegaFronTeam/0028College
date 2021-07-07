@@ -1,0 +1,55 @@
+// start .sWork
+.sWork {
+	--sPT: #{rem(30)};
+	--sPB: #{rem(50)};
+	--sTPB: #{rem(46)};
+
+	&__row{
+		--bs-gutter-x: #{rem(24)};
+		--bs-gutter-y: #{rem(24)};
+		@include media-breakpoint-up(xl){
+			--bs-gutter-x: #{rem(32)};
+			--bs-gutter-y: #{rem(32)};
+		}
+	}
+	&__item{
+		background: $gray-110;
+		border-radius: rem(10);
+		min-height: 100%;
+
+		--item-p-top: #{rem(37)};
+		padding: var(--item-p-top) rem(37) rem(30);
+
+		position: relative;
+		z-index: 1;
+		&:after{
+			content: '';
+			position: absolute;
+			top: var(--item-p-top);
+			left: 0;
+			height: rem(63);
+			width: 3px;
+			border-radius: rem(10);
+			background-color: $primary;
+		}
+	}
+	&__title{
+		font-weight: 600;
+		font-size: rem(20);
+		line-height: 1.5;
+
+		text-transform: uppercase;
+		color: $coal;
+
+		min-height: rem(90);
+		margin-bottom: rem(12);
+	}
+	&__salary{
+		font-weight: bold;
+		font-size: rem(20);
+		color: $primary;
+	}
+	&__{}
+	&__{}
+	&__{}
+} // end.sWork

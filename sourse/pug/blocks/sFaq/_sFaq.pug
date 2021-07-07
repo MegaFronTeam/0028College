@@ -1,0 +1,25 @@
+mixin sFaq(data)
+	// start sFaq
+	+b.SECTION.sFaq.section#sFaq&attributes(attributes)
+		.container
+			+b.title-row.row
+				.col-auto
+					h2 Ответы на самые частые вопросы
+			+e.items.sFaq-dd-group-js
+				+sFaqItem('')
+				+sFaqItem('active')
+				+sFaqItem('')
+	// end sFaq
+
+mixin sFaqItem(activeClasses)
+	+e.item(class=activeClasses)
+		+e.head.dd-head-js
+			+e.h-txt
+				| Задай их нашим специалистам приемной комиссии и
+				|
+				br.d-none.d-xl-block
+				| получи ответ на e-mail
+			+e.h-plus
+		+e.content.dd-content-js(class=activeClasses)
+			p Теория совмещена с практикой. Проходите стажировки в компаниях-партнерах с последующим трудоустройством!Теория совмещена с практикой. Проходите стажировки в компаниях-партнерах с последующим трудоустройством!Теория совмещена с практикой. Проходите стажировки в компаниях-партнерах с последующим трудоустройством!
+

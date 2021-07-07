@@ -1,0 +1,88 @@
+mixin sWeek(data)
+	// start sWeek
+	+b.SECTION.sWeek#sWeek&attributes(attributes)
+		+e.slider-wrap
+			.swiper-container.sWeek-slider-js
+				.swiper-wrapper
+					+sWeekSlide()
+					+sWeekSlide()
+					+sWeekSlide()
+					+sWeekSlide()
+				.swiper-pagination
+		+e.sub-title Выберите отделение
+		+e.d-row.row
+			+sWeekSmItem({
+				title: `Центр градостроительных технологий`,
+				tags: true,
+				addClasses: 'item-sm',
+				imgNum: 1,
+			})
+			+sWeekSmItem({
+				title: `Центр <br> технологий транспорта`,
+				tags: true,
+				addClasses: 'item-sm',
+				imgNum: 2,
+			})
+			+sWeekSmItem({
+				title: `Центр промышленных технологий`,
+				tags: true,
+				addClasses: 'item-sm',
+				imgNum: 3,
+			})
+			+sWeekSmItem({
+				title: `Центр <br> ИНФОРМАЦИОННЫХ <br> ТЕХНОЛОГИЙ`,
+				tags: true,
+				addClasses: 'item-sm',
+				imgNum: 4,
+			})
+			//
+			+sWeekSmItem({
+				title: `среднее образование`,
+				addClasses: 'item-big',
+				bootClasses: 'col-xl-6',
+				imgNum: 5,
+			})
+			+sWeekSmItem({
+				title: `дошкольное образование`,
+				addClasses: 'item-big',
+				bootClasses: 'col-xl-6',
+				imgNum: 6,
+			})
+
+mixin sWeekSmItem(data)
+	div(class=`${data.bootClasses || 'col-sm-6 col-xl-3'}`)
+		+e.d-item(class=data.addClasses)
+			+e.d-bg
+				img(loading="lazy" src=`img/@2x/sWeek-${data.imgNum}.png` alt="")
+			+e.d-title!=data.title
+			if data.tags
+				+e.tags
+					+e.tags-row.row
+						.col-auto
+							+e.tag Кунцево
+			+e.d-link(href="#") Перейти
+
+	// end sWeek
+mixin sWeekSlide()
+	.swiper-slide
+		+e.item
+			+e.bg
+				img(loading="lazy" src="img/@2x/sWeek-slide-1.png" alt="")
+			+e.content
+				+e.title
+					| Неделя
+					br
+					| профессий
+				+e.descr
+					| в Центре промышленных
+					br
+					| технологий
+				+e.btn(href='#') Подробнее
+
+mixin asideMenu()
+	+b.aside-menu
+		+e.logo(href="#")
+			img(loading="lazy" src="img/svg/logo.svg" alt="")
+		+e.menu
+			+mnu3()
+		+soc()

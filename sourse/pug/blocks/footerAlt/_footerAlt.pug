@@ -1,0 +1,37 @@
+mixin footerAlt(data)
+	// start footerAlt
+	+b.FOOTER.footerAlt#footerAlt&attributes(attributes)
+		+e.top
+			.container
+				+e.row.row
+					.col-md-6.col-lg-4
+						+e.title Наш адрес
+						+e.key Адрес:
+						+e.val 121351, Москва, Бобруйская улица, дом 7
+						+e.key Станция метро:
+						+e.val Молодежная
+						+e.key Как нас найти:
+						+e.val От метро "Молодежная" на автобусе 73, 794 до остановки "Колледж"
+					.col-md-6.col-lg-4
+						+e.title Контактные данные
+						+e.key Директор
+						+e.val
+							| Калугина Ксения Евгеньевна
+							br
+							a(href="mailto:KaluginaKE@edu.mos.ru") KaluginaKE@edu.mos.ru
+							br
+							a(href="tel:+79263121624") +7 (926) 312-16-24
+							br
+							a(href="tel:+74952254490") +7 (495) 225-44-90
+						+e.key Секретарь
+						+e.val
+							| Кузьмина Дарья Олеговна
+							br
+							a(href="tel:+74952254490") +7 (495) 225-44-90
+					+e.no-title-col.col-lg-4
+						+e.key Адрес электронной почты:
+						+e.val
+							a(href="mailto:spo-41@edu.mos.ru") spo-41@edu.mos.ru
+		//-+e.bot
+
+	// end footerAlt

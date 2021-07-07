@@ -1,0 +1,252 @@
+// start .sBaner
+.sBaner {
+	--sPT: #{rem(32)};
+	--sPB: #{rem(16)};
+
+	&__row{
+		--bs-gutter-y: #{rem(40)};
+
+		//flex-direction: column-reverse;
+		//@include media-breakpoint-up(lg){
+		//	flex-direction: row;
+		//}
+
+		--bs-gutter-x: #{rem(30)};
+		@include media-breakpoint-up(xl){
+			--bs-gutter-x: #{rem(55)};
+		}
+		@include media-breakpoint-up(xxl){
+			--bs-gutter-x: #{rem(80)};
+		}
+	}
+	&__menu-col{
+		width: calc(#{rem(256)} + var(--bs-gutter-x)) !important;
+		@include media-breakpoint-up(lg){
+			width: calc(#{rem(256)} + var(--bs-gutter-x)) !important;
+		}
+	}
+	&__black-btn{
+		@extend .btn;
+		@extend .btn-coal;
+
+		font-weight: bold;
+		font-size: rem(12);
+		line-height: 1.5;
+
+		color: $white!important;
+
+		padding: rem(2) rem(5);
+		border-radius: rem(4);
+
+		&--top{
+			// margin-bottom: rem(23);
+		}
+		&--bot{
+			// padding: rem(2) rem(11);
+		}
+	}
+	&__menu{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+
+		--li-mb: #{rem(19)};
+
+		li{
+			margin-bottom: var(--li-mb);
+			&:last-child{
+				margin-bottom: 0;
+			}
+
+			a{
+				&:not(.sBaner__black-btn) {
+
+					display: block;
+					font-weight: bold;
+					
+					text-transform: uppercase;
+					color: $dark;
+					&:hover{
+						color: $primary;
+					}
+				}
+			}
+		}
+
+		&--top{
+			@include media-breakpoint-up(lg) {
+
+				padding-top: var(--li-mb);
+				padding-bottom: var(--li-mb);
+			}
+			.hr{
+				border-bottom: 1px solid rgba($blue, 0.2);
+				// padding-bottom: var(--li-mb);
+				margin-bottom: var(--li-mb);
+
+			}
+		}
+			&--bot{
+			margin-bottom: rem(22);
+		}
+	}
+	&__baner-col{
+
+	}
+	&__box{
+		border-radius: rem(12);
+		background: $gray-110;
+
+		position: relative;
+		z-index: 1;
+
+		padding: rem(40) rem(30);
+		@include media-breakpoint-up(xl){
+			padding: rem(50) rem(60);
+		}
+		@include media-breakpoint-up(xxl){
+			padding: rem(60) rem(79) rem(80);
+		}
+	}
+	&__bg{
+		position: absolute;
+		z-index: -2;
+
+		&--1{
+			z-index: -1;
+			bottom: 0;
+			right: 0;
+
+			width: calc(#{rem(368)} *1/3);
+			height: calc(#{rem(518)} *1/3);
+			@include media-breakpoint-up(lg){
+				width: calc(#{rem(368)} *2/3);
+				height: calc(#{rem(518)} *2/3);
+			}
+			@include media-breakpoint-up(xl){
+				width: calc(#{rem(368)} *4/5);
+				height: calc(#{rem(518)} *4/5);
+			}
+			@include media-breakpoint-up(xxl){
+				width: rem(368);
+				height: rem(518);
+			}
+
+			display: flex;
+			justify-content: flex-end;
+			align-items: flex-end;
+
+			img{
+				width: auto;
+				height: auto;
+				max-width: 100%;
+				max-height: 100%;
+			}
+		}
+		&--2{
+			z-index: -2;
+			bottom: rem(30);
+			right: rem(10);
+			width: calc(#{rem(416)} * 1/3);
+			height: calc(#{rem(325)} * 1/3);
+			@include media-breakpoint-up(lg){
+				width: calc(#{rem(416)} * 2/3);
+				height: calc(#{rem(325)} * 2/3);
+			}
+			@include media-breakpoint-up(xxl){
+				bottom: rem(49);
+				right: rem(100);
+
+				width: rem(416);
+				height: rem(325);
+			}
+
+			display: flex;
+			justify-content: flex-end;
+			align-items: flex-end;
+
+			img{
+				width: auto;
+				height: auto;
+				max-width: 100%;
+				max-height: 100%;
+			}
+		}
+	}
+	&__content{
+		position: relative;
+		z-index: 1;
+	}
+	&__title{
+		font-weight: bold;
+		font-size: rem(40);
+		line-height: 1.5;
+		text-transform: uppercase;
+		color: $coal;
+		margin-bottom: rem(36);
+	}
+	&__descr{
+		line-height: 1.8;
+		color: $coal;
+		margin-bottom: rem(39);
+		width: 370px;
+		max-width: 100%;
+	}
+	&__b-btn{
+		@extend .btn;
+		@extend .btn-outline-primary;
+
+		padding: rem(15) rem(20);
+		border-radius: rem(20);
+
+		width: rem(320);
+		max-width: 100%;
+		@include media-breakpoint-up(xl){
+			width: rem(357);
+			max-width: 100%;
+		}
+	}
+
+	//menu-btn
+	&__menu-btn{
+		@extend .btn;
+		@extend .btn-primary;
+		border: none!important;
+
+		color: $danger;
+		background-color: rgba($primary, .2);
+		padding: rem(12);
+		margin-bottom: rem(20);
+
+		font-weight: bold;
+		font-size: 14px;
+		text-transform: uppercase;
+		line-height: 1.2;
+
+		span:first-child{
+			display: none;
+		}
+		&.active{
+			span:first-child{
+				display: inline;
+			}
+		}
+	}
+	&__menu-content{
+		li:nth-child(n + 5) {
+
+			@include media-breakpoint-up(lg){
+				display: block!important;
+			}
+			
+			display: none;
+			&.active{
+				display: block;
+			}
+		}
+	}
+
+	&__{}
+	&__{}
+} // end.sBaner

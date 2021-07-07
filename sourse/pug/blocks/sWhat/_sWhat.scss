@@ -1,0 +1,13 @@
+// start .sWhat
+.sWhat {
+	--sPT: #{rem(23)};
+	--sPB: #{rem(25)};
+	--sTPB: #{rem(26)};
+
+	&__list{
+		@extend .red-dot-ul;
+	}
+	&__{}
+	&__{}
+	&__{}
+} // end.sWhat

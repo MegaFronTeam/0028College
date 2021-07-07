@@ -1,0 +1,18 @@
+mixin sUnivers(data)
+	// start sUnivers
+	+b.SECTION.sUnivers.section#sUnivers&attributes(attributes)
+		.container
+			+b.title-row.row
+				.col-auto
+					h2 Партнеры
+			+e.slider-wrap
+				.swiper-container.sUnivers-slider-js
+					.swiper-wrapper
+						-for(var i=1; i <= 7; i++)
+							+sUniversSlide(i)
+	// end sUnivers
+
+mixin sUniversSlide(imgNum)
+	.swiper-slide
+		+e.img
+			img(loading="lazy" src=`img/@2x/sUnivers-${imgNum}.png` alt="")

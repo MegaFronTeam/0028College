@@ -1,0 +1,22 @@
+mixin sBanerAlt(data)
+	// start sBanerAlt
+	+b.SECTION.sBanerAlt.section#sBanerAlt&attributes(attributes)
+		+e.bg
+			+e.bg-img
+				img(loading="lazy" src="img/@2x/sBanerAlt-bg.jpg" alt="")
+		.container
+			+e.back(href='#')
+				img(loading="lazy" src="img/svg/arrow-left2.svg" alt="")
+			+b.section-title
+				h1
+					| Мастер
+					|
+					br.d-none.d-xl-block
+					| столярно-плотничных, паркетных и стекольных работ
+				+e.row.row
+					.col-auto
+						+e.btn--outline(href="#") Записаться на день открытых дверей
+					.col-auto
+						+e.btn--red(href="#") Подать документы
+			.row
+	// end sBanerAlt

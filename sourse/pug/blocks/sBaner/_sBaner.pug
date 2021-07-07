@@ -1,0 +1,40 @@
+mixin sBaner(data)
+	// start sBaner
+	+b.SECTION.sBaner.section#sBaner&attributes(attributes)
+		+e.container.container
+			+e.row.row
+				+e.menu-col.col-lg-auto.order-lg-0.order-last
+					+e.menu-content.sBaner-menu-content-js
+						
+						+e.UL.menu--top
+							li
+								+e.black-btn--top(href='#') Кунцево
+							li: a(href="#") Главная
+							li: a(href="#") о Центре
+							li: a(href="#") Поступающим
+							li: a(href="#") Специальности
+							li: a(href="#") Как мы учим
+							li: a(href="#") Календарь мероприятий
+							li.hr
+							li: a(href="#") Обучающимся
+							li: a(href="#") Расписание
+							li: a(href="#") Библиотека
+							li.mb-3
+								+e.black-btn--bot(href='#') Личный Кабинет
+					+e.menu-btn.d-lg-none.sBaner-menu-btn-js Показать еще
+				+e.baner-col.col-lg
+					+e.box
+						+e.bg--1
+							img(loading="lazy" src='img/@2x/sBaner-img.png' alt="")
+						+e.bg--2
+							img(loading="lazy" src='img/svg/sBaner-strips.svg' alt="")
+						+e.content
+							+e.H1.title
+								| Центр
+								br
+								| промышленных
+								br
+								| технологий
+							+e.descr Препараты и пульсоксиметры: расширяется  бесплатного лекарственного обеспечения больных COVID-19
+							+e.b-btn(href='#') Узнать больше о колледже
+	// end sBaner

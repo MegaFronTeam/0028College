@@ -1,0 +1,23 @@
+mixin sWork(data)
+	// start sWork
+	+b.SECTION.sWork.section#sWork&attributes(attributes)
+		.container
+			+b.section-title--smaller
+				h2 Кем я смогу работать?
+			+e.row.row
+				+sWorkItem()
+					| Плотник
+				+sWorkItem()
+					| Столяр - строитель
+				+sWorkItem()
+					| Столяр - краснодеревщик
+				+sWorkItem()
+					| Столяр по производству мебели
+	// end sWork
+
+mixin sWorkItem()
+	.col-md-6.col-xl-3
+		+e.item
+			+e.title
+				block
+			+e.salary 60000-90000 рублей

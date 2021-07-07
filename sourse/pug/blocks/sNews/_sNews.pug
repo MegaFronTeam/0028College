@@ -1,0 +1,23 @@
+mixin sNews(data)
+	// start sNews
+	+b.SECTION.sNews.section#sNews&attributes(attributes)
+		.container
+			+b.title-row.row
+				.col-auto
+					h2 Новости и события
+				.col-auto
+					+e.all(href='#') все
+			+e.row.row
+				+sNewsItem()
+				+sNewsItem()
+				+sNewsItem()
+	// end sNews
+
+mixin sNewsItem()
+	.col-md-6.col-lg-4
+		+e.item(href='#')
+			+e.img
+				img(loading="lazy" src='img/@2x/sNews-1.jpg' alt="")
+			+e.txt От всей души поздравляем всех с профессиональным праздником – Международным днем учителя.
+			+e.date 16.05.2020
+
