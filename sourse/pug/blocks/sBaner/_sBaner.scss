@@ -6,10 +6,10 @@
 	&__row{
 		--bs-gutter-y: #{rem(40)};
 
-		flex-direction: column-reverse;
-		@include media-breakpoint-up(lg){
-			flex-direction: row;
-		}
+		//flex-direction: column-reverse;
+		//@include media-breakpoint-up(lg){
+		//	flex-direction: row;
+		//}
 
 		--bs-gutter-x: #{rem(30)};
 		@include media-breakpoint-up(xl){
@@ -211,6 +211,15 @@
 		font-size: 14px;
 		text-transform: uppercase;
 		line-height: 1.2;
+
+		span:first-child{
+			display: none;
+		}
+		&.active{
+			span:first-child{
+				display: inline;
+			}
+		}
 	}
 	&__menu-content{
 		@include media-breakpoint-up(lg){

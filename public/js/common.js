@@ -350,6 +350,7 @@ function eventHandler() {
 	//
 
 	$('.sBaner-menu-btn-js').click(function () {
+		$(this).toggleClass('active');
 		$('.sBaner-menu-content-js').slideToggle(function () {
 			$(this).toggleClass('active');
 		});
