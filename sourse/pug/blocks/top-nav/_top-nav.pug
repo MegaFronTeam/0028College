@@ -104,3 +104,11 @@ mixin topNavSearch()
 		+input('Найти информацию', 'text')
 		+e.search-btn(type="button")
 			img(loading="lazy" src="img/svg/zoom.svg" alt="")
+
+mixin mob-mnu4()
+	+b.menu-mobile--js.d-xl-none
+		+b.toggle-menu-mobile--js
+			span
+		+e.inner
+			+mnu3()
+			//-+topNavSearch()

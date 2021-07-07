@@ -35,9 +35,22 @@ mixin sWeek(data)
 				addClasses: 'item-sm',
 				imgNum: 4,
 			})
+			//
+			+sWeekSmItem({
+				title: `среднее образование`,
+				addClasses: 'item-big',
+				bootClasses: 'col-xl-6',
+				imgNum: 5,
+			})
+			+sWeekSmItem({
+				title: `дошкольное образование`,
+				addClasses: 'item-big',
+				bootClasses: 'col-xl-6',
+				imgNum: 6,
+			})
 
 mixin sWeekSmItem(data)
-	.col-sm-6.col-lg-3
+	div(class=`${data.bootClasses || 'col-sm-6 col-xl-3'}`)
 		+e.d-item(class=data.addClasses)
 			+e.d-bg
 				img(loading="lazy" src=`img/@2x/sWeek-${data.imgNum}.png` alt="")

@@ -88,7 +88,7 @@
 		font-size: rem(73);
 		line-height: 0.92;
 		text-transform: uppercase;
-		margin-bottom: rem(30);
+		margin-bottom: rem(25);
 	}
 	&__descr{
 		font-size: rem(20px);
@@ -130,7 +130,14 @@
 		z-index: 1;
 
 		&.item-sm{
-			min-height: rem(252);
+			min-height: rem(182);
+
+			--title-mw: #{rem(170)};
+		}
+		&.item-big{
+			min-height: rem(110);
+			//
+			--title-mw: #{rem(300)};
 		}
 
 		padding: rem(20);
@@ -164,7 +171,7 @@
 	&__d-title{
 		font-weight: 600;
 		font-size: rem(14);
-		max-width: rem(170);
+		max-width: var(--title-mw);
 		line-height: 1.23;
 
 		text-transform: uppercase;
@@ -196,7 +203,7 @@
 		font-weight: bold;
 		font-size: rem(12);
 		line-height: 1.8;
-		color: $dark;
+		color: $dark!important;
 
 		display: inline-flex;
 		align-items: center;
@@ -223,7 +230,6 @@
 	display: flex;
 	flex-direction: column;
 
-
 	&__logo{
 		display: block;
 		margin-bottom: rem(35);
@@ -235,29 +241,53 @@
 	&__{}
 	&__{}
 
-	.a-menu{
+	.menu{
 		list-style: none;
 		padding: 0;
-		margin: 0 0 rem(20);
+		@include media-breakpoint-up(xl){
+			margin: 0 0 rem(87);
+		}
 
 		& > li{
-			margin: 0 0 rem(10) 0;
+			margin: 0 0 rem(13) 0;
 			&:last-child{
 				margin: 0;
 			}
+
 			& > a, span{
+				padding: 0;
 				font-weight: bold;
 				font-size: rem(16);
 
 				text-transform: uppercase;
 				color: $dark;
 			}
+			&.menu-item-has-children{
+				span{
+					display: block!important;
+					text-align: left;
+					&:after{
+						content: none;
+					}
+				}
+
+
+			}
 
 			//
 			& > ul{
 				list-style: none;
-				padding: 0 0 0 rem(16);
-				margin: 0 0 0 0;
+				padding: rem(7) 0 14px rem(16) !important;
+				//7px 0 0 1re
+				margin: 0!important;
+
+				position: static!important;
+				top: unset!important;
+				left: unset!important;
+				box-shadow: none!important;
+				display: block!important;
+				border: none!important;
+				text-align: left!important;
 
 				li{
 					margin-bottom: 1px;
@@ -267,9 +297,10 @@
 				}
 
 				a{
-					font-weight: 500;
-					font-size: rem(14);
-					line-height: (27/14);
+					font-weight: 500!important;
+					font-size: rem(14) !important;
+					line-height: (27/14) !important;
+					text-transform: none!important;
 
 					color: $black;
 					&:hover{
@@ -294,13 +325,20 @@
 .weekMain{
 	padding-top: rem(27);
 	&__row{
-		--bs-gutter-x: #{rem(39)};
+		--bs-gutter-x: #{rem(20)};
+		@include media-breakpoint-up(xxl){
+			--bs-gutter-x: #{rem(39)};
+		}
 	}
 	&__aside-col{
-		width: calc(#{rem(185)} + var(--bs-gutter-x));
+		@include media-breakpoint-up(xl){
+			width: calc(#{rem(185)} + var(--bs-gutter-x)) !important;
+		}
 	}
 	&__content-col{
-		width: calc(100% - #{rem(185)} - var(--bs-gutter-x));
+		@include media-breakpoint-up(xl){
+			width: calc(100% - #{rem(185)} - var(--bs-gutter-x)) !important;
+		}
 	}
 	&__{}
 }

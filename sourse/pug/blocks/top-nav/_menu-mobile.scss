@@ -159,11 +159,19 @@ $h: em(2);
 	padding: rem(0) rem(10);
 	ul{
 		text-transform: uppercase;
-
 		display: block;
 		& > li{
 			display: block;
 			cursor: pointer;
+			a, span{
+				text-align: left!important;
+			}
+
+			&.menu-item-has-children{
+				span{
+					display: flex;
+				}
+			}
 
 			& > ul{
 				transition: all 0s ease-in-out;

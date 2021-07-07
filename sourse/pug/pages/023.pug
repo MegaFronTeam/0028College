@@ -36,6 +36,7 @@ include ../blocks/sContinue/_sContinue.pug
 include ../blocks/sDocs/_sDocs.pug
 include ../blocks/sHeaderAlt/_sHeaderAlt.pug
 include ../blocks/sWeek/_sWeek.pug
+include ../blocks/footerSlim/_footerSlim.pug
 
 block variables
 	- let  mainPage='container-bigger color-coal'
@@ -45,11 +46,13 @@ block title
 	- let  title= '023'
 	title= title
 block pagecontent
+	+mob-mnu4()
 	+b.weekMain
 		.container
 			+e.row.row
-				+e.aside-col.col-xl-auto
+				+e.aside-col.col-xl-auto.d-xl-block.d-none
 					+asideMenu()
 				+e.content-col.col-xl
 					+sHeaderAlt()
 					+sWeek()
+	+footerSlim()

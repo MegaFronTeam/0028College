@@ -47,10 +47,10 @@ mixin mnu2()
 			a(href="#") Контакты
 
 mixin mnu3()
-	+b.UL.a-menu
-		li: a(href="#") О нас
-		li: a(href="#") Поступающим
-		li.has-children
+	+b.UL.menu
+		li.menu-item: a(href="#") О нас
+		li.menu-item: a(href="#") Поступающим
+		li.menu-item.menu-item-has-children
 			span Образование
 			ul
 				li: a(href="#") Детский сад
@@ -58,15 +58,15 @@ mixin mnu3()
 				li: a(href="#") Колледж
 				li: a(href="#") Профподготовка
 				li: a(href="#") Дополнительное
-		li.has-children
+		li.menu-item.menu-item-has-children
 			span Наши проекты
 			ul
 				li: a(href="#") Мебельная помощь
 				li: a(href="#") Неделя профессий
-		li: a(href="#") АВТОШКОЛА
-		li: a(href="#") ФАБРИКА МЕБЕЛИ
-		li: a(href="#") ПРОЕКТНОЕ БЮРО
-		li: a(href="#") ЦЕНТР КАРЬЕРЫ
-		li: a(href="#") ПАРТНЁРЫ
-		li: a(href="#") ПРЕСС-СЛУЖБА
-		li: a(href="#") Контакты
+		li.menu-item: a(href="#") АВТОШКОЛА
+		li.menu-item: a(href="#") ФАБРИКА МЕБЕЛИ
+		li.menu-item: a(href="#") ПРОЕКТНОЕ БЮРО
+		li.menu-item: a(href="#") ЦЕНТР КАРЬЕРЫ
+		li.menu-item: a(href="#") ПАРТНЁРЫ
+		li.menu-item: a(href="#") ПРЕСС-СЛУЖБА
+		li.menu-item: a(href="#") Контакты

@@ -1,18 +1,21 @@
 mixin sHeaderAlt(data)
 	// start sHeaderAlt
 	+b.sHeaderAlt#sHeaderAlt&attributes(attributes)
-		.container
-			.row.align-items-center
-				.col-auto
-					+e.tel(href="tel:88006559988")
-						+icon('tel')
-						| 8 800 655 99 88
-				.col
-					+e.text Многоканальный c 9:00 до 19:00
-				.col-md-auto.col
-					+e.btn(href="#showquiz") Подобрать программу
-				.col-auto.d-xl-none
-					+b.toggle-menu-mobile--js
-						span
+		.row.align-items-center.gy-4
+			.col-auto.d-xl-none
+				+e.logo(href='/')
+					img(loading="lazy" src="img/svg/logo.svg" alt="")
+			.col-auto
+				+e.tel(href="tel:88006559988")
+					+icon('tel')
+					| 8 800 655 99 88
+				+e.text.mt-1.d-lg-none Многоканальный c 9:00 до 19:00
+			.col.d-none.d-lg-block
+				+e.text Многоканальный c 9:00 до 19:00
+			.col-md-auto.col
+				+e.btn(href="#showquiz") Подобрать программу
+			.col-auto.d-xl-none
+				+b.toggle-menu-mobile--js
+					span
 
 	// end sHeaderAlt

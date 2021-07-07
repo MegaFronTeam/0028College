@@ -1,9 +1,13 @@
 // start .sHeaderAlt
 .sHeaderAlt {
-	padding-top: 10px;
+	padding-top: 3px;
 	padding-bottom: 33px;
+
 	&__text {
-		font-size: $small;
+		font-size: 12px;
+		@include media-breakpoint-up(md){
+			font-size: $small;
+		}
 	}
 	&__tel {
 		font-weight: bold;
@@ -17,6 +21,8 @@
 	}
 
 	&__btn {
+		white-space: nowrap;
+
 		@extend .btn;
 		@extend .btn-sm;
 		@extend .btn-primary;
