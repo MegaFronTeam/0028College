@@ -195,6 +195,34 @@
 			max-width: 100%;
 		}
 	}
+
+	//menu-btn
+	&__menu-btn{
+		@extend .btn;
+		@extend .btn-primary;
+		border: none!important;
+
+		color: $danger;
+		background-color: rgba($primary, .2);
+		padding: rem(12);
+		margin-bottom: rem(20);
+
+		font-weight: bold;
+		font-size: 14px;
+		text-transform: uppercase;
+		line-height: 1.2;
+	}
+	&__menu-content{
+		@include media-breakpoint-up(lg){
+			display: block!important;
+		}
+
+		display: none;
+		&.active{
+			display: block;
+		}
+	}
+
 	&__{}
 	&__{}
 } // end.sBaner

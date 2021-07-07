@@ -338,7 +338,6 @@ function eventHandler() {
 			$(this).toggleClass('active');
 		});
 	})
-	//endluckyoneJs
 	let sWeekSlider = new Swiper('.sWeek-slider-js', {
 		slidesPerView: 'auto',
 		loop: true,
@@ -350,6 +349,16 @@ function eventHandler() {
 			clickable: true,
 		},
 	});
+
+	//
+	//
+	$('.sBaner-menu-btn-js').click(function (){
+		$('.sBaner-menu-content-js').slideToggle(function (){
+			$(this).toggleClass('active');
+		})
+	})
+
+	//endluckyoneJs
 
 };
 if (document.readyState !== 'loading') {

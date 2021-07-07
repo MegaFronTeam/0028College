@@ -85,7 +85,11 @@
 	&__title{
 		font-weight: bold;
 		max-width: 50%;
-		font-size: rem(73);
+
+		font-size: rem(60);
+		@include media-breakpoint-up(md){
+			font-size: rem(73);
+		}
 		line-height: 0.92;
 		text-transform: uppercase;
 		margin-bottom: rem(25);

@@ -4,19 +4,21 @@ mixin sBaner(data)
 		+e.container.container
 			+e.row.row
 				+e.menu-col.col-lg-auto
-					+e.black-btn--top(href='#') Кунцево
-					+e.UL.menu--top
-						li: a(href="#") Главная
-						li: a(href="#") о Центре
-						li: a(href="#") Поступающим
-						li: a(href="#") Специальности
-						li: a(href="#") Как мы учим
-						li: a(href="#") Календарь мероприятий
-					+e.UL.menu--bot
-						li: a(href="#") Обучающимся
-						li: a(href="#") Расписание
-						li: a(href="#") Библиотека
-					+e.black-btn--bot(href='#') Личный Кабинет
+					+e.menu-btn.d-inline-block.d-lg-none.sBaner-menu-btn-js Меню
+					+e.menu-content.sBaner-menu-content-js
+						+e.black-btn--top(href='#') Кунцево
+						+e.UL.menu--top
+							li: a(href="#") Главная
+							li: a(href="#") о Центре
+							li: a(href="#") Поступающим
+							li: a(href="#") Специальности
+							li: a(href="#") Как мы учим
+							li: a(href="#") Календарь мероприятий
+						+e.UL.menu--bot
+							li: a(href="#") Обучающимся
+							li: a(href="#") Расписание
+							li: a(href="#") Библиотека
+						+e.black-btn--bot(href='#') Личный Кабинет
 				+e.baner-col.col-lg
 					+e.box
 						+e.bg--1
