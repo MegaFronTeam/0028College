@@ -1,0 +1,20 @@
+// start .sIcons
+.sIcons {
+		--sPT: 50px;
+		--sPB: 30px;
+		// --sTPB: ;
+	text-align: center;
+	.row{
+		justify-content: space-around;
+	}
+	img{
+		margin-bottom: 30px;
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sIcons

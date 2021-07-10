@@ -1,0 +1,21 @@
+mixin sContactBlock(data)
+	// start sContactBlock
+	+b.SECTION.sContactBlock.section#sContactBlock&attributes(attributes)
+		.container
+			mixin item(i,t='Центральная  приемная комиссия',tel="8 (499) 673-01-41", time='Многоканальный c 9:00 до 19:00')
+				- let th =  tel.trim()
+				+e.item.bg-wrap&attributes(attributes)
+					.line-inner
+					+pic(i,'bg',0).picture-bg
+					+e.left
+						+e.title= t 
+						+e.tel(href=`tel:${th}`)
+							+icon("tel")
+							= tel
+						+e.time= time
+						+e.more(href="#") Подробнее
+			//- +item(`iframe-img-1.jpg`)
+			//- +item(`iframe-img-2.jpg`)(style="--color: #003E70")
+			+item(`iframe.png`)
+
+	// end sContactBlock

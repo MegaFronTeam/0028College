@@ -43,14 +43,12 @@ html(lang="ru")
 			}
 		link(type="image/ico", href='img/favicon.ico', rel='shortcut icon') 
 		<meta name="format-detection" content="telephone=no"> 
-		+allcss()
+		link(href="css/main.min.css", rel="stylesheet")
 	block variables
 	//- style.
 	//- 	.loaded_hiding {  opacity: 0; pointer-events: none;  } .loaded_hiding::before { display: none; }
 	//- body.loaded_hiding(class= mainPage) 
 	body(class= mainPage data-bg= bg)
-		.main-wrapper
+		.main-wrapper.main-wrapper--iframe
 			block pagecontent
 				h3 content
-		+modal()
-		+allcjs()

@@ -1,0 +1,66 @@
+extends layout/frame.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sAdvanteges/_sAdvanteges.pug
+//- include ../blocks/sPlaces/_sPlaces.pug
+//- include ../blocks/sSpecials/_sSpecials.pug
+//- include ../blocks/sMost/_sMost.pug
+//- include ../blocks/sBanner/_sBanner.pug
+//- include ../blocks/sAbout/_sAbout.pug
+//- include ../blocks/sPrises/_sPrises.pug
+//- include ../blocks/sWorks/_sWorks.pug
+//- include ../blocks/sQw/_sQw.pug
+//- include ../blocks/sBaner/_sBaner.pug
+//- include ../blocks/sVantage/_sVantage.pug
+//- include ../blocks/sClosest/_sClosest.pug
+//- include ../blocks/sNews/_sNews.pug
+//- include ../blocks/sNewsAlt/_sNewsAlt.pug
+//- include ../blocks/sProfs/_sProfs.pug
+//- include ../blocks/sGalery/_sGalery.pug
+//- include ../blocks/sPartners/_sPartners.pug
+//- include ../blocks/sUnivers/_sUnivers.pug
+//- include ../blocks/sFaq/_sFaq.pug
+//- include ../blocks/sFormAlt/_sFormAlt.pug
+//- include ../blocks/footerAlt/_footerAlt.pug
+//- include ../blocks/sBanerAlt/_sBanerAlt.pug
+//- include ../blocks/sEnter/_sEnter.pug
+//- include ../blocks/sWhat/_sWhat.pug
+//- include ../blocks/sStudy/_sStudy.pug
+//- include ../blocks/sPrice/_sPrice.pug
+//- include ../blocks/sPrice/_sPrice.pug
+//- include ../blocks/sPantProg/_sPantProg.pug
+//- include ../blocks/sWork/_sWork.pug
+//- include ../blocks/sContinue/_sContinue.pug
+//- include ../blocks/sDocs/_sDocs.pug
+//- include ../blocks/sHeaderAlt/_sHeaderAlt.pug
+//- include ../blocks/sWeek/_sWeek.pug
+//- include ../blocks/footerSlim/_footerSlim.pug
+include ../blocks/sContactBlock/_sContactBlock.pug
+include ../blocks/sCard/_sCard.pug
+include ../blocks/sTime/_sTime.pug
+include ../blocks/sIcons/_sIcons.pug
+
+block variables
+	- let  mainPage='container-bigger color-coal'
+	- let  bg='023.png'
+
+block title
+	- let  title= 'iframe'
+	title= title
+block pagecontent
+	+sContactBlock
+	+sCard
+	+sTime
+	+sIcons
+	//- +mob-mnu4()
+	//- +b.weekMain
+	//- 	.container
+	//- 		+e.row.row
+	//- 			+e.aside-col.col-xl-auto.d-xl-block.d-none
+	//- 				+asideMenu()
+	//- 			+e.content-col.col-xl
+	//- 				+sHeaderAlt()
+	//- 				+sWeek()
+	//- +footerSlim()
