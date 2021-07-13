@@ -17,17 +17,17 @@ mixin top-nav()
 						img(src="img/svg/logo.svg", alt="")
 				.col-12.d-none.d-xl-block
 					+mnu()
-				.col-md
+				.col.order-first
 					.row
 						.col-xl
-							+e.title Центральная приемная комиссия
+							+e.title.d-none.d-md-block Центральная приемная комиссия
 						.col-auto
 							+e.tel(href="tel:88006559988")
 								+icon('tel')
 								| 8 800 655 99 88
 						.col-auto
 							+e.text Многоканальный c 9:00 до 19:00
-				.col-md-auto.col
+				.col-md-auto.order-md-0.order-last
 					+e.btn(href="#showquiz") Подобрать программу
 				.col-auto.d-xl-none
 					+b.toggle-menu-mobile--js
@@ -36,15 +36,15 @@ mixin top-nav()
 
 mixin top-nav2()
 	// start top-nav
-	+b.top-nav--alt
+	+b.top-nav
 		.container
-			.row.gy-3.gy-xl-0
+			.row.gy-1.gy-xl-0
 				+e.logo.col-auto
 					a(href="/")
 						img(src="img/svg/logo.svg", alt="")
 				.col-12.d-none.d-xl-block
 					+mnu2()
-				.col-md
+				.col
 					.row
 						.col-auto
 							+e.tel(href="tel:88006559988")
@@ -52,7 +52,7 @@ mixin top-nav2()
 								| 8 800 655 99 88
 						.col-auto
 							+e.text Многоканальный c 9:00 до 19:00
-				.col-md-auto.col
+				.col-md-auto.order-md-0.order-last
 					+e.btn(href="#showquiz") Подобрать программу
 				.col-auto.d-xl-none
 					+b.toggle-menu-mobile--js
@@ -68,15 +68,15 @@ mixin mob-mnu2()
 
 mixin top-nav3()
 	// start top-nav
-	+b.top-nav--alt
+	+b.top-nav
 		.container
-			.row.gy-3.gy-lg-0
+			.row.gy-1.gy-lg-0
 				+e.logo.col-auto
 					a(href="/")
 						img(src="img/svg/logo.svg", alt="")
 				.col-12.d-none.d-xl-block
 					+mnu2()
-				.col-md
+				.col
 					.row
 						.col-lg.d-none.d-lg-block
 							+topNavSearch()
@@ -85,7 +85,7 @@ mixin top-nav3()
 								+icon('tel')
 								| 8 800 655 99 88
 							+e.sm-txt Многоканальный c 9:00 до 19:00
-				.col-md-auto.col
+				.col-md-auto.order-md-0.order-last
 					+e.btn(href="#showquiz") Подобрать программу
 				.col-auto.d-xl-none
 					+b.toggle-menu-mobile--js

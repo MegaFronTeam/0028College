@@ -214,6 +214,29 @@ function eventHandler() {
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
+
+	function setFixedNav() {
+		let topNav = document.querySelector('.top-nav  ');
+		if (!topNav) return;
+		window.scrollY > 0
+			? topNav.classList.add('fixed')
+			: topNav.classList.remove('fixed');
+	}
+
+
+	function whenResize() {
+		setFixedNav();
+	}
+
+	window.addEventListener('scroll', () => {
+		setFixedNav();
+
+	}, { passive: true })
+	window.addEventListener('resize', () => {
+		whenResize();
+	}, { passive: true });
+
+	whenResize();
   
 	const swiper4 = new Swiper('.sMost__slider--js', { 
 		slidesPerView: 'auto', 

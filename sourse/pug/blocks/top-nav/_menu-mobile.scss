@@ -3,7 +3,7 @@ $h: em(2);
 
 .toggle-menu-mobile {
 	display: block;
-	height: $h* 12;
+	height: $h* 10;
 	position: relative;
 	color: $primary;
 	font-size: 32px;
@@ -174,12 +174,15 @@ $h: em(2);
 			}
 
 			& > ul{
-				transition: all 0s ease-in-out;
-				position: static;
+				 @include media-breakpoint-up(lg){
 
-				display: none!important;
+				 }
+				// transition: all 0s ease-in-out;
+				// position: static;
+
+				display: none;
 				&.active{
-					display: block!important;
+					display: block;
 				}
 
 				border: none;

@@ -52,26 +52,32 @@
         }
       }
     }
+     @include media-breakpoint-up(lg){
 
-    &:hover {
-      & > ul {
-        display: block;
+       &:hover {
+         & > ul {
+           display: block;
+          }
+        }
       }
-    }
 
     & > ul {
       display: none;
       list-style: none;
       padding: rem(12) rem(12);
       margin: 0;
-      position: absolute;
-      z-index: 10;
-      left: 0;
-      top: 100%;
-      background-color: $white;
-      border-radius: rem(10);
-      border: 1px solid $gray-100;
-      box-shadow: 0 0 rem(12) 0 rgba($gray-300, 1);
+       @include media-breakpoint-up(lg) {
+
+
+         position: absolute;
+         z-index: 10;
+         left: 0;
+         top: 100%;
+         background-color: $white;
+         border-radius: rem(10);
+         border: 1px solid $gray-100;
+         box-shadow: 0 0 rem(12) 0 rgba($gray-300, 1);
+        }
 
       li {
         margin-bottom: rem(5);
