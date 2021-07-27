@@ -1,0 +1,57 @@
+// start .sArticle
+.sArticle {
+	--sPT: #{rem(40)};
+
+	--sPB: #{rem(70)};
+	@include media-breakpoint-up(xxl){
+		--sPB: #{rem(139)};
+	}
+	--sTPB: #{rem(40)};
+
+	&__row{
+		--bs-gutter-x: #{rem(30)};
+		--bs-gutter-y: #{rem(40)};
+	}
+	&__img{
+		@extend .accept-ratio-frame-nh;
+		padding-top: (389/753) * 100%;
+		border-radius: rem(20);
+		margin-bottom: rem(38);
+	}
+	&__txt{
+		color: $black;
+		line-height: 1.85;
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+
+		p{
+			margin-bottom: rem(24);
+		}
+	}
+	&__also-col {
+		position: relative;
+		top: rem(-8);
+	}
+	&__also-title{
+		font-weight: 600;
+		font-size: rem(24);
+		margin-bottom: rem(40);
+		line-height: 1.5;
+
+		text-transform: uppercase;
+		color: $coal;
+	}
+	&__a-items{
+
+	}
+	.news-item{
+		margin-bottom: rem(30);
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	&__{}
+	&__{}
+	&__{}
+} // end.sArticle

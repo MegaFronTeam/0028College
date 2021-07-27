@@ -29,7 +29,26 @@ mixin arrow3()
 	.swiper-next
 		+icon('chevron-right')
 
+mixin phSocItem(iconName)
+	.col-auto
+		+e.soc-item(href="#")
+			+icon(iconName)
+
+mixin phSpeaker(imgNum, name, surname)
+	+e.speaker
+		+e.s-row.row
+			.col-auto
+				+e.s-img
+					img(loading="lazy" src=`img/@2x/speaker-${imgNum}.png` alt="")
+			.col
+				+e.name
+					span=name
+					br
+					span=surname
+				+e.job-place
+					block
+
+
 mixin ie11()
 	//- modernizer and for ie11
-	 
 	<!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->

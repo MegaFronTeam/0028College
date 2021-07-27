@@ -8,4 +8,5 @@
 1. <https://megafronteam.github.io/0028College/public/news.html>
 1. <https://megafronteam.github.io/0028College/public/events.html>
 1. <https://megafronteam.github.io/0028College/public/article.html>
+1. <https://megafronteam.github.io/0028College/public/event.html>
 

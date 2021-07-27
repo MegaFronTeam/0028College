@@ -36,6 +36,7 @@ include ../blocks/sContinue/_sContinue.pug
 include ../blocks/sDocs/_sDocs.pug
 include ../blocks/sNewsPage/_sNewsPage.pug
 include ../blocks/sEvents/_sEvents.pug
+include ../blocks/sArticle/_sArticle.pug
 
 block variables
 	- let  mainPage='container-bigger color-coal page-head-no-bb'
@@ -57,8 +58,19 @@ block pagecontent
 							img(loading="lazy" src='img/svg/back-arrow.svg' alt="")
 					+e.title-col.col
 						h1 От всей души поздравляем всех с профессиональным праздником –  Международным днем учителя.
-				+e.info-row.row
-
-	//+sEvents()
+						+e.info-row.row.align-items-center
+							.col-auto
+								+e.date
+									span 16.05.2020
+									span Вторник
+							.col-auto
+								+e.i-sub-row.row.align-items-center
+									+e.share-col.col-auto Поделиться:
+									.col-auto
+										+e.soc-row.row
+											+phSocItem('soc-vk')
+											+phSocItem('soc-fb')
+											+phSocItem('soc-inst')
+	+sArticle()
 	+sFormAlt()(class="pt-4 pb-0")
 	+footer()
