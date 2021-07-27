@@ -374,11 +374,22 @@ function eventHandler() {
 	});
 
 	//
-	//
 	$('.sBaner-menu-btn-js').click(function (){
 		$('.sBaner-menu-content-js li:hidden').slideDown()
 		$(this).fadeOut();
 	})
+	//
+	let sEventsSlider = new Swiper('.sEvents-slider-js', {
+		slidesPerView: 'auto',
+		loop: true,
+		spaceBetween: 40,
+
+		navigation: {
+			nextEl: '.swiper-next',
+			prevEl: '.swiper-prev',
+		},
+	});
+
 
 	//endluckyoneJs
 

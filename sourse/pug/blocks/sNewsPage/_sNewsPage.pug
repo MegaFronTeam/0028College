@@ -1,0 +1,11 @@
+mixin sNewsPage(data)
+	// start sNewsPage
+	+b.sNewsPage.section#sNewsPage&attributes(attributes)
+		.container
+			+e.row.row
+				- for(var i = 0; i < 4; i++)
+					+sNewsItem()
+					+sNewsItem()
+					+sNewsItem()
+			+pugin()
+	// end sNewsPage
