@@ -358,6 +358,15 @@ function eventHandler() {
 		},
 	});
 
+	//
+	let topNav = document.querySelector(".top-nav");
+	function calcHeaderHeight() {
+		document.documentElement.style.setProperty('--top-nav-h', `${topNav.offsetHeight}px`);
+	}
+	window.addEventListener('resize', calcHeaderHeight, { passive: true });
+	window.addEventListener('scroll', calcHeaderHeight, { passive: true });
+	calcHeaderHeight();
+
 
 	//endluckyoneJs
 

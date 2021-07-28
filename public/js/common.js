@@ -353,7 +353,21 @@ function eventHandler() {
 			nextEl: '.swiper-next',
 			prevEl: '.swiper-prev'
 		}
-	}); //endluckyoneJs
+	}); //
+
+	let topNav = document.querySelector(".top-nav");
+
+	function calcHeaderHeight() {
+		document.documentElement.style.setProperty('--top-nav-h', "".concat(topNav.offsetHeight, "px"));
+	}
+
+	window.addEventListener('resize', calcHeaderHeight, {
+		passive: true
+	});
+	window.addEventListener('scroll', calcHeaderHeight, {
+		passive: true
+	});
+	calcHeaderHeight(); //endluckyoneJs
 }
 
 ;

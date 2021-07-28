@@ -542,7 +542,7 @@ iframe {
 
 //
 .page-head{
-	margin-top: rem(30);
+	//margin-top: rem(30);
 	border-top: 1px solid rgba($gray-550, 0.2);
 	border-bottom: 1px solid rgba($gray-550, 0.2);
 	padding: rem(7) 0;
@@ -557,7 +557,7 @@ iframe {
 
 	&-item{
 		&:last-child{
-			a{
+			a, span{
 				color: $body-color;
 
 				&:after{
@@ -566,7 +566,7 @@ iframe {
 			}
 		}
 
-		a{
+		a, span{
 			display: inline-flex;
 			align-items: center;
 
