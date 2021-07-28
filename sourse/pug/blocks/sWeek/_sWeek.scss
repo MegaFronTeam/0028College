@@ -253,6 +253,8 @@
 		}
 
 		& > li{
+			width: 100% !important;
+			text-align: left!important;
 			margin: 0 0 rem(13) 0;
 			&:last-child{
 				margin: 0;
