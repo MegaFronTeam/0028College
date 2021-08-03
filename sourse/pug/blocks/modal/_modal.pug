@@ -1,10 +1,22 @@
-
-mixin modal() 
+mixin modal()
 	//  start modals
-
 	+b.modal-win(id="modal-thanks" class=" " style="display: none" )
 		h3 Спасибо!
 		p Мы свяжемсяс Вами в ближайшее время!
+	+b.modal-education(id="modal-education" style="display: none" )
+		+e.H2.title Школьное образование
+		+e.chose-txt Выберите отделение
+		+e.row.row
+			+sEducationItem(1, 'Переделкино')
+			+sEducationItem(2, 'Давыдково')
+			+sEducationItem(3, 'Федосьино')
 	// #modal-thanks
-	
 	// end modals
+
+mixin sEducationItem(imgNum, name)
+	.col-lg-4
+		+b.education-item(href="#")
+			+e.department Школьные отделения Колледжа №41
+			+e.name=name
+			+e.img-box
+				img(loading="lazy" src=`img/@2x/sEducation-${imgNum}.png` alt="")

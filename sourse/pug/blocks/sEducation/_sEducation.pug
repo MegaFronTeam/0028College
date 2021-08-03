@@ -1,0 +1,18 @@
+mixin sEducation(data)
+	// start sEducation
+	+b.SECTION.sEducation.section#sEducation&attributes(attributes)
+		.container
+			+b.section-title-arrowed
+				+e.row.row
+					.col-auto
+						+e.back-arrow(href="#")
+							img(loading="lazy" src='img/svg/back-arrow.svg' alt="")
+					+e.title-col.col
+						h1 Школьное образование
+			+e.choose-txt Выберите отделение
+			+e.row.row
+				+sEducationItem(1, 'Переделкино')
+				+sEducationItem(2, 'Давыдково')
+				+sEducationItem(3, 'Федосьино')
+
+	// end sEducation

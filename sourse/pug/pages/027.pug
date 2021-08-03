@@ -1,0 +1,55 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAdvanteges/_sAdvanteges.pug
+include ../blocks/sPlaces/_sPlaces.pug
+include ../blocks/sSpecials/_sSpecials.pug
+include ../blocks/sMost/_sMost.pug
+include ../blocks/sBanner/_sBanner.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sPrises/_sPrises.pug
+include ../blocks/sWorks/_sWorks.pug
+include ../blocks/sQw/_sQw.pug
+include ../blocks/sBaner/_sBaner.pug
+include ../blocks/sVantage/_sVantage.pug
+include ../blocks/sClosest/_sClosest.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sNewsAlt/_sNewsAlt.pug
+include ../blocks/sProfs/_sProfs.pug
+include ../blocks/sGalery/_sGalery.pug
+include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sUnivers/_sUnivers.pug
+include ../blocks/sFaq/_sFaq.pug
+include ../blocks/sFormAlt/_sFormAlt.pug
+include ../blocks/footerAlt/_footerAlt.pug
+
+block variables
+	- let  mainPage='container-bigger color-coal'
+	- let  bg='027.png'
+
+block title
+	- let  title= '027'
+	title= title
+block pagecontent
+	+mob-mnu2()
+	+top-nav2()
+	.page-head
+		.container
+			+breadcrumb('МИК', 'Центр промышленных технологий')
+	+sBanerAlt()
+		+b.w-baner
+			+e.department
+				| Школьные
+				br
+				| отделения
+				br
+				| Колледжа №41
+			+e.H2.name Переделкино
+			+e.btn(href='#') Узнать больше о школах
+			+e.bg
+				img(loading="lazy" src='img/@2x/sBanerAlg-bg-1.png' alt="")
+	+sFormAlt()
+	//-+footerAlt()
+	+footer()
