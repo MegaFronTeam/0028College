@@ -2,6 +2,12 @@
 .sWeek {
 	&__slider-wrap{
 		margin-bottom: rem(32);
+		@include media-breakpoint-up(xl){
+			margin-bottom: rem(15);
+		}
+		@include media-breakpoint-up(xxl){
+			margin-bottom: rem(32);
+		}
 
 		.swiper-container{}
 		.swiper-wrapper{}
@@ -59,6 +65,9 @@
 		min-height: 100%;
 
 		padding: rem(50) rem(32);
+		@include media-breakpoint-up(xl){
+			padding: rem(30) rem(24);
+		}
 		@include media-breakpoint-up(xxl){
 			padding: 49px 31px 52px;
 		}
@@ -126,6 +135,12 @@
 		color: $black;
 
 		margin-bottom: rem(26);
+		@include media-breakpoint-up(xl){
+			margin-bottom: rem(15);
+		}
+		@include media-breakpoint-up(xxl){
+			margin-bottom: rem(26);
+		}
 	}
 	&__d-row{
 		--bs-gutter-x: #{rem(26)};
@@ -242,7 +257,15 @@
 
 	&__logo{
 		display: block;
-		margin-bottom: rem(35);
+		//margin-bottom: rem(35);
+
+		padding-bottom: rem(35);
+		@include media-breakpoint-up(xl){
+			padding-bottom: rem(20);
+		}
+		@include media-breakpoint-up(xxl){
+			padding-bottom: rem(35);
+		}
 		img{
 			width: auto;
 			max-width: 100%;
@@ -261,7 +284,12 @@
 		& > li{
 			width: 100% !important;
 			text-align: left!important;
+
 			margin: 0 0 rem(13) 0;
+			@include media-breakpoint-between(xl,xxl){
+				margin: 0 0 rem(5) 0;
+			}
+
 			&:last-child{
 				margin: 0;
 			}
@@ -290,6 +318,10 @@
 			& > ul{
 				list-style: none;
 				padding: rem(7) 0 14px rem(16) !important;
+				@include media-breakpoint-between(xl,xxl){
+					padding: rem(3) 0 5px rem(16) !important;
+				}
+
 				//7px 0 0 1re
 				margin: 0!important;
 
@@ -311,6 +343,9 @@
 				a{
 					font-weight: 500!important;
 					font-size: rem(14) !important;
+					@include media-breakpoint-between(xl, xxl){
+						font-size: rem(12) !important;
+					}
 					line-height: (27/14) !important;
 					text-transform: none!important;
 
@@ -335,7 +370,10 @@
 }
 
 .weekMain{
-	padding-top: rem(27);
+	padding-top: rem(20);
+	@include media-breakpoint-up(xxl){
+		padding-top: rem(27);
+	}
 	&__row{
 		--bs-gutter-x: #{rem(20)};
 		@include media-breakpoint-up(xxl){

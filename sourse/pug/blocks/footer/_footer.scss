@@ -10,6 +10,12 @@
 	}
 
 	padding-top: rem(90);
+	&--alt-padd{
+		@include media-breakpoint-between(xl,xxl){
+			padding-top: rem(30);
+		}
+	}
+
 	margin-top: auto;
 	position: relative;
 	z-index: 2;
