@@ -1,4 +1,11 @@
 // start .sCard
+body .main-wrapper--iframe .container {
+	max-width: 100% !important;
+}
+
+body{
+	min-width: 320px;
+}
 .sCard {
 		--sPT: 0;
 		--sPB: 24px ;
