@@ -1,0 +1,42 @@
+mixin sEvents(data)
+	// start sEvents
+	+b.SECTION.sEvents.section#sEvents&attributes(attributes)
+		.container
+			+e.nav-row.row
+				.col-6.col-lg-4.col-xxl-3
+					+e.slider-wrap
+						.swiper-container.sEvents-slider-js
+							.swiper-wrapper
+								+sEventsSlide()
+								-for (var i =1; i < 12; i++)
+									+sEventsSlide(i)
+						+arrow3()
+				.col-6.col-lg-4.col-xxl-3
+					+input('Вебинары', 'select')
+			+e.content-row.row
+				- for(var i = 0; i < 3; i++)
+					.col-md-6.col-xl-4
+						+sClosestItem({
+							imgNum: 1,
+							title: `Техника безопасности <br> при работе со сварочными аппаратами`,
+							plateColor: '#B71E09',
+						})
+					.col-md-6.col-xl-4
+						+sClosestItem({
+							imgNum: 2,
+							title: `Осенние веселые <br> старты для 8-10 классов`,
+							plateColor: '#9B51E0',
+							addClasses: 'gradient-black',
+						})
+					.col-md-6.col-xl-4
+						+sClosestItem({
+							imgNum: 3,
+							title: `Мастер-класс по технологии деревообработки еще немного описания`,
+							plateColor: '#2D9CDB',
+						})
+			+pugin
+	// end sEvents
+
+mixin sEventsSlide(mod='')
+	.swiper-slide
+		+e.txt.text-center=`Август 2020${mod}`

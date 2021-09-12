@@ -132,37 +132,6 @@ const JSCCommon = {
 		Inputmask("+9(999)999-99-99").mask(InputTel);
 	},
 	// /inputMask
- 
-	sendForm() { 
-
-		$(document).on('submit', "form", function (e) {
-			e.preventDefault();
-			const th = $(this);
-			var data = th.serialize(); 
-			$.ajax({
-				url: 'rest.php',
-				type: 'POST',
-				data: data,
-				
-			}).done(function (data) {
-				console.log(data);
-				$.fancybox.close();
-				$.fancybox.open({
-					src: '#modal-thanks',
-					type: 'inline'
-				});
-				// window.location.replace("/thanks.html");
-				setTimeout(function () {
-					// Done Functions
-					th.trigger("reset");
-					// $.magnificPopup.close();
-					// ym(53383120, 'reachGoal', 'zakaz');
-					// yaCounter55828534.reachGoal('zakaz');
-				}, 4000);
-			}).fail(function () { });
-				console.log('fail');
-		});
-	},
 	heightwindow() {
 		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 		let vh = window.innerHeight * 0.01;
@@ -202,7 +171,6 @@ function eventHandler() {
 	JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
-	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 	JSCCommon.getCurrentYear('.year');
 	JSCCommon.animateScroll();
@@ -374,11 +342,31 @@ function eventHandler() {
 	});
 
 	//
-	//
 	$('.sBaner-menu-btn-js').click(function (){
 		$('.sBaner-menu-content-js li:hidden').slideDown()
 		$(this).fadeOut();
 	})
+	//
+	let sEventsSlider = new Swiper('.sEvents-slider-js', {
+		slidesPerView: 'auto',
+		loop: true,
+		spaceBetween: 40,
+
+		navigation: {
+			nextEl: '.swiper-next',
+			prevEl: '.swiper-prev',
+		},
+	});
+
+	//
+	let topNav = document.querySelector(".top-nav");
+	function calcHeaderHeight() {
+		document.documentElement.style.setProperty('--top-nav-h', `${topNav.offsetHeight}px`);
+	}
+	window.addEventListener('resize', calcHeaderHeight, { passive: true });
+	window.addEventListener('scroll', calcHeaderHeight, { passive: true });
+	calcHeaderHeight();
+
 
 	//endluckyoneJs
 

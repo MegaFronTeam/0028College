@@ -1,7 +1,11 @@
 // start .sHeaderAlt
 .sHeaderAlt {
 	padding-top: 3px;
-	padding-bottom: 33px;
+
+	padding-bottom: rem(20);
+	@include media-breakpoint-up(xxl){
+		padding-bottom: rem(33);
+	}
 
 	&__text {
 		font-size: 12px;

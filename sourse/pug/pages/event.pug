@@ -1,0 +1,92 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAdvanteges/_sAdvanteges.pug
+include ../blocks/sPlaces/_sPlaces.pug
+include ../blocks/sSpecials/_sSpecials.pug
+include ../blocks/sMost/_sMost.pug
+include ../blocks/sBanner/_sBanner.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sPrises/_sPrises.pug
+include ../blocks/sWorks/_sWorks.pug
+include ../blocks/sQw/_sQw.pug
+include ../blocks/sBaner/_sBaner.pug
+include ../blocks/sVantage/_sVantage.pug
+include ../blocks/sClosest/_sClosest.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sNewsAlt/_sNewsAlt.pug
+include ../blocks/sProfs/_sProfs.pug
+include ../blocks/sGalery/_sGalery.pug
+include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sUnivers/_sUnivers.pug
+include ../blocks/sFaq/_sFaq.pug
+include ../blocks/sFormAlt/_sFormAlt.pug
+include ../blocks/footerAlt/_footerAlt.pug
+include ../blocks/sBanerAlt/_sBanerAlt.pug
+include ../blocks/sEnter/_sEnter.pug
+include ../blocks/sWhat/_sWhat.pug
+include ../blocks/sStudy/_sStudy.pug
+include ../blocks/sPrice/_sPrice.pug
+include ../blocks/sPrice/_sPrice.pug
+include ../blocks/sPantProg/_sPantProg.pug
+include ../blocks/sWork/_sWork.pug
+include ../blocks/sContinue/_sContinue.pug
+include ../blocks/sDocs/_sDocs.pug
+include ../blocks/sNewsPage/_sNewsPage.pug
+include ../blocks/sEvents/_sEvents.pug
+include ../blocks/sArticle/_sArticle.pug
+
+block variables
+	- let  mainPage='container-bigger color-coal page-head-no-bb'
+	- let  bg='event.png'
+
+block title
+	- let  title= 'event'
+	title= title
+block pagecontent
+	+mob-mnu3()
+	+top-nav3()
+	.page-head
+		.container
+			+breadcrumb('Главная', 'Новости')
+			+b.section-title-arrowed--gray-bg
+				+e.row.row
+					.col-12
+						+e.back-arrow(href="#")
+							img(loading="lazy" src='img/svg/back-arrow.svg' alt="")
+					+e.left-col.col
+						h1 Техника безопасности  при работе со сварочными аппаратами
+						+e.info-row.row.align-items-center
+							.col-auto
+								+e.tag(style="background-color: #E3000F;") Вебинары
+							.col-auto
+								+e.date
+									span 16.05.2020 в 12:00
+									span Вторник
+							.col-auto
+								+e.location г. Москва, ул Лермонтова 21а
+						+e.txt-box
+							p РГАУ-МСХА имени К.А. Тимирязева возглавляет учебно-методические объединения вузов Российской Федерации по агрономическому, агроинженерному образованию и образованию в области природообустройства и водопользования. Сегодня Российский государственный аграрный университет – МСХА имени К.А. Тимирязева является ведущим учебным, научным, методическим и консультационным центром системы аграрного образования России.
+							p РГАУ-МСХА имени К.А. Тимирязева возглавляет учебно-методические объединения вузов Российской Федерации по агрономическому, агроинженерному образованию и образованию в области природообустройства и водопользования. Сегодня Российский государственный аграрный университет – МСХА имени К.А. Тимирязева является ведущим учебным,
+							p Мастер столярно-плотничных и паркетных работ – квалифицированный рабочий широкого профиля, выполняющий столярные, плотничные, стекольные, паркетные работы, выполняет работы по ремонту деревянных конструкций и деталей, производит различные деревянные изделия на деревообрабатывающих станках. Наши мастера востребованы в строительных фирмах,
+					+e.right-col.col-lg-5.col-xl-4.ms-auto
+						+e.img
+							img(loading="lazy" src="img/@2x/sClosest-1.jpg" alt="")
+						+e.gray-box
+							+e.g-title Текст свободный
+							+e.g-link(href="https://webinar.ru/?utm_source=ys&utm_campaign=yd_aon_performance_smb_webinar_..." target="_blank") https://webinar.ru/?utm_source=ys&utm_campaign=yd_aon_performance_smb_webinar_...
+							+e.copy-btn Копировать
+						+e.sp-title Спикеры
+						+e.speakers
+							+phSpeaker(1, 'Ольга', 'Циалковская')
+								| Министрество науки и образования
+								br
+								| Российской федерации
+							+phSpeaker(2, 'Ирина', 'Лебинская-Охтарская')
+								| Mail.ru Group
+
+	//+sArticle()
+	+sFormAlt()(class="pt-4 pb-0")
+	+footer()

@@ -1,0 +1,16 @@
+mixin sArticle(data)
+	// start sArticle
+	+b.sArticle.section#sArticle&attributes(attributes)
+		.container
+			+e.row.row
+				.col-lg-7
+					+e.img
+						img(loading="lazy" src="img/@2x/sArticle-img.jpg" alt="")
+					+e.txt
+						p РГАУ-МСХА имени К.А. Тимирязева возглавляет учебно-методические объединения вузов Российской Федерации по агрономическому, агроинженерному образованию и образованию в области природообустройства и водопользования. Сегодня Российский государственный аграрный университет – МСХА имени К.А. Тимирязева является ведущим учебным, научным, методическим и консультационным центром системы аграрного образования России.
+				+e.also-col.col-lg-5.col-xl-4.ms-auto
+					+e.H4.also-title Еще новости:
+					+e.a-items
+						+sNewsNoCol()
+
+	// end sArticle

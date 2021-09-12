@@ -1,0 +1,21 @@
+// start .sNewsPage
+.sNewsPage {
+	--sPT: #{rem(20)};
+
+	--sPB: #{rem(66)};
+	@include media-breakpoint-up(xl){
+		--sPB: #{rem(86)};
+	}
+	--sTPB: #{rem(28)};
+
+
+	&__row{
+		--bs-gutter-x: #{rem(32)};
+		--bs-gutter-y: #{rem(36)};
+
+		padding-bottom: rem(60);
+	}
+
+	&__{}
+	&__{}
+} // end.sNewsPage

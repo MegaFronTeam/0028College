@@ -1,0 +1,109 @@
+// start .sEvents
+.sEvents {
+	--sPT: #{rem(13)};
+	--sPB: #{rem(30)};
+	--sTPB: #{rem(20)};
+
+	&__slider-wrap{
+		position: relative;
+		z-index: 1;
+		padding: rem(6) rem(45);
+		background: $light;
+		border-radius: rem(10);
+		overflow: hidden;
+
+
+		.swiper-container{}
+		.swiper-wrapper{}
+		.swiper-slide{
+
+		}
+
+		.swiper-prev,
+		.swiper-next{
+			cursor: pointer;
+
+			position: absolute;
+			z-index: 10;
+			top: 0;
+
+			@include mt();
+			background-color: transparent;
+			&:hover{
+				background-color: $primary;
+				transform: none;
+				.icon{
+					stroke: $white;
+				}
+			}
+
+			width: rem(40);
+			height: 100%;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			.icon{
+				@include mt();
+				font-size: rem(12);
+				color: transparent;
+				stroke: $coal;
+			}
+		}
+
+		.swiper-prev{
+			left: 0;
+		}
+		.swiper-next{
+			right: 0;
+		}
+	}
+	&__txt{
+		font-weight: bold;
+		font-size: rem(16);
+		line-height: 1.8;
+		color: $coal;
+	}
+	&__input{
+		padding: rem(6) rem(45) rem(6) rem(14.5);
+		border: none!important;
+		background: $light;
+		border-radius: rem(10);
+
+		font-weight: bold;
+		font-size: rem(16);
+		line-height: 1.8;
+		color: $coal;
+	}
+	//
+	&__nav-row{
+		--bs-gutter-x: #{rem(20)};
+		@include media-breakpoint-up(md){
+			--bs-gutter-x: #{rem(33)};
+		}
+		--bs-gutter-y: #{rem(33)};
+		padding-bottom: rem(32);
+	}
+	&__slider-wrap{
+		.swiper-container{
+
+		}
+		.swiper-wrapper{
+
+		}
+		.swiper-slide{
+			width: 100%;
+			height: auto;
+		}
+	}
+
+
+	&__content-row{
+		--bs-gutter-x: #{rem(35)};
+		--bs-gutter-y: #{rem(32)};
+
+		padding-bottom: rem(62);
+	}
+	&__{}
+} // end.sEvents

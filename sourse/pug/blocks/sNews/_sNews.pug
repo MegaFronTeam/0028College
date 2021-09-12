@@ -15,9 +15,11 @@ mixin sNews(data)
 
 mixin sNewsItem()
 	.col-md-6.col-lg-4
-		+e.item(href='#')
-			+e.img
-				img(loading="lazy" src='img/@2x/sNews-1.jpg' alt="")
-			+e.txt От всей души поздравляем всех с профессиональным праздником – Международным днем учителя.
-			+e.date 16.05.2020
+		+sNewsNoCol()
 
+mixin sNewsNoCol()
+	+b.news-item(href='#')
+		+e.img
+			img(loading="lazy" src='img/@2x/sNews-1.jpg' alt="")
+		+e.txt От всей души поздравляем всех с профессиональным праздником – Международным днем учителя.
+		+e.date 16.05.2020
