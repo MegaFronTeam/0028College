@@ -35,7 +35,19 @@
   border-bottom: 1px solid #fff;
   @include mt;
   &.fixed{
+    padding-top: 0;
+    padding-bottom: 5px;
     border-color: #ccc;
+    .top-nav__logo {
+      img{
+        max-height: 70px;
+        @include mt;
+      }
+    }
+    .menu>li>a,
+    .menu>li>span {
+      padding: .7rem 0;
+    }
     .menu{
       margin-bottom: 0px;
       @include mt;
