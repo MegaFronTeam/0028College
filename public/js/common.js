@@ -363,10 +363,8 @@ function eventHandler() {
 
 	window.addEventListener('resize', calcHeaderHeight, {
 		passive: true
-	});
-	window.addEventListener('scroll', calcHeaderHeight, {
-		passive: true
-	});
+	}); // window.addEventListener('scroll', calcHeaderHeight, { passive: true });
+
 	calcHeaderHeight(); //endluckyoneJs
 }
 
