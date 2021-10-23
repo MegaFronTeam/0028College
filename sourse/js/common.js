@@ -361,12 +361,24 @@ function eventHandler() {
 	//
 	let topNav = document.querySelector(".top-nav");
 	function calcHeaderHeight() {
-		document.documentElement.style.setProperty('--top-nav-h', `${topNav.offsetHeight}px`);
+		if (topNav){
+			document.documentElement.style.setProperty('--top-nav-h', `${topNav.offsetHeight}px`);
+		}
+		else{
+			document.documentElement.style.setProperty('--top-nav-h', `0px`);
+		}
 	}
 	window.addEventListener('resize', calcHeaderHeight, { passive: true });
 	// window.addEventListener('scroll', calcHeaderHeight, { passive: true });
 	calcHeaderHeight();
-
+	//
+	let sCardssliders = document.querySelectorAll('.sCards-slider-js');
+	for(let slider of sCardssliders){
+		let sCardsslider = new Swiper(slider, {
+			slidesPerView: 'auto',
+			spaceBetween: 30,
+		});
+	}
 
 	//endluckyoneJs
 

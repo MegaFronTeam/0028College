@@ -1,0 +1,64 @@
+mixin sCards(data)
+	// start sCards
+	+b.SECTION.sCards.section#sCards&attributes(attributes)
+		.container
+			+e.main-row.row
+				+e.col--left.col-lg-3.d-none.d-lg-block
+					//+e.mob-dd-btn.d-lg-none
+					+e.sidebar.sCards-sidebar-js
+						ul
+							li: a(href="#box1") Мастер по ремонту и обслуживанию инженерных систем жилищно-коммунального хозяйства
+							li: a(href="#box2") Мастер по ремонту и обслуживанию инженерных систем жилищно-коммунального хозяйства
+							li: a(href="#box3") Мастер по ремонту и обслуживанию инженерных систем жилищно-коммунального хозяйства
+							li: a(href="#box4") Мастер по ремонту и обслуживанию инженерных систем жилищно-коммунального хозяйства
+				+e.col--right.col-lg-9
+					+e.items
+						+sCardsBlock({
+							id: 'box1',
+						})
+						+sCardsBlock({
+							id: 'box2',
+						})
+						+sCardsBlock({
+							id: 'box3',
+						})
+						+sCardsBlock({
+							id: 'box4',
+						})
+	// end sCards
+
+mixin sCardsBlock(data)
+	+e.item(class=`${data.addClasses || ''}` id=data.id)
+		+e.H2.main-title Мастер по ремонту и обслуживанию инженерных систем жилищно-коммунального хозяйства
+		+e.top-row.row.align-items-center
+			.col-auto
+				+e.name Центр градостроительных технологий
+			.col-auto
+				+e.location г. Москва, ул. Авиаторов, д.11
+			.col-auto
+				+e.require На базе 9 классов
+		+e.mid-row.row
+			+sCardsCard('Продолжительность обучения на базе основного общего образования (9 класс)', '2 г. 10 меc.')
+			+sCardsCard('Вступительные испытания', 'Конкурс аттестатов')
+			+sCardsCard('Форма обучения', 'Очная')
+		+e.title--descr О программе
+		+e.descr
+			p РГАУ-МСХА имени К.А. Тимирязева возглавляет учебно-методические объединения вузов Российской Федерации по агрономическому, агроинженерному образованию и образованию в области природообустройства и водопользования. Сегодня Российский государственный аграрный университет – МСХА имени К.А. Тимирязева является ведущим учебным, научным, методическим и консультационным центром системы аграрного образования России.
+		//if u need this title on mob, remove d- classes
+		+e.title--pills.d-none.d-md-block Перспектива трудоустройства
+		+e.slider-wrap
+			.swiper-container.sCards-slider-js
+				.swiper-wrapper
+					+sCardsSlide()
+					+sCardsSlide()
+					+sCardsSlide()
+
+mixin sCardsSlide(txt='Юрист по земельно-имущественным отношениям')
+	.swiper-slide
+		+e.s-item=txt
+
+mixin sCardsCard(title, red)
+	.col-md-4.text-md-center
+		+e.card
+			+e.c-title=title
+			+e.red=red

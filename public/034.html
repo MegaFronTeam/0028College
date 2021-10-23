@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>034</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=570,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no">
+		<script>
+			let viewport = document.querySelector("meta[name=viewport]");
+			var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+			if (is_safari) {
+				//- alert(navigator.userAgent);
+				//570
+				function w() {
+					this.outerWidth > 570
+						? viewport.content = "width=device-width, initial-scale=1.0,  maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
+						:  viewport.content = "width=570,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no"
+					//- alert(this.outerWidth + ', '+  viewport.content);
+				}
+				 w();
+				window.addEventListener('resize', () => {
+				 w();
+				}, { passive: true });
+			}
+		</script>
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+		<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+	</head>
+	<body data-bg="034-320.png">
+		<div class="main-wrapper">
+			<!-- start sCards-->
+			<section class="sCards section" id="sCards">
+				<div class="container">
+					<div class="sCards__main-row row">
+						<div class="sCards__col sCards__col--left col-lg-3 d-none d-lg-block">
+							<!--+e.mob-dd-btn.d-lg-none-->
+							<div class="sCards__sidebar sCards-sidebar-js">
+								<ul>
+									<li><a href="#box1">Мастер по ремонту и обслуживанию инженерных систем жилищно-коммунального хозяйства</a></li>
+									<li><a href="#box2">Мастер по ремонту и обслуживанию инженерных систем жилищно-коммунального хозяйства</a></li>
+									<li><a href="#box3">Мастер по ремонту и обслуживанию инженерных систем жилищно-коммунального хозяйства</a></li>
+									<li><a href="#box4">Мастер по ремонту и обслуживанию инженерных систем жилищно-коммунального хозяйства</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="sCards__col sCards__col--right col-lg-9">
+							<div class="sCards__items">
+								<div class="sCards__item" id="box1">
+									<h2 class="sCards__main-title">Мастер по ремонту и обслуживанию инженерных систем жилищно-коммунального хозяйства
+									</h2>
+									<div class="sCards__top-row row align-items-center">
+										<div class="col-auto">
+											<div class="sCards__name">Центр градостроительных технологий
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="sCards__location">г. Москва, ул. Авиаторов, д.11
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="sCards__require">На базе 9 классов
+											</div>
+										</div>
+									</div>
+									<div class="sCards__mid-row row">
+										<div class="col-md-4 text-md-center">
+											<div class="sCards__card">
+												<div class="sCards__c-title">Продолжительность обучения на базе основного общего образования (9 класс)
+												</div>
+												<div class="sCards__red">2 г. 10 меc.
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 text-md-center">
+											<div class="sCards__card">
+												<div class="sCards__c-title">Вступительные испытания
+												</div>
+												<div class="sCards__red">Конкурс аттестатов
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 text-md-center">
+											<div class="sCards__card">
+												<div class="sCards__c-title">Форма обучения
+												</div>
+												<div class="sCards__red">Очная
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sCards__title sCards__title--descr">О программе
+									</div>
+									<div class="sCards__descr">
+										<p>РГАУ-МСХА имени К.А. Тимирязева возглавляет учебно-методические объединения вузов Российской Федерации по агрономическому, агроинженерному образованию и образованию в области природообустройства и водопользования. Сегодня Российский государственный аграрный университет – МСХА имени К.А. Тимирязева является ведущим учебным, научным, методическим и консультационным центром системы аграрного образования России.</p>
+									</div>
+									<!--if u need this title on mob, remove d- classes-->
+									<div class="sCards__title sCards__title--pills d-none d-md-block">Перспектива трудоустройства
+									</div>
+									<div class="sCards__slider-wrap">
+										<div class="swiper-container sCards-slider-js">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<div class="sCards__s-item">Юрист по земельно-имущественным отношениям
+													</div>
+												</div>
+												<div class="swiper-slide">
+													<div class="sCards__s-item">Юрист по земельно-имущественным отношениям
+													</div>
+												</div>
+												<div class="swiper-slide">
+													<div class="sCards__s-item">Юрист по земельно-имущественным отношениям
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sCards__item" id="box2">
+									<h2 class="sCards__main-title">Мастер по ремонту и обслуживанию инженерных систем жилищно-коммунального хозяйства
+									</h2>
+									<div class="sCards__top-row row align-items-center">
+										<div class="col-auto">
+											<div class="sCards__name">Центр градостроительных технологий
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="sCards__location">г. Москва, ул. Авиаторов, д.11
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="sCards__require">На базе 9 классов
+											</div>
+										</div>
+									</div>
+									<div class="sCards__mid-row row">
+										<div class="col-md-4 text-md-center">
+											<div class="sCards__card">
+												<div class="sCards__c-title">Продолжительность обучения на базе основного общего образования (9 класс)
+												</div>
+												<div class="sCards__red">2 г. 10 меc.
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 text-md-center">
+											<div class="sCards__card">
+												<div class="sCards__c-title">Вступительные испытания
+												</div>
+												<div class="sCards__red">Конкурс аттестатов
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 text-md-center">
+											<div class="sCards__card">
+												<div class="sCards__c-title">Форма обучения
+												</div>
+												<div class="sCards__red">Очная
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sCards__title sCards__title--descr">О программе
+									</div>
+									<div class="sCards__descr">
+										<p>РГАУ-МСХА имени К.А. Тимирязева возглавляет учебно-методические объединения вузов Российской Федерации по агрономическому, агроинженерному образованию и образованию в области природообустройства и водопользования. Сегодня Российский государственный аграрный университет – МСХА имени К.А. Тимирязева является ведущим учебным, научным, методическим и консультационным центром системы аграрного образования России.</p>
+									</div>
+									<!--if u need this title on mob, remove d- classes-->
+									<div class="sCards__title sCards__title--pills d-none d-md-block">Перспектива трудоустройства
+									</div>
+									<div class="sCards__slider-wrap">
+										<div class="swiper-container sCards-slider-js">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<div class="sCards__s-item">Юрист по земельно-имущественным отношениям
+													</div>
+												</div>
+												<div class="swiper-slide">
+													<div class="sCards__s-item">Юрист по земельно-имущественным отношениям
+													</div>
+												</div>
+												<div class="swiper-slide">
+													<div class="sCards__s-item">Юрист по земельно-имущественным отношениям
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sCards__item" id="box3">
+									<h2 class="sCards__main-title">Мастер по ремонту и обслуживанию инженерных систем жилищно-коммунального хозяйства
+									</h2>
+									<div class="sCards__top-row row align-items-center">
+										<div class="col-auto">
+											<div class="sCards__name">Центр градостроительных технологий
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="sCards__location">г. Москва, ул. Авиаторов, д.11
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="sCards__require">На базе 9 классов
+											</div>
+										</div>
+									</div>
+									<div class="sCards__mid-row row">
+										<div class="col-md-4 text-md-center">
+											<div class="sCards__card">
+												<div class="sCards__c-title">Продолжительность обучения на базе основного общего образования (9 класс)
+												</div>
+												<div class="sCards__red">2 г. 10 меc.
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 text-md-center">
+											<div class="sCards__card">
+												<div class="sCards__c-title">Вступительные испытания
+												</div>
+												<div class="sCards__red">Конкурс аттестатов
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 text-md-center">
+											<div class="sCards__card">
+												<div class="sCards__c-title">Форма обучения
+												</div>
+												<div class="sCards__red">Очная
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sCards__title sCards__title--descr">О программе
+									</div>
+									<div class="sCards__descr">
+										<p>РГАУ-МСХА имени К.А. Тимирязева возглавляет учебно-методические объединения вузов Российской Федерации по агрономическому, агроинженерному образованию и образованию в области природообустройства и водопользования. Сегодня Российский государственный аграрный университет – МСХА имени К.А. Тимирязева является ведущим учебным, научным, методическим и консультационным центром системы аграрного образования России.</p>
+									</div>
+									<!--if u need this title on mob, remove d- classes-->
+									<div class="sCards__title sCards__title--pills d-none d-md-block">Перспектива трудоустройства
+									</div>
+									<div class="sCards__slider-wrap">
+										<div class="swiper-container sCards-slider-js">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<div class="sCards__s-item">Юрист по земельно-имущественным отношениям
+													</div>
+												</div>
+												<div class="swiper-slide">
+													<div class="sCards__s-item">Юрист по земельно-имущественным отношениям
+													</div>
+												</div>
+												<div class="swiper-slide">
+													<div class="sCards__s-item">Юрист по земельно-имущественным отношениям
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sCards__item" id="box4">
+									<h2 class="sCards__main-title">Мастер по ремонту и обслуживанию инженерных систем жилищно-коммунального хозяйства
+									</h2>
+									<div class="sCards__top-row row align-items-center">
+										<div class="col-auto">
+											<div class="sCards__name">Центр градостроительных технологий
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="sCards__location">г. Москва, ул. Авиаторов, д.11
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="sCards__require">На базе 9 классов
+											</div>
+										</div>
+									</div>
+									<div class="sCards__mid-row row">
+										<div class="col-md-4 text-md-center">
+											<div class="sCards__card">
+												<div class="sCards__c-title">Продолжительность обучения на базе основного общего образования (9 класс)
+												</div>
+												<div class="sCards__red">2 г. 10 меc.
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 text-md-center">
+											<div class="sCards__card">
+												<div class="sCards__c-title">Вступительные испытания
+												</div>
+												<div class="sCards__red">Конкурс аттестатов
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 text-md-center">
+											<div class="sCards__card">
+												<div class="sCards__c-title">Форма обучения
+												</div>
+												<div class="sCards__red">Очная
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sCards__title sCards__title--descr">О программе
+									</div>
+									<div class="sCards__descr">
+										<p>РГАУ-МСХА имени К.А. Тимирязева возглавляет учебно-методические объединения вузов Российской Федерации по агрономическому, агроинженерному образованию и образованию в области природообустройства и водопользования. Сегодня Российский государственный аграрный университет – МСХА имени К.А. Тимирязева является ведущим учебным, научным, методическим и консультационным центром системы аграрного образования России.</p>
+									</div>
+									<!--if u need this title on mob, remove d- classes-->
+									<div class="sCards__title sCards__title--pills d-none d-md-block">Перспектива трудоустройства
+									</div>
+									<div class="sCards__slider-wrap">
+										<div class="swiper-container sCards-slider-js">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<div class="sCards__s-item">Юрист по земельно-имущественным отношениям
+													</div>
+												</div>
+												<div class="swiper-slide">
+													<div class="sCards__s-item">Юрист по земельно-имущественным отношениям
+													</div>
+												</div>
+												<div class="swiper-slide">
+													<div class="sCards__s-item">Юрист по земельно-имущественным отношениям
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sCards-->
+		</div>
+		<!--  start modals-->
+		<div class="modal-win" id="modal-thanks" style="display: none">
+			<h3>Спасибо!</h3>
+			<p>Мы свяжемсяс Вами в ближайшее время!</p>
+		</div>
+		<div class="modal-education" id="modal-education" style="display: none">
+			<h2 class="modal-education__title">Школьное образование
+			</h2>
+			<div class="modal-education__chose-txt">Выберите отделение
+			</div>
+			<div class="modal-education__row row">
+				<div class="col-lg-4"><a class="education-item" href="#"><span class="education-item__department">Школьные отделения Колледжа №41</span><span class="education-item__name">Переделкино</span><span class="education-item__img-box"><img loading="lazy" src="img/@2x/sEducation-1.png" alt=""/></span></a>
+				</div>
+				<div class="col-lg-4"><a class="education-item" href="#"><span class="education-item__department">Школьные отделения Колледжа №41</span><span class="education-item__name">Давыдково</span><span class="education-item__img-box"><img loading="lazy" src="img/@2x/sEducation-2.png" alt=""/></span></a>
+				</div>
+				<div class="col-lg-4"><a class="education-item" href="#"><span class="education-item__department">Школьные отделения Колледжа №41</span><span class="education-item__name">Федосьино</span><span class="education-item__img-box"><img loading="lazy" src="img/@2x/sEducation-3.png" alt=""/></span></a>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-thanks-->
+		<!-- end modals-->
+		<!-- modal libs-->
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
+		<!-- modal libs-->
+		<!-- slider libs-->
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<!-- /slider libs-->
+		<script src="libs/inputmask/inputmask.min.js"></script>
+		<script src="js/libs.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

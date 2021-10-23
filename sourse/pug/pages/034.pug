@@ -1,0 +1,25 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAdvanteges/_sAdvanteges.pug
+include ../blocks/sPlaces/_sPlaces.pug
+include ../blocks/sSpecials/_sSpecials.pug
+include ../blocks/sMost/_sMost.pug
+include ../blocks/sBanner/_sBanner.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sPrises/_sPrises.pug
+include ../blocks/sWorks/_sWorks.pug
+include ../blocks/sQw/_sQw.pug
+include ../blocks/sCards/_sCards.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg='034-320.png'
+
+block title
+	- let  title= '034'
+	title= title
+block pagecontent
+	+sCards()
