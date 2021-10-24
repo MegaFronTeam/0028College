@@ -356,12 +356,28 @@ function eventHandler() {
 	}); //
 
 	let topNav = document.querySelector(".top-nav");
+	let headerH = 0;
+	let stickyArr = [];
+	$('.sticky-js').each(function () {
+		let Sticky = new hcSticky(this, {
+			stickTo: '#sticyContjs',
+			top: 20 + headerH
+		});
+		stickyArr.push(Sticky);
+	});
 
 	function calcHeaderHeight() {
 		if (topNav) {
 			document.documentElement.style.setProperty('--top-nav-h', "".concat(topNav.offsetHeight, "px"));
+			headerH = header.offsetHeight;
 		} else {
 			document.documentElement.style.setProperty('--top-nav-h', "0px");
+		}
+
+		for (let Sticky of stickyArr) {
+			Sticky.update({
+				top: 20 + headerH
+			});
 		}
 	}
 
