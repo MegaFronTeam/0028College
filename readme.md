@@ -18,6 +18,6 @@
 15. <https://megafronteam.github.io/0028College/public/031.html>
 16. <https://megafronteam.github.io/0028College/public/032.html>
 17. <https://megafronteam.github.io/0028College/public/00-modals.html>
-
-///////////////23.10.2021////////////////
-18. <https://megafronteam.github.io/0028College/public/034.html>
+18. 
+19. ///////////////23.10.2021////////////////
+20. <https://megafronteam.github.io/0028College/public/034.html>
