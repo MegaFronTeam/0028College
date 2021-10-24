@@ -378,8 +378,25 @@ function eventHandler() {
 			slidesPerView: 'auto',
 			spaceBetween: 30
 		});
-	} //endluckyoneJs
+	} //
 
+
+	$('.sCards-dd-btn-js').click(function () {
+		$('.sCards-dd-btn-js, .sCards-dd-js').toggleClass('active');
+	}); //-
+
+	document.body.addEventListener('click', function () {
+		let target = event.target;
+
+		if (!target.closest('.sCards-dd-btn-js') && !target.closest('.sCards-dd-js')) {
+			$('.sCards-dd-btn-js, .sCards-dd-js').removeClass('active');
+		}
+	});
+	window.addEventListener('resize', function () {
+		if (window.matchMedia("(min-width: 992px)").matches) {
+			$('.sCards-dd-btn-js, .sCards-dd-js').removeClass('active');
+		}
+	}); //endluckyoneJs
 }
 
 ;

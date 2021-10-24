@@ -10,6 +10,12 @@
 		}
 	}
 	&__main-row{
+		--bs-gutter-x: 16px;
+		--bs-gutter-y: 16px;
+		@include media-breakpoint-up(lg){
+			--bs-gutter-x: #{rem(30)};
+			--bs-gutter-y: #{rem(30)};
+		}
 
 	}
 	&__col{
@@ -20,12 +26,85 @@
 
 		}
 	}
+	&__dd{
+		position: relative;
+		z-index: 10;
+	}
+	&__m-btn{
+		cursor: pointer;
+		background: $light;
+		border-radius: rem(10);
+
+		padding: 15px 16px;
+		display: flex;
+		align-items: center;
+
+		&:after{
+			@include mt();
+			content: '';
+			flex-shrink: 0;
+			width: 10px;
+			height: 10px;
+			margin-left: 14px;
+			@include media-breakpoint-up(md){
+				width: rem(12);
+				height: rem(12);
+				margin-left: rem(18);
+			}
+
+			background-image: url(../img/svg/chevron-down.svg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+		}
+
+		font-weight: bold;
+		font-size: 12px;
+		@include media-breakpoint-up(md){
+			font-size: rem(14);
+		}
+		line-height: 1.5;
+		color: $coal;
+
+		//
+		&.active{
+			&:after{
+				transform: rotateX(180deg);
+			}
+		}
+
+		span{
+			@include ell(1);
+		}
+	}
+
 	&__sidebar{
 		//width: 100%;
 		//position: sticky;
 		//top: calc(var(--top-nav-h, 0px) + 20px);
-		padding-bottom: 20px;
-		min-height: 80vh;
+
+		@include media-breakpoint-down(lg){
+			box-shadow: 1px 1px 8px 0 rgba($black, .2);
+			position: absolute;
+			left: 0;
+			width: 100%;
+			top: calc(100% + 16px);
+			height: auto;
+
+			@include mt();
+			transform-origin: top center;
+			transform: scaleY(0);
+			&.active{
+				transform: scaleY(1);
+			}
+		}
+
+		@include media-breakpoint-up(lg){
+			padding-bottom: 20px;
+		}
+		@include media-breakpoint-up(xxl){
+			min-height: 80vh;
+		}
 
 		background: $light;
 		border-radius: rem(10);
@@ -37,6 +116,13 @@
 
 			li{
 				border-bottom: 1px solid rgba($black, .1);
+				&:last-child{
+					border-bottom: none;
+					@include media-breakpoint-up(lg){
+						border-bottom: 1px solid rgba($black, .1);
+					}
+				}
+
 				a{
 					display: block;
 
