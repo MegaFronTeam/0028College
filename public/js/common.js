@@ -392,6 +392,9 @@ function eventHandler() {
 			$('.sCards-dd-btn-js, .sCards-dd-js').removeClass('active');
 		}
 	});
+	$('.sCards-dd-js a').click(function () {
+		$('.sCards-dd-btn-js, .sCards-dd-js').removeClass('active');
+	});
 	window.addEventListener('resize', function () {
 		if (window.matchMedia("(min-width: 992px)").matches) {
 			$('.sCards-dd-btn-js, .sCards-dd-js').removeClass('active');
